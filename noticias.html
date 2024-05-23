@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sala de Situação do estado de São Paulo - Notícias</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><!-- maps -->
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Serenity - v4.11.0
+  * Template URL: https://bootstrapmade.com/serenity-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+    
+          <div class="logo">
+            <h1 class="text-light"><a href="index.html"><img src="assets/img/logo/daee_up.png"></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          </div>
+    
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a class="active" href="index.html">Home</a></li>
+              <li><a href="noticias.html">Notícias</a></li>
+              <li class="dropdown"><a href="#"><span>Sala de Situação</span> <i class="bi bi-chevron-down"></i></a>
+    
+                <ul>
+                  <li><a href="sobre.html">Sobre</a></li>
+                  <li><a href="equipe.html">Equipe</a></li>
+                  <li><a href="galeria.html"> Galeria</a></li>
+                  <!-- <li><a href="radares.html"> Radares</a></li> -->
+                </ul>
+              </li>
+    
+              <li class="dropdown"><a href="#"><span>Boletins</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                  <li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target="_black">Boletim Diário</a></li>
+                  <li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFlnw" target="_black">Boletim Mensal</a></li>
+                  <li><a href="https://docs.google.com/document/d/11qxQPqNc1RW7mMYw_uXdw-Gmh7lr8UUbaH2AnG6k6g0/edit#heading=h.7vzq6ltz512f" target="_black">Último Boletim</a></li>
+                </ul>
+              </li>
+              <li><a href="postos.html">Estações</a></li>
+              <li><a href="">SIBH - Chuvas Agora</a></li>
+              <!-- <li><a href="">Chuvas diárias Alto Tietê/Cubatão</a></li> -->
+              <li><a href="">Últimos Alertas</a></li>
+            
+    
+              <!--li><a class="getstarted" href="about.html">Login</a></li-->
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+    
+        </div>
+      </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="breadcrumb-hero">
+        <div class="container">
+          <div class="breadcrumb-hero">
+            <h2>Noticias em tempo real</h2>
+            <p>Acompanhe as notícias referente ao monitoramento de cheias em tempo real, tudo que a SSSP faz dentro de 24h para atualizar sobre o estado de alerta, crítico, e geração de relatorios aqui.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Montoramento de Recursos Hídricos</li>
+        </ol>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-8 entries">
+            <article class="entry">
+              <div class="entry-img">
+                    <div id="map"></div>
+                        <!-- Scripts -->
+                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                        <script>
+                            // Inicializar o mapa
+                            var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
+                    
+                            // Adicionar a camada de mapa
+                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            }).addTo(map);
+                    
+                            // Adicionar marcador
+                            var marker = L.marker([-23.5505, -46.6333]).addTo(map);
+                            marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
+                        </script>
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">Monitoramento de Cheias no estado</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">Sala de Situação do estado</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">dia, ano</time></a></li>
+                  <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> -->
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                <!-- monitoramento dos recursos hídricos é operado em processo de coleta de dados  -->
+                As Redes Telemétricas, são um conjunto de equipamentos que transmitem dados de sensores de chuva e nível para o SIBH e a SSSP, permitindo o acompanhamento de chuvas intensas, escassez hídrica, níveis dos rios, reservatórios e piscinões. Através do SIBH, os dados de várias entidades são normalizados e centralizados para um fácil acesso as informações
+                </p>
+                <div class="read-more">
+                  <a href="blog-single.html">Leia mais</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba sofre com falta de chuva e ameaça abastecimento</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Font: materia da vtvnews</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2020-01-01">dia, ano</time></a></li>
+                  <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> -->
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  "O Rio Piracicaba sofre os efeitos do baixo volume de chuva de abril e maio, que segundo dados da sala de situação do PCJ ficou abaixo do esperado. Na região da rua do Porto a vazão, e o nível estão abaixo das expectativas. Na manhã desta sexta-feira (17/05), o manancial estava em 24,97 m3/s 69,51% menor que o ideal nesse período do ano. A vazão média histórica para maio é de 81,90 mil litros de água por segundo."
+                </p>
+                <div class="read-more">
+                  <a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Leia mais</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <!-- <article class="entry">
+
+              <div class="entry-img">
+                <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">Possimus soluta ut id suscipit ea ut. In quo quia et soluta libero sit sint.</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  Aut iste neque ut illum qui perspiciatis similique recusandae non. Fugit autem dolorem labore omnis et. Eum temporibus fugiat voluptate enim tenetur sunt omnis.
+                  Doloremque est saepe laborum aut. Ipsa cupiditate ex harum at recusandae nesciunt. Ut dolores velit.
+                </p>
+                <div class="read-more">
+                  <a href="blog-single.html">Read More</a>
+                </div>
+              </div>
+
+            </article>End blog entry -->
+
+            <!-- <article class="entry">
+
+              <div class="entry-img">
+                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">Non rem rerum nam cum quo minus. Dolor distinctio deleniti explicabo eius exercitationem.</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  Aspernatur rerum perferendis et sint. Voluptates cupiditate voluptas atque quae. Rem veritatis rerum enim et autem. Saepe atque cum eligendi eaque iste omnis a qui.
+                  Quia sed sunt. Ea asperiores expedita et et delectus voluptates rerum. Id saepe ut itaque quod qui voluptas nobis porro rerum. Quam quia nesciunt qui aut est non omnis. Inventore occaecati et quaerat magni itaque nam voluptas. Voluptatem ducimus sint id earum ut nesciunt sed corrupti nemo.
+                </p>
+                <div class="read-more">
+                  <a href="blog-single.html">Read More</a>
+                </div>
+              </div>
+
+            </article>End blog entry -->
+
+            <div class="blog-pagination">
+              <ul class="justify-content-center">
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+              </ul>
+            </div>
+
+          </div><!-- End blog entries list -->
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+              <!-- <h3 class="sidebar-title">Search</h3>
+              <div class="sidebar-item search-form">
+                <form action="">
+                  <input type="text">
+                  <button type="submit"><i class="bi bi-search"></i></button>
+                </form>
+              </div> -->
+
+              <h3 class="sidebar-title">Categorias</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  <li><a href="#">Alertas </a></li>
+                  <li><a href="#">SIBH - Chuva agora </a></li>
+                  <!-- <li><a href="#">Travel <span>(5)</span></a></li> -->
+                
+                  <li><a href="#">Boletins <span>(14)</span></a></li>
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Materias recentes</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+                  <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
+                  <time datetime="2020-01-01">Mai 17, 2024</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/blog/blog-recent-2.jpg" alt="">
+                  <h4><a href="blog-single.html">Mudanças Climáticas </a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                    <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+                    <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
+                    <time datetime="2020-01-01">Mai 17, 2024</time>
+                  </div>
+
+                  <div class="post-item clearfix">
+                    <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+                    <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
+                    <time datetime="2020-01-01">Mai 17, 2024</time>
+                  </div>
+
+           
+
+              </div><!-- End sidebar recent posts-->
+
+              <h3 class="sidebar-title"><i class="bi bi-tag-fill"></i> Tags </h3>
+              <div class="sidebar-item tags">
+                <ul>
+                  <li><a href="#">Mudanças do Clima</a></li>
+                  <li><a href="#">Seca</a></li>
+                  <li><a href="#">El Niño</a></li>
+                  <li><a href="#">INPE/CPTEC</a></li>
+                  <li><a href="#">Wind</a></li>
+                  <li><a href="#">SIBH</a></li>
+                  <li><a href="#">Defesa Civil</a></li>
+                  <li><a href="#">SEMIL</a></li>
+                  <li><a href="#">Recursos Hídricos</a></li>
+                  <li><a href="#">Paneta</a></li>
+                  <li><a href="#">Água</a></li>
+                </ul>
+              </div><!-- End sidebar tags-->
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="" style="margin-top: 10px;;">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>SSSP-DAEE</h3>
+            <p>Rede Hidrológica básica do Estado de São Paulo é operada pelo DAEE desde 1951.</p>
+            <p>Sala de Situação de São Paulo, apresenta produtos e relatos por redes sociais e e-mails. </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Boletins</h4>
+            <ul>
+              <li><a href="#">Boletins Diários</a></li>
+              <li><a href="#">Boletins Mensais</a></li>
+              <li><a href="#">Ultimos Boletim</a></li>
+            </ul>
+             <h4>Sobre</h4>
+             <ul>
+              <li><a href="sobre.php">Sobre Nós</a></li>
+              <li><a href="equipe.php">Equipes</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Situação</h4>
+            <ul>
+              <li><a href="#">Chuvas Diárias Alto Tietê/Cubatão</a></li>
+              <li><a href="#">Últimos Alertas</a></li>
+              <li><a href="#">Ultimas Publicações da SSSP / DAEE</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contato</h4>
+            <p>
+              Rua Boa Vista, 170 <br>
+              11º andar, Bloco 5<br>
+             São Paulo / SP <br>
+              <strong>Telefone:</strong> (11) 3293 - 8461<br>
+              <strong>Email:</strong> salasituacao@daee.sp.gov.br<br>
+            </p>
+
+            <div class="social-links"> <p>Redes Sociais DAEE</p>
+              <a href="https://www.facebook.com/DAEESP/" target="_black" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/daeesp/" target="_black" class="instagram"><i class="bi bi-instagram"></i></a>
+              <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
+
+              <a href="https://www.youtube.com/channel/UCOEBfJpTq7LE25rdjX9tdUQ" target="_black" class=""><i class="bi bi-youtube"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy;  <strong><span>SSSP-DAEE</span></strong>. 
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/serenity-bootstrap-corporate-template/ -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
