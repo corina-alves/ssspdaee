@@ -2562,3 +2562,6 @@ list-style: none;
   height: 400px;
   width: 100%;
 }
+img{
+  border-radius: 5px;;
+}
