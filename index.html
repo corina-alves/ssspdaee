@@ -26,6 +26,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
     <!-- Estilos CSS  dashboard-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+  
   <!-- =======================================================
   * Template Name: Serenity - v4.11.0
   * Template URL: https://bootstrapmade.com/serenity-bootstrap-corporate-template/
@@ -87,9 +88,11 @@
         <div class="row">
           <div class="banner-info">
             <div class="banner-text text-center" style="color:#FFF;">
-              <h1 class="white">SALA DE SITUAÇÃO DO ESTADO DE SÃO PAULO</h1>
-              <p>A sala de situação é responsável pelo recursos hídricos do estado</p>
-              <P>Operando como central de monitoramento em tempo real, a Sala de Situação tem o objetivo de acompanhar condições hidrometeorológicas e ocorrência de eventos críticos, além de subsidiar a gestão de recursos hídricos</P>
+              <h1 class="white" style="font-weight: 900; font-size: 100px; text-align: left;">SSSP</h1>
+              <h2 class="white" style="font-weight: 300; font-size: 40px; text-align: left;">Sala de Situação de São Paulo</h2>
+              <h3 class="white" style="font-weight: 300; font-size: 20px; text-align: left;"><i class="bi bi-dash-lg"></i>Departamento de Águas e Energia Elétrica</h3>
+              <!-- <p>A sala de situação é responsável pelo recursos hídricos do estado</p>
+              <P>Operando como central de monitoramento em tempo real, a Sala de Situação tem o objetivo de acompanhar condições hidrometeorológicas e ocorrência de eventos críticos, além de subsidiar a gestão de recursos hídricos</P> -->
              <a href="https://cth.daee.sp.gov.br/sibh/chuva_agora" target="_blank" class="btn btn-primary" data-mdb-ripple-init>SIBH - Chuva agora</a>
             </div>
           </div>
@@ -98,50 +101,128 @@
     </div>
   </section>
 
-  <div class="container pt-3">
-      <div class="row" >
-         <div class="col-lg-6">
-            <div id="demo" class="carousel slide" data-bs-ride="carousel" >
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-              <div class="carousel-inner rounded">
-                <div class="carousel-item active">
-                  <img src="assets/img/banner/visita.jpg" class="d-block" alt="..." style="height: 43vh;">
-                  <div class="carousel-caption rounded d-none d-md-block">
-                    <h5>Sala de Situação na Mídia</h5>
-                    <p>Entrevista do monitormento de chuvas pelo radar de Ponte Nova</p>
-                  </div>
-                </div>
-                <div class="carousel-item ">
-                  <img src="assets/img/banner/ssspdaee.jpg" class="d-block w-100" alt="..." style="height: 43vh;">
-                  <div class="carousel-caption rounded d-none d-md-block">
-                    <h5>Visite a Sala de Situação</h5>
-                    <p>Venha conhecer a sala de Situação de monitoramento de Recursos Hídricos</p>.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/img/banner/queimadas20240517.png" class="d-block w-100" alt="..." style="height: 43vh;">
-                  <div class="carousel-caption rounded d-none d-md-block">
-                    <h5>Focos QUEIMADAS</h5>
-                    <p>Referente do dia previsto 17/05/2024</p>.</p>
-                  </div>
-                </div>
-                
+ <!-- ======= NOTICIAS======= -->
+ <section id="noticias" class="noticias pt-5">
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-6">
+              <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div> 
-          </div>
+                <div class="carousel-inner rounded">
+                  <div class="carousel-item active">
+                    <img src="assets/img/banner/sssp.png" class="d-block w-100" alt="..." style="height: 43vh;">
+                    <div class="carousel-caption rounded d-none d-md-block">
+                      <h5>Sala de Situação na Mídia</h5>
+                      <p>Entrevista do monitormento de chuvas pelo radar de Ponte Nova</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item ">
+                    <img src="assets/img/banner/ssspdaee.jpg" class="d-block w-100" alt="..." style="height: 43vh;">
+                    <div class="carousel-caption rounded d-none d-md-block">
+                      <h5>Visite a Sala de Situação</h5>
+                      <p>Venha conhecer a sala de Situação de monitoramento de Recursos Hídricos</p>.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/img/banner/queimadas20240517.png" class="d-block w-100" alt="..." style="height: 43vh;">
+                    <div class="carousel-caption rounded d-none d-md-block">
+                      <h5>Focos QUEIMADAS</h5>
+                      <p>Referente do dia previsto 17/05/2024</p>.</p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div> 
+ 
+      </div>
+      <div class="col-lg-3">
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title" style="color: #042647; font-weight: bold;"><i class="bi bi-cloud-sun"></i>Relatos de Chuvas</h5>   
+            <p class="card-text">Relatos de chuvas por Municípios e Regiões de todo o estado de São Paulo, em tempo real direto de Satélite, Radares e Rede Telemétricos.</p>
+            <p class="card-text"> Regiões de todo o estado de São Paulo, em tempo real direto de Satélite, Radares e Rede Telemétricos.</p>
 
+            <!-- <p class="card-text"></p>  <strong>17/05/2024 ás 08:00 - </strong>Sem registros de chuvas no decorrer do período noturno e até o momento no estado de São Paulo.</p> -->
+
+            <!-- <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong> Relato completo.</strong></a> -->
+            <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong> <i class="bi bi-chevron-double-right"></i> Relatorios de Chuva</strong></a>
+
+           <p> <a href="#" class="card-link"><strong>  <i class="bi bi-chevron-double-right"></i> Cheias</strong></a></p>
+
+           <p> <a href="#" class="card-link"><strong>  <i class="bi bi-chevron-double-right"></i> Secas</strong></a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+
+        <div class="sidebar">
+        <!--  <h3 class="sidebar-title">Pesquisar</h3>
+          <div class="sidebar-item search-form">
+            <form action="">
+              <input type="text">
+              <button type="submit"><i class="bi bi-search"></i></button>
+            </form>
+          </div> 
+
+           <h3 class="sidebar-title">Categorias</h3>
+          <div class="sidebar-item categories">
+            <ul>
+              <li><a href="#">Alertas </a></li>
+              <li><a href="cth.daee.sp.gov.br/sibh" target="_blank">SIBH - Chuva agora </a></li>
+              <li><a href="#">Boletins <span>(14)</span></a></li>
+            </ul>
+          </div> -->
+
+          <h3 class="sidebar-title">Matérias Recentes</h3>
+          <div class="sidebar-item recent-posts">
+            <div class="post-item clearfix">
+              <img src="assets/img/noticias/BSantista.png" alt="">
+              <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Chuvas fortes na Baixada Santista</a></h4>
+              <time datetime="2020-01-01">Jun 04, ás 05:00</time>
+            </div>
+
+            <div class="post-item clearfix">
+              <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+              <h4><a href="#">Mudanças Climáticas </a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+
+            <div class="post-item clearfix">
+                <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+                <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
+                <time datetime="2020-01-01">Mai 17, 2024</time>
+              </div>
+
+              <!-- <div class="post-item clearfix">
+                <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+                <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
+                <time datetime="2020-01-01">Mai 17, 2024</time>
+              </div> -->
+           </div>
+        </div><!-- End sidebar -->
+
+      </div><!-- End blog sidebar -->
+
+    </div>
+
+  </div>
+</section><!-- End Blog Section -->
+
+
+  <div class="container ">
+      <!-- <div class="row" >
             <div class="col-md-6 card pt-3">
               <h5 class="p-3" style="font-weight: bold;"> Chuva no estado de São Paulo </h5><br/>
                 <p style="text-align: justify;">
@@ -155,7 +236,7 @@
                 </p>
               <div class="col-lg-4 align-self-center"><a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong> Relato completo.</strong></a> </div>
           </div>
-      </div>
+      </div> -->
 
     <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
@@ -186,8 +267,8 @@
   <div class="container">
     <div class="section-title" data-aos="fade-up">
       <div class="row">
-      <h1 style="font-weight: 600; font-size: 40px; color:#0466c8 ;">#SituaçãoAtual</h1>
-      <p class="pt-3 p-5">Dados de de referência de Pontos telemetricos</p>
+      <h1 style="font-weight: 900; font-size: 50px; color:#0466c8 ;">SITUAÇÃO ATUAL</h1>
+      <p class="pt-3 p-5 fst-italic">Acompanhe os alertas dos munícipios no momento atual, baseados em dados de postos telemétricos.  </p>
           <div class="card-group">
           
             <div class="card col-md-2">
@@ -238,10 +319,10 @@
             </div>
        
           </div>
-          <!-- <div class="card col-md-8">
+           <!-- <div class="card col-md-8">
             <h6>Chuvas por UGRHIs</h6>
             <canvas id="barChart"></canvas>
-        </div> -->
+        </div>  -->
     </div>
 </section>
     <!-- ======= produtos emitidos ======= -->
@@ -568,10 +649,10 @@
       </div>
     </section><!-- End Our Clients Section -->
     
-<script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-contrast.js"></script>
+<!-- <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-contrast.js"></script>
 <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-tamanho-fonte.js"></script>
 <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-scroll.js"></script>
-<script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-topo.js"></script>
+<script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-topo.js"></script> -->
 
   
     <!-- Scripts DASHBOARD-->
@@ -722,17 +803,14 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <!-- <script src="assets/vendor/waypoints/noframework.waypoints.js"></script> -->
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 
-      <script src="assets/js/jquery-1.11.1.min.js"></script>
-  <script src="assets/js/jquery-ui.js"></script>
-
-      
+  <script href="primeiro.js"></script>
 </body>
 
 </html>
