@@ -2564,7 +2564,7 @@ list-style: none;
 
 }
 .carousel-caption{
-  background:rgba(169, 169, 173, 0.9);
+  background:rgba(21, 21, 22, 0.9);
 }
 
 #map {
@@ -2573,4 +2573,16 @@ list-style: none;
 }
 img{
   border-radius: 5px;;
+}
+
+/*status de intensidade de chuva*/
+
+.fraca {
+  color: blue;
+}
+.moderada {
+  color: orange;
+}
+.forte {
+  color: red;
 }

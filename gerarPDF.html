@@ -1,0 +1,100 @@
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#content {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+</style>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Chuva</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="content">
+        <h1>Relatório de Chuva</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Precipitação (mm)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>01/01/2024</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>02/01/2024</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>03/01/2024</td>
+                    <td>15</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+    <button id="download-pdf">Baixar PDF</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Importa a biblioteca jsPDF
+import { jsPDF } from "jspdf";
+
+document.getElementById('download-pdf').addEventListener('click', function () {
+    // Cria uma nova instância do jsPDF
+    const doc = new jsPDF();
+
+    // Seleciona o conteúdo que queremos converter para PDF
+    const content = document.getElementById('content');
+
+    // Adiciona o conteúdo ao PDF
+    doc.html(content, {
+        callback: function (doc) {
+            // Salva o PDF com o nome especificado
+            doc.save('relatorio_chuva.pdf');
+        },
+        x: 10,
+        y: 10
+    });
+});
+
+    </script>
+</body>
+</html>
+
+</html>
