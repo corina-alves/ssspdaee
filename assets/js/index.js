@@ -8,6 +8,7 @@ window.onload = function(){
     // CarregaMap()
     // categorizarValores()
     carregaPrevisao()
+    // teste()
      
 }
 
@@ -112,7 +113,6 @@ function carregaPrevisao(){
 
     
 }
-
 
 
 
