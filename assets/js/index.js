@@ -98,10 +98,11 @@ function carregaPrevisao(){
             response.json().then(function(previsao){
                 console.log(previsao);
 
-                let climaAgora = previsao.currentConditions            
+                let climaAgora = previsao.currentConditions    
+                let data = previsao.days        
 
                 let previsaoTempo = document.createElement("div") 
-                previsaoTempo.innerHTML = "<div>"+latLng.name+"</div><div>"+climaAgora.datetime+"</div><div>"+climaAgora.temp +"</div>"
+                previsaoTempo.innerHTML = "<div class='card-group' style='border-solid 1px #F00;'>"+latLng.name+"</div><div>"+ "<div>"+data.description+"</div><div>"+climaAgora.datetime+"</div><div>"+climaAgora.temp +"</div>"
 
                 let prev = document.getElementById("previsao")
 
