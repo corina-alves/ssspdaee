@@ -114,8 +114,176 @@ function carregaPrevisao(){
     
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const salesData = [
+        { date: '2024-01-01', sales: 5.0 },
+        { date: '2024-02-01', sales: 12.0 },
+        { date: '2024-03-01', sales: 3.5 },
+        // Adicione mais dados aqui
+    ];
+
+    const top10Products = [
+        { sku: 'A01B25', description: 'Smartphone', revenue: 'R$ 23,310,245.00' },
+        { sku: 'A01B66', description: 'Adaptador de tomada', revenue: 'R$ 2,490,300.00' },
+        { sku: 'A01B79', description: 'HD Externo', revenue: 'R$ 2,275,544.78' },
+        // Adicione mais produtos aqui
+    ];
+
+    const ctx = document.getElementById('salesChart').getContext('2d');
+    const salesChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: salesData.map(data => data.date),
+            datasets: [{
+                label: 'Receita de Vendas (R$)',
+                data: salesData.map(data => data.sales),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2,
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'time',
+                    time: {
+                        unit: 'month'
+                    }
+                },
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const orderStatusData = {
+        labels: ['Atendido', 'Em aberto', 'Cancelado'],
+        datasets: [{
+            data: [247, 145, 21],
+            backgroundColor: ['#4CAF50', '#FFC107', '#F44336']
+        }]
+    };
+
+    const orderStatusCtx = document.getElementById('orderStatusChart').getContext('2d');
+    const orderStatusChart = new Chart(orderStatusCtx, {
+        type: 'doughnut',
+        data: orderStatusData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top'
+                }
+            }
+        }
+    });
+
+    top10Products.forEach(product => {
+        $('#rankingTable tbody').append(`
+            <tr>
+                <td>${product.sku}</td>
+                <td>${product.description}</td>
+                <td>${product.revenue}</td>
+            </tr>
+        `);
+    });
+
+    $('#rankingTable').DataTable();
+});
 
 
+//ddddddddddddddddd
+document.addEventListener('DOMContentLoaded', () => {
+    const rainfallData = [
+        { date: '2024-01-01', rainfall: 5.0 },
+        { date: '2024-01-02', rainfall: 12.0 },
+        { date: '2024-01-03', rainfall: 3.5 },
+        // Adicione mais dados aqui
+    ];
+
+    const top10Accumulated = rainfallData.sort((a, b) => b.rainfall - a.rainfall).slice(0, 10);
+
+    function classifyRainfall(value) {
+        if (value < 2.5) return 'Fraca';
+        if (value < 10) return 'Moderada';
+        return 'Forte';
+    }
+
+    const ctx = document.getElementById('rainfallChart').getContext('2d');
+    const rainfallChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: rainfallData.map(data => data.date),
+            datasets: [{
+                label: 'Acumulado de Chuvas (mm)',
+                data: rainfallData.map(data => data.rainfall),
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2,
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    type: 'time',
+                    time: {
+                        unit: 'day'
+                    }
+                },
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const rainStatusData = {
+        labels: ['Fraca', 'Moderada', 'Forte'],
+        datasets: [{
+            data: [
+                rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Fraca').length,
+                rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Moderada').length,
+                rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Forte').length
+            ],
+            backgroundColor: ['#4CAF50', '#FFC107', '#F44336']
+        }]
+    };
+
+    const rainStatusCtx = document.getElementById('rainStatusChart').getContext('2d');
+    const rainStatusChart = new Chart(rainStatusCtx, {
+        type: 'doughnut',
+        data: rainStatusData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top'
+                }
+            }
+        }
+    });
+
+    top10Accumulated.forEach(data => {
+        $('#rankingTable tbody').append(`
+            <tr>
+                <td>${data.date}</td>
+                <td>${data.rainfall}</td>
+                <td>${classifyRainfall(data.rainfall)}</td>
+            </tr>
+        `);
+    });
+
+    $('#rankingTable').DataTable();
+
+    const totalRainfall = rainfallData.reduce((sum, data) => sum + data.rainfall, 0);
+    const lightRain = rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Fraca').reduce((sum, data) => sum + data.rainfall, 0);
+    const moderateRain = rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Moderada').reduce((sum, data) => sum + data.rainfall, 0);
+    const heavyRain = rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Forte').reduce((sum, data) => sum + data.rainfall, 0);
+
+    document.getElementById('totalRainfall').
 
 
 
