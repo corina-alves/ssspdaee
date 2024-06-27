@@ -20,7 +20,7 @@ const loadHeader = () =>{
               '<li><a href="sobre.html">Sobre</a></li>'+
               '<li><a href="salas-de-situacao.html">Salas de Situação</a></li>'+
               '<li><a href="monitoramento.html">Monitoramento</a></li>'+
-              '<li><a href="equipe.html">Equipe</a></li>'+
+              // '<li><a href="equipe.html">Equipe</a></li>'+
               '<li><a href="galeria.html"> Galeria</a></li>'+
             '</ul>'+
           '</li>'+

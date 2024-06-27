@@ -2587,3 +2587,53 @@ img{
   color: red;
 }
 
+/*-- EFEITO ELASTICO HOVER---*/ 
+
+.elastic-text {
+    position: relative;
+    display: inline-block;
+    padding: 0px 0px;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.elastic-text::before, .elastic-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.elastic-text::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.elastic-text::after {
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.elastic-text:hover::before, .elastic-text:hover::after {
+    width: 100%;
+    transition: all 0.7s cubic-bezier(0.25, 0.1, 0.25, 1.5);
+}
+
+.hidro:hover{
+  background:#c8dceb;
+  /* border: solid 2px #007bff; */
+}
+.hidro{
+  border: none;
+  background: #e6ecf0;
+}
+
+h2{
+  font-weight: 900; font-size: 40px;
+}

@@ -9,7 +9,6 @@ window.onload = function(){
     // categorizarValores()
     carregaPrevisao()
     // teste()
-     
 }
 
 function carregarTabelaDado(){
