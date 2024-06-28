@@ -2634,6 +2634,18 @@ img{
   background: #e6ecf0;
 }
 
-h2{
-  font-weight: 900; font-size: 40px;
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
 }
