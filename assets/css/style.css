@@ -472,12 +472,12 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
   padding-bottom: 0;
   font-family: "Poppins", sans-serif;
-  color: #646c55;
+  color: #1a1b19;
 }
 
 .section-title p {
@@ -2022,11 +2022,14 @@ swiper-slide
 }
 
 .noticias .sidebar {
-  padding: 30px;
-  margin: 0 0 60px 20px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 17px;
+  /* margin: 0 0 20px 20px;*/
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
 }
-
+.post-item:hover{
+  background:#e5e7e9;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+}
 .noticias .sidebar .sidebar-title {
   font-size: 20px;
   font-weight: 700;
@@ -2109,13 +2112,9 @@ swiper-slide
 
 .post-item{
   box-shadow: 0px 0 15px rgba(0, 0, 0, 0.08);
-  padding: 2px;
+  padding: 20px;
 }
-.post-item .clearfix{
-  display: flex;
- 
-  
-}
+
 .noticias .sidebar .recent-posts img {
   width: 80px;
   float: left;
@@ -2625,27 +2624,66 @@ img{
     transition: all 0.7s cubic-bezier(0.25, 0.1, 0.25, 1.5);
 }
 
-.hidro:hover{
-  background:#c8dceb;
-  /* border: solid 2px #007bff; */
-}
+
 .hidro{
   border: none;
   background: #e6ecf0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); 
 }
 
+.hidro:hover{
+   background:#c8dceb;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
+}
 
-.cards {
+/* .cards {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
-}
+} */
 
 .card {
   background-color: #f9f9f9;
   padding: 20px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   text-align: center;
   flex: 1;
-  margin: 0 10px;
+  margin: 0px 10px;
+}
+.totalChuva{
+  background: rgb(129, 125, 125);
+  color: #FFF;
+}
+.totalChuva h2{
+  color: #FFF;
+}
+.chuvaFraca{
+  background: rgb(43, 149, 230);
+  color: #f0f7e9;
+}
+.chuvaFraca h2{
+  color: #FFF;
+}
+.chuvaForte{
+  background: rgba(168, 13, 13, 0.822);
+  color: #f0f7e9;
+}
+.chuvaForte h2{
+  color: #FFF;
+}
+.chuvaModerada{
+  background: rgb(241, 154, 72);
+  color: #f0f7e9;
+}
+.chuvaModerada h2{
+color: #FFF;
+}
+.detalhes{
+  font-weight: bold;
+  padding: 20px;
+  background-image: linear-gradient(160deg, #232525 0%, #a0a0a0 100%);
+  color: #FFF;
+}
+.detalhes button{
+  color: #FFF;
 }

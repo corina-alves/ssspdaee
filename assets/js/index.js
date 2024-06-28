@@ -2,7 +2,7 @@
 
 window.onload = function(){
   
-    // carregarTabelaDado()
+    //carregarTabelaDado()
     // carregarRelatos()
     //  carregarRelatosModal()
     // CarregaMap()
@@ -16,32 +16,24 @@ function carregarTabelaDado(){
          response.json().then(function(dados){
              console.log(dados);
              let medicoes = dados.json
-
             //ordenar e cortar as  maiores
              let maiores = medicoes.sort((a,b)=>b.value-a.value).slice(0,8)
-
             //intancia tabela
             let tabela = document.getElementById("tabela_eventos")
-            
             //instancia corpo tabela
            let tbody = tabela.getElementsByTagName("tbody")[0]
-
              //apaga os dados da tabela
             tbody.innerHTML = null
-            
             //para cada medicao..
              maiores.forEach(maior => {
-
                  //criar linha tabela
                 let tr = document.createElement("tr")
-
                 //preencher linha tabela
                 tr.innerHTML = "<td>"+maior.city+
                 "</td><td>"+maior.value.toFixed(1)+
                 "</td><td>"+maior.station_prefix_id+
                 "</td><td>"+maior.value.toFixed(1)
                 +"</td>"
-
                 //append = anexar linha no corpo da tabela
                  tbody.appendChild(tr)
             });
@@ -53,12 +45,12 @@ function carregarTabelaDado(){
 
                  tbody.appendChild(tr)
              }
-
-      
         })
       })
    }
+function carregaChuva{
 
+}
 
  function carregarRelatos(){
     
@@ -115,99 +107,6 @@ function carregaPrevisao(){
 }
 
 
-//ddddddddddddddddd
-// document.addEventListener('DOMContentLoaded', () => {
-//     const rainfallData = [
-//         { date: '2024-01-01', rainfall: 5.0 },
-//         { date: '2024-01-02', rainfall: 12.0 },
-//         { date: '2024-01-03', rainfall: 3.5 },
-//         // Adicione mais dados aqui
-//     ];
-
-//     const top10Accumulated = rainfallData.sort((a, b) => b.rainfall - a.rainfall).slice(0, 10);
-
-//     function classifyRainfall(value) {
-//         if (value < 2.5) return 'Fraca';
-//         if (value < 10) return 'Moderada';
-//         return 'Forte';
-//     }
-
-//     const ctx = document.getElementById('rainfallChart').getContext('2d');
-//     const rainfallChart = new Chart(ctx, {
-//         type: 'line',
-//         data: {
-//             labels: rainfallData.map(data => data.date),
-//             datasets: [{
-//                 label: 'Acumulado de Chuvas (mm)',
-//                 data: rainfallData.map(data => data.rainfall),
-//                 borderColor: 'rgba(75, 192, 192, 1)',
-//                 borderWidth: 2,
-//                 fill: false
-//             }]
-//         },
-//         options: {
-//             responsive: true,
-//             scales: {
-//                 x: {
-//                     type: 'time',
-//                     time: {
-//                         unit: 'day'
-//                     }
-//                 },
-//                 y: {
-//                     beginAtZero: true
-//                 }
-//             }
-//         }
-//     });
-
-//     const rainStatusData = {
-//         labels: ['Fraca', 'Moderada', 'Forte'],
-//         datasets: [{
-//             data: [
-//                 rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Fraca').length,
-//                 rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Moderada').length,
-//                 rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Forte').length
-//             ],
-//             backgroundColor: ['#4CAF50', '#FFC107', '#F44336']
-//         }]
-//     };
-
-//     const rainStatusCtx = document.getElementById('rainStatusChart').getContext('2d');
-//     const rainStatusChart = new Chart(rainStatusCtx, {
-//         type: 'doughnut',
-//         data: rainStatusData,
-//         options: {
-//             responsive: true,
-//             plugins: {
-//                 legend: {
-//                     position: 'top'
-//                 }
-//             }
-//         }
-//     });
-
-//     top10Accumulated.forEach(data => {
-//         $('#rankingTable tbody').append(`
-//             <tr>
-//                 <td>${data.date}</td>
-//                 <td>${data.rainfall}</td>
-//                 <td>${classifyRainfall(data.rainfall)}</td>
-//             </tr>
-//         `);
-//     });
-
-//     $('#rankingTable').DataTable();
-
-//     const totalRainfall = rainfallData.reduce((sum, data) => sum + data.rainfall, 0);
-//     const lightRain = rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Fraca').reduce((sum, data) => sum + data.rainfall, 0);
-//     const moderateRain = rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Moderada').reduce((sum, data) => sum + data.rainfall, 0);
-//     const heavyRain = rainfallData.filter(d => classifyRainfall(d.rainfall) === 'Forte').reduce((sum, data) => sum + data.rainfall, 0);
-
-//     document.getElementById('totalRainfall')
-
-
-
 // function CarregaMap(){
 //     // Inicializar o mapa
 //     var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
@@ -224,10 +123,10 @@ function carregaPrevisao(){
 
 
 
-// Array de valores para categorizar e colorir
+// // Array de valores para categorizar e colorir
 // const valores = [0, 2, 6, 11, 3, 8, 15];
 
-// // Função para categorizar e colorir os valores
+// // // Função para categorizar e colorir os valores
 // function categorizarValores(valores) {
 //     const tabela = document.getElementById('valores');
     

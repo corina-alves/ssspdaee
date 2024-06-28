@@ -64,7 +64,7 @@
  <section id="noticias" class="noticias pt-5">
   <div class="container" data-aos="fade-up">
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-8">
               <div id="demo" class="carousel slide" data-bs-ride="carousel" >
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -73,7 +73,7 @@
               </div>
                 <div class="carousel-inner rounded">
                   <div class="carousel-item active">
-                    <img src="assets/img/mapa/IGC_UGRHI_2014.jpg" class="d-block w-100" alt="..." style="height: 43vh;">
+                    <img src="assets/img/mapa/IGC_UGRHI_2014.jpg" class="d-block w-100" alt="..." style="height: 55vh;">
                     <!-- <div class="carousel-caption rounded d-none d-md-block">
                       <h5>Sala de Situação na Mídia</h5>
                       <p>Entrevista do monitormento de chuvas pelo radar de Ponte Nova</p>
@@ -87,7 +87,7 @@
                     </div>
                   </div> -->
                   <div class="carousel-item">
-                    <img src="assets/img/mapa/UGRHIs.png" class="d-block w-100" alt="..." style="height: 43vh;">
+                    <img src="assets/img/mapa/UGRHIs.png" class="d-block w-100" alt="..." style="height: 55vh;">
                     <!-- <div class="carousel-caption rounded d-none d-md-block">
                       <h5>Focos QUEIMADAS</h5>
                       <p>Referente do dia previsto 17/05/2024</p>.</p>
@@ -104,9 +104,8 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div> 
- 
       </div>
-      <div class="col-lg-3">
+      <!-- <div class="col-lg-3">
         <div class="card">
           <div class="card-body">
             <h6 class="card-title" style="color: #042647; font-weight: bold;"><i class="bi bi-cloud-sun"></i> Relatos de <strong style="font-weight: 900; font-size:30px;;">Chuvas</strong></h6>   
@@ -123,26 +122,30 @@
            <p> <a href="#" class="card-link"><strong>  <i class="bi bi-chevron-double-right"></i> Secas</strong></a></p>
           </div>
         </div>
-      </div>
-      <div class="col-lg-3">
+      </div> -->
+      <div class="col-lg-4">
 
         <div class="sidebar">
 
           <h3 class="sidebar-title">Matérias Recentes</h3>
           <div class="sidebar-item recent-posts">
-            <div class="post-item clearfix">
+            <div class="post-item">
               <img src="assets/img/noticias/BSantista.png" alt="">
               <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Chuvas fortes na Baixada Santista</a></h4>
               <time datetime="2020-01-01">Jun 04, ás 05:00</time>
             </div>
 
-            <div class="post-item clearfix">
+            <div class="post-item">
               <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
               <h4><a href="#">Mudanças Climáticas </a></h4>
               <time datetime="2020-01-01">Jan 1, 2020</time>
             </div>
-
-            <div class="post-item clearfix">
+            <div class="post-item">
+              <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+              <h4><a href="#">Mudanças Climáticas </a></h4>
+              <time datetime="2020-01-01">Jan 1, 2020</time>
+            </div>
+            <div class="post-item">
                 <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
                 <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
                 <time datetime="2020-01-01">Mai 17, 2024</time>
@@ -157,30 +160,6 @@
   </div>
 </section>
 
-
-  <div class="container ">
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-      <div class="modal-dialog " >
-        <div class="container modal-content " style="width:700px;">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Relatos SSSP</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body" id="relatosModal">
-            <!-- <P><strong>16/05/2024 08:00 - </strong>
-            Sem chuvas significativas até o momento no Estado de São Paulo.</P> -->
-        
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  
     <!-- <div id="valores">
       Os valores serão inseridos aqui pelo JavaScript 
     </div> -->
@@ -190,26 +169,28 @@
   <div class="container">
     <div class="section-title" data-aos="fade-up">
       <div class="row">
-      <h1 style="font-weight: 900; font-size: 30px; color:#0466c8 ;">SITUAÇÃO ATUAL</h1>
-      <p class="pt-3 p-5 fst-italic">Acompanhe os alertas dos munícipios no momento atual, baseados em dados de postos telemétricos.  </p>
-      <section class="cards">
-        <div class="card">
+    
+      <h1 style="font-weight: bold;">Relatório de chuva diário</h1>
+      <p class="pt-3 p-3 fst-italic">Acompanhe os alertas dos munícipios no momento atual, baseados em dados de postos telemétricos.  </p>
+      <row class="card-group p-3">
+        <div class=" card  totalChuva">
             <h2 style="font-size: 2em;">Total de Chuvas</h2>
             <p id="totalChuva">0 mm</p>
         </div>
-        <div class="card">
+        <div class=" card chuvaFraca">
             <h2 style="font-size: 2em;">Chuvas Fracas</h2>
             <p id="chuvaFraca">0 mm</p>
         </div>
-        <div class="card">
+        <div class=" card chuvaModerada">
             <h2 style="font-size: 2em;">Chuvas Moderadas</h2>
             <p id="chuvaModerada">0 mm</p>
         </div>
-        <div class="card">
+        <div class="card chuvaForte">
             <h2 style="font-size: 2em;">Chuvas Fortes</h2>
             <p id="chuvaForte">0 mm</p>
         </div>
-    </section>    
+      
+      </row>    
       <div class="card-group">
             <div class="card col-md-2" id="map">
               <div id="map"></div>
@@ -264,49 +245,32 @@
            <!-- <div class="card col-md-8">
             <h6>Chuvas por UGRHIs</h6>
             <canvas id="barChart"></canvas>
-        </div>  -->
-       <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-               
-                      <div class="container">
-                        <!-- <header>
-                            <h1>Relatório de Monitoramento de Chuvas</h1>
-                            <div class="filters">
-                                <label for="startDate">Data Início:</label>
-                                <input type="date" id="startDate">
-                                <label for="endDate">Data Fim:</label>
-                                <input type="date" id="endDate">
-                                <button id="filterButton">Filtrar</button>
-                            </div>
-                        </header> 
-                 
-                        <section class="charts">
-                            <div class="chart">
-                                <h2>Acumulado de Chuvas por Período</h2>
-                                <canvas id="rainfallChart"></canvas>
-                            </div>
-                            <div class="chart">
-                                <h2>Situação de Chuvas</h2>
-                                <canvas id="rainStatusChart"></canvas>
-                            </div>
-                        </section>
-                         <section class="ranking">
-                            <h2 style="font-size: 1em;">Top 10 Maiores Acumulados de Chuvas em 24h</h2>
-                            <table id="rankingTable" class="display">
-                                <thead>
-                                    <tr>
-                                        <th>Data</th>
-                                        <th>Acumulado (mm)</th>
-                                        <th>Intensidade</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                   Dados inseridos pelo JavaScript 
-                                </tbody>
-                            </table>
-                        </section> -->
-                    
-                    </div>
+        </div>   -->
+      </div>
+      <div class="col detalhes text-center">Para mais detalhes clique aqui 
+        <a href="boletins/Boletim_SSSP_20240628.pdf" target="_blank" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-outline-primary">Relatório</a></div>
+      <div class="container ">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalRelatorio" aria-hidden="true" >
+          <div class="modal-dialog " >
+            <div class="container modal-content " style="width:700px;">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalRelatorio">Relatos SSSP</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="relatosModal">
+                <!-- <P><strong>16/05/2024 08:00 - </strong>
+                Sem chuvas significativas até o momento no Estado de São Paulo.</P> -->
+                <object type="application/pdf" data="boletins/Boletim_SSSP_20240628.pdf" width="100%" height="500" style="height: 85vh;"></object>
+              </div>
+    
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
 
 <section id="Atualidade" class="produtos pt-3" style="margin-top: 10px;">
@@ -334,16 +298,13 @@
               <li class="elastic-text p-3"><a href="https://terrabrasilis.dpi.inpe.br/queimadas/situacao-atual/estatisticas/estatisticas_estados/" target="_blank"><i class="bi bi-indent"></i> Monitoramento dos Focos Ativos por Estado</a></li>
               <li class="elastic-text p-3"><a href="https://mananciais.sabesp.com.br/Situacao" target="_blank"><i class="bi bi-indent"></i> Nível dos Reservatórios RMSP - SABESP</a></li>
               <li class="elastic-text p-3"><a href="https://www.ons.org.br/paginas/energia-agora/reservatorios" target="_blank"><i class="bi bi-indent"></i> Reservatórios Geração de Energia - ONS</a></li>
-             
             </ul>
           </div>
         </div>
       </div>
    </div>
   </div>
-
-
-    </section>
+ </section>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -370,7 +331,6 @@
        
             </div><hr style="size: 10px; width: 70%; margin-left: 18%; border: black 2px solid;">
             <ul class="p-3"style="font-weight:600;">
-              <li class="elastic-text p-3"><a href=""><i class="bi bi-indent"></i> Defesa Civil do estado de São Paulo</a></li>
               <li class="elastic-text p-3"><a href=""><i class="bi bi-indent"></i> Defesa Civil do estado de São Paulo</a></li>
             </ul>
           </div>
