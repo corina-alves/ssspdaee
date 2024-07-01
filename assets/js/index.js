@@ -7,7 +7,7 @@ window.onload = function(){
     //  carregarRelatosModal()
     // CarregaMap()
     // categorizarValores()
-     //carregaPrevisao()
+    carregaPrevisao()
     // teste()
 }
 
