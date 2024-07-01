@@ -176,7 +176,7 @@ function carregaPrevisao() {
                 previsaoTempo.innerHTML = `
                     <div class='row'>
                         <div class='col'>
-                            <strong> ${latLng.name} </strong
+                            <strong> ${latLng.name} </strong><br/>
                             ${climaAgora.temp} °C <br/>
                             Chuva: ${chuva} mm
                         </div>
