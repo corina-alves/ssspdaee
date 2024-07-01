@@ -7,7 +7,7 @@ window.onload = function(){
     //  carregarRelatosModal()
     // CarregaMap()
     // categorizarValores()
-    carregaPrevisao()
+    //carregaPrevisao()
     // teste()
 }
 
@@ -62,7 +62,6 @@ function carregarTabelaDado() {
 
 
  function carregarRelatos(){
-    
     fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/control_rooms/1/get_reports?limit=20&offset=0").then(function(response){
          response.json().then(function(relatos){
             // let relatos = []
@@ -172,6 +171,7 @@ function carregaPrevisao() {
                  });
                 let previsaoTempo = document.createElement("div");
                 previsaoTempo.classList.add('card');
+                previsaoTempo.classList.add('col-lg-4');
                 previsaoTempo.classList.add('cardPrev');
                 previsaoTempo.innerHTML = `
                     <div class='row'>
