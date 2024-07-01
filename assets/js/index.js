@@ -7,7 +7,7 @@ window.onload = function(){
     //  carregarRelatosModal()
     // CarregaMap()
     // categorizarValores()
-    // carregaPrevisao()
+     carregaPrevisao()
     // teste()
 }
 
@@ -172,11 +172,11 @@ function carregaPrevisao() {
                  });
                 let previsaoTempo = document.createElement("div");
                 previsaoTempo.classList.add('card');
+                previsaoTempo.classList.add('cardPrev');
                 previsaoTempo.innerHTML = `
                     <div class='row'>
                         <div class='col'>
-                            ${formattedDate} <br/>
-                           <strong> ${latLng.name} </strong><br/>
+                            <strong> ${latLng.name} </strong
                             ${climaAgora.temp} °C <br/>
                             Chuva: ${chuva} mm
                         </div>
