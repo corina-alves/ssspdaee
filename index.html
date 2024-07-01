@@ -26,6 +26,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
     <!-- Estilos CSS  dashboard-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+  
   <!-- =======================================================
   * Template Name: Serenity - v4.11.0
   * Template URL: https://bootstrapmade.com/serenity-bootstrap-corporate-template/
@@ -37,166 +38,177 @@
 <body>
 
   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <div class="logo">
-        <h1 class="text-light"><a href="index.html"><img src="assets/img/logo/daee_up.png"></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="active" href="index.html">Home</a></li>
-          <li><a href="noticias.html">Notícias</a></li>
-          <li class="dropdown"><a href="#"><span>Sala de Situação</span> <i class="bi bi-chevron-down"></i></a>
-
-            <ul>
-              <li><a href="sobre.html">Sobre</a></li>
-              <li><a href="equipe.html">Equipe</a></li>
-              <li><a href="galeria.html"> Galeria</a></li>
-              <!-- <li><a href="radares.html"> Radares</a></li> -->
-            </ul>
-          </li>
-
-          <li class="dropdown"><a href="#"><span>Boletins</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target="_black">Boletim Diário</a></li>
-              <li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFlnw" target="_black">Boletim Mensal</a></li>
-              <li><a href="https://docs.google.com/document/d/11qxQPqNc1RW7mMYw_uXdw-Gmh7lr8UUbaH2AnG6k6g0/edit#heading=h.7vzq6ltz512f" target="_black">Último Boletim</a></li>
-            </ul>
-          </li>
-          <li><a href="postos.html">Estações</a></li>
-          <li><a href="">SIBH - Chuvas Agora</a></li>
-          <!-- <li><a href="">Chuvas diárias Alto Tietê/Cubatão</a></li> -->
-          <li><a href="">Últimos Alertas</a></li>
-        
-
-          <!--li><a class="getstarted" href="about.html">Login</a></li-->
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-    </div>
+   
   </header><!-- End Header -->
 
 <section id="banner" class="banner">
     <div class="bg-color">
       <div class="container">
         <div class="row">
-          <div class="banner-info">
-            <div class="banner-text text-center" style="color:#FFF;">
-              <h1 class="white">SALA DE SITUAÇÃO DO ESTADO DE SÃO PAULO</h1>
-              <p>A sala de situação é responsável pelo recursos hídricos do estado</p>
-              <P>Operando como central de monitoramento em tempo real, a Sala de Situação tem o objetivo de acompanhar condições hidrometeorológicas e ocorrência de eventos críticos, além de subsidiar a gestão de recursos hídricos</P>
-             <a href="https://cth.daee.sp.gov.br/sibh/chuva_agora" target="_blank" class="btn btn-primary" data-mdb-ripple-init>SIBH - Chuva agora</a>
+         <div class="banner-info">
+          <div class="card-group">
+            <div class="col-lg-6 banner-text text-center" style="color:#FFF;">
+              <h1 class="white" style="font-weight: 900; font-size: 100px; text-align: left;">SS-SP</h1>
+              <h2 class="white" style="font-weight: 300; font-size: 40px; text-align: left;">Sala de Situação de São Paulo</h2>
+              <h3 class="white" style="font-weight: 300; font-size: 20px; text-align: left;"><i class="bi bi-dash-lg"></i>Departamento de Águas e Energia Elétrica</h3>
             </div>
-          </div>
+              <!-- <p>A sala de situação é responsável pelo recursos hídricos do estado</p>
+              <P>Operando como central de monitoramento em tempo real, a Sala de Situação tem o objetivo de acompanhar condições hidrometeorológicas e ocorrência de eventos críticos, além de subsidiar a gestão de recursos hídricos</P> -->
+           <div class="col-lg-6 p-5"> 
+           <center> <a href="https://cth.daee.sp.gov.br/sibh/chuva_agora" target="_blank" class="btn btn-outline-primary p-2" data-mdb-ripple-init>SIBH - Chuva agora</a></center>
+            </div>
+          </div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="container pt-3">
-      <div class="row" >
-         <div class="col-lg-6">
-            <div id="demo" class="carousel slide" data-bs-ride="carousel" >
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-              <div class="carousel-inner rounded">
-                <div class="carousel-item active">
-                  <img src="assets/img/visita.jpg" class="d-block" alt="..." style="height: 43vh;">
-                  <div class="carousel-caption rounded d-none d-md-block">
-                    <h5>Sala de Situação na Mídia</h5>
-                    <p>Entrevista do monitormento de chuvas pelo radar de Ponte Nova</p>
-                  </div>
-                </div>
-                <div class="carousel-item ">
-                  <img src="assets/img/ssspdaee.jpg" class="d-block w-100" alt="..." style="height: 43vh;">
-                  <div class="carousel-caption rounded d-none d-md-block">
-                    <h5>Visite a Sala de Situação</h5>
-                    <p>Venha conhecer a sala de Situação de monitoramento de Recursos Hídricos</p>.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/img/queimadas20240517.png" class="d-block w-100" alt="..." style="height: 43vh;">
-                  <div class="carousel-caption rounded d-none d-md-block">
-                    <h5>Focos QUEIMADAS</h5>
-                    <p>Referente do dia previsto 17/05/2024</p>.</p>
-                  </div>
-                </div>
-                
+ <!-- ======= carousel ======= -->
+ <section id="noticias" class="noticias pt-5">
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-8">
+              <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div> 
+                <div class="carousel-inner rounded">
+                  <div class="carousel-item active">
+                    <img src="assets/img/mapa/IGC_UGRHI_2014.jpg" class="d-block w-100" alt="..." style="height: 55vh;">
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="assets/img/mapa/UGRHIs.png" class="d-block w-100" alt="..." style="height: 55vh;">
+                    <!-- <div class="carousel-caption rounded d-none d-md-block">
+                      <h5>Focos QUEIMADAS</h5>
+                      <p>Referente do dia previsto 17/05/2024</p>.</p>
+                    </div> -->
+                  </div>
+                  
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div> 
+      </div>
+      <!-- <div class="col-lg-3">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title" style="color: #042647; font-weight: bold;"><i class="bi bi-cloud-sun"></i> Relatos de <strong style="font-weight: 900; font-size:30px;;">Chuvas</strong></h6>   
+           <div id="card_relatos">
+            <div class="text-center">
+              <div class="spinner-border text-info" role="status">
+                <span class="visually-hidden">Carregando Relato...</span>
+              </div>
+            </div>
+            </div>
+
+            <a href="#" class="card-link" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong> <i class="bi bi-chevron-double-right"></i> Relatorios de Chuva</strong></a>
+
+           <p> <a href="#" class="card-link"><strong>  <i class="bi bi-chevron-double-right"></i> Secas</strong></a></p>
           </div>
+        </div>
+      </div> -->
+      <div class="col-lg-4">
 
-            <div class="col-md-6 card pt-3">
-              <h5 class="p-3" style="font-weight: bold;"> Chuva no estado de São Paulo </h5><br/>
-                <p style="text-align: justify;">
-                <strong>17/05/2024 ás 08:00 - </strong>Sem registros de chuvas no decorrer do período noturno e até o momento no estado de São Paulo.
-                </p>
-                <p style="text-align: justify;">
-                  <strong>17/05/2024 ás 08:00 - </strong>Sem registros de chuvas até o momento no estado de São Paulo.
-                </p>
-                <p style="text-align: justify;">
-                    <strong>17/05/2024 ás 08:00 - </strong>Sem registros de chuvas até o momento.
-                </p>
-              <div class="col-lg-4 align-self-center"><a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><strong> Relato completo.</strong></a> </div>
-          </div>
+        <div class="sidebar">
+
+          <h3 class="sidebar-title">Matérias Recentes</h3>
+          <div class="sidebar-item recent-posts">
+            <div class="post-item">
+              <img src="assets/img/noticias/BSantista.png" alt="">
+              <h4><a href="#" >Sem registros de chuvas no estado de SP</a></h4>
+              <time datetime="2020-01-01">Jun 29, ás 08:00</time>
+            </div>
+
+            <div class="post-item">
+              <!-- <img src="assets/img/noticias/rio_piracicaba.jpeg" alt=""> -->
+              <h4><a href="http://www.daee.sp.gov.br/site/planodiretordemacrometropole/" target="_blank">Segurança hídrica com destaque para abastecimento público até o horizonte de 2035</a></h4>
+              <!-- <time datetime="2020-01-01">Jan 1, 2020</time> -->
+            </div>
+            <div class="post-item">
+              <img src="assets/img/posts/PracadoBombPiscinao.jpg" alt="">
+              <h4><a href="http://www.daee.sp.gov.br/site/piscinoes/" target="_blank">Reservatórios de contenção de cheias para auxílio no combate a enchentes </a></h4>
+              <time datetime="2020-01-01">maio, 2024</time>
+            </div>
+            <div class="post-item">
+                <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+                <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
+                <time datetime="2020-01-01">Mai 17, 2024</time>
+              </div>
+           </div>
+        </div>
+
       </div>
 
-    <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-  <div class="modal-dialog " >
-    <div class="container modal-content " style="width:700px;">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Relatos SSSP</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <P><strong>16/05/2024 08:00 - </strong>
-        Sem chuvas significativas até o momento no Estado de São Paulo.</P>
-        <P><strong>16/05/2024 22:00 - </strong>
-        Sem chuvas até o momento no Estado de São Paulo.</P>
-        <P><strong>17/05/2024 08:00 - </strong>
-        Sem registros de chuvas no decorrer do período noturno e até o momento no estado de São Paulo.</P>
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
-      </div>
     </div>
+
   </div>
-</div>
-</div>
+</section>
+
+    <!-- <div id="valores">
+      Os valores serão inseridos aqui pelo JavaScript 
+    </div> -->
+
 
 <section id="situacaoAtual" class="situacaoAtual section-bg p-5 pt-4" style="margin-top: 10px;">
   <div class="container">
     <div class="section-title" data-aos="fade-up">
       <div class="row">
-      <h3>Situação Atual</h3>
-      <p class="pt-3 p-5">Dados de de referência de Pontos telemetricos</p>
-          <div class="card-group">
+      <h1 style="font-weight: bold;">Relatório de chuva diário</h1>
+      <p class="pt-3 p-3 fst-italic">Acompanhe os alertas dos munícipios no momento atual, baseados em dados de postos telemétricos.  </p>
+      <row class="card-group p-3">
+        <div class=" card  semChuva">
+            <h2 style="font-size: 2em;">Sem Chuvas</h2>
+            <p id="semChuva">0 mm</p>
+        </div>
+       
+        <div class=" card chuvaFraca">
+            <h2 style="font-size: 2em;">Chuvas Fracas</h2>
+            <p id="chuvaFraca">0 mm</p>
+        </div>
+        <div class=" card chuvaModerada">
+            <h2 style="font-size: 2em;">Chuvas Moderadas</h2>
+            <p id="chuvaModerada">0 mm</p>
+        </div>
+        <div class="card chuvaForte">
+            <h2 style="font-size: 2em;">Chuvas Fortes</h2>
+            <p id="chuvaForte">0 mm</p>
+        </div>
+      
+      </row>    
+      <div class="card-group">
+            <div class="card col-md-2" id="map">
+              <div id="map"></div>
+              <!-- Scripts -->
+              <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+              <script>
+                  // Inicializar o mapa
+                  var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
           
-            <div class="card col-md-2">
-              <img src="assets/img/interpolacao_dados.jpeg">
+                  // Adicionar a camada de mapa
+                  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  }).addTo(map);
+          
+                  // Adicionar marcador
+                   var marker = L.marker([-23.5505, -46.6333]).addTo(map);
+                   marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
+              </script>
+              <!-- <img src="assets/img/interpolacao_dados.jpeg"> -->
                 <!-- <h6>Entidade de monitoramento</h6>
                 <canvas id="pieChart"></canvas> script abaixo -->
             </div>
             <div class="card col-md-6">
                 <h6 style="font-weight: bold;">Os Municípios com maiores volumes de chuvas</h6>
-                <table class="table table-striped">
+                <table id="tabela_eventos" class="table table-striped">
                     <thead>
                         <tr>
                             <th>Municípios</th>
@@ -206,43 +218,144 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Bertioga</td>
-                            <td>23.4</td>
-                            <td>90.4</td>
-                            <td>100</td>
+                      <div class="text-center" >
+                        <tr class="text-center">
+                          <td colspan="4" id="valores">
+                            <div class="text-center">
+                              <div class="spinner-border text-info" role="status">
+                                <span class="visually-hidden">Carregando dados...</span>
+                              </div>
+                            </div>
+                          </td>
                         </tr>
-                        <tr>
-                          <td>Bertioga</td>
-                          <td>23.4</td>
-                          <td>90.4</td>
-                          <td>100</td>
-                      </tr>
-                        <tr>
-                            <td>Ribeirão Pires</td>
-                            <td>11.8</td>
-                            <td>15.8</td>
-                            <td>20</td>
-                        </tr>
-                        <tr>
-                            <td>São Sebastião</td>
-                            <td>9.6</td>
-                            <td>116.9</td>
-                            <td>118.3</td>
-                        </tr>
-
+                      </div>
                     </tbody>
                 </table>
               </div>
             </div>
        
           </div>
-          <!-- <div class="card col-md-8">
+           <!-- <div class="card col-md-8">
             <h6>Chuvas por UGRHIs</h6>
             <canvas id="barChart"></canvas>
-        </div> -->
+        </div>   -->
+      </div>
+      <div class="col detalhes text-center">Boletim Diário da Sala de Situação de Monitoramento de Recursos Hídricos do estado de São Paulo
+        <a href="boletins/Boletim_SSSP_20240628.pdf" target="_blank" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" class="btn btn-warning">Relatório</a></div>
+      <div class="container ">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalRelatorio" aria-hidden="true" >
+          <div class="modal-dialog " >
+            <div class="container modal-content " style="width: 800px;;">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalRelatorio">Boletim Diário da Sala de Situação de Monitoramento de Recursos Hídricos do estado de São Paulo</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="relatosModal">
+                <!-- <P><strong>16/05/2024 08:00 - </strong>
+                Sem chuvas significativas até o momento no Estado de São Paulo.</P> -->
+                <object type="application/pdf" data="boletins/Boletim_SSSP_20240628.pdf" width="100%" height="500" style="height: 85vh;"></object>
+              </div>
+    
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+<!-- <section id="Previsão" class="produtos pt-3" style="margin-top: 10px;"> -->
+  <!-- <div class="container" >
+    <h2 class="produtos text-center p-3">Previsão do tempo</h2>
+    <div class="row">
+      <div class="card-group">
+        <div class="col-lg-2 card" id="previsao" style="color: #F00;"></div>
+      </div>
+    </div> -->
+  <div class=" container p-4" onload="carregaPrevisao()">
+    <h2 class="text-center">Previsão do Tempo</h2>
+      <div id="previsao" class="card-group"></div>
+    <!-- <div class="results">   
+        <div class="cardPrev" id="weakRain">
+            <p>Chuva Fraca: <span id="weakCount">0</span></p>
+        </div>
+        <div class="cardPrev" id="moderateRain">
+            <p>Chuva Moderada: <span id="moderateCount">0</span></p>
+        </div>
+        <div class="cardPrev" id="heavyRain">
+            <p>Chuva Forte: <span id="heavyCount">0</span></p>
+        </div>
+    </div> -->
+  </div>
+        
+<!-- </section> -->
 </section>
+<section id="Atualidade" class="produtos pt-3" style="margin-top: 10px;">
+  <div class="container">
+    <h2 class="produtos text-center p-3" style="font-size: 40px;">EVENTOS <strong style="font-weight: 900; font-size:50px; color: brown;">CRÍTICOS</strong></h2>
+    <div class="row">
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="assets/img/mapa/119_maio2024.png" class="img-fluid rounded-start" alt="...">
+            <p class="card-text"><small class="text-body-secondary">Fonte:https://monitordesecas.ana.gov.br/</small></p>
+          </div>
+          <div class="col-md-6">
+            <div class="col-lg-12" style="border-bottom: solid 2px #868181; ">
+            <div class="card-body" style="margin-top: auto; text-align:justify;">
+              <h5 class="card-title text-center p-5"><strong>São Paulo</strong> </h5>
+              <i class="bi bi-quote"></i>Em São Paulo, devido às anomalias negativas de precipitação, houve o avanço da seca fraca (S0) no leste do estado e o agravamento da seca no norte, que passou de fraca (S0) para moderada (S1). Os impactos são de curto prazo (C).<br/><br/>
+            </div>
+       
+            </div>
+            <ul class="p-3"style="font-weight:600; text-align:justify;">
+              <li class="elastic-text p-3"><a href="https://monitordesecas.ana.gov.br/mapa?mes=5&ano=2024" target="_blank"><i class="bi bi-indent"></i> Monitor de Secas</a></li><br/>
+              <li class="elastic-text p-3"><a href="https://monitordesecas.ana.gov.br/o-monitor-de-secas" target="_blank"><i class="bi bi-indent"></i> Acompanhe o monitor de secas</a></li><br/>
+              <li class="elastic-text p-3"><a href="https://terrabrasilis.dpi.inpe.br/queimadas/situacao-atual/situacao_atual/" target="_blank"><i class="bi bi-indent"></i> Queimadas - Situação Atual</a></li>
+              <li class="elastic-text p-3"><a href="https://terrabrasilis.dpi.inpe.br/queimadas/situacao-atual/estatisticas/estatisticas_estados/" target="_blank"><i class="bi bi-indent"></i> Monitoramento dos Focos Ativos por Estado</a></li>
+              <li class="elastic-text p-3"><a href="https://mananciais.sabesp.com.br/Situacao" target="_blank"><i class="bi bi-indent"></i> Nível dos Reservatórios RMSP - SABESP</a></li>
+              <li class="elastic-text p-3"><a href="https://www.ons.org.br/paginas/energia-agora/reservatorios" target="_blank"><i class="bi bi-indent"></i> Reservatórios Geração de Energia - ONS</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+   </div>
+  </div>
+ </section>
+</section>
+
+<section id="Atualidade" class="produtos pt-3" style="margin-top: 10px;background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);">
+  <div class="container">
+    <h2 class="produtos text-center p-3" style="font-size: 40px; color: #FFF;">Plantão de Emergências em Situação de Crise</h2>
+    <div class="row">
+      <div class="card mb-4">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="assets/img/eventos/centroEmergencia2024-01-22 at 09.58.52.jpeg" class="img-fluid rounded-start" alt="...">
+            <p class="card-text"><small class="text-body-secondary">Jan/2024</small></p>
+          </div>
+          <div class="col-md-6">
+            <div class="col-lg-12">
+            <div class="card-body" style="margin-top: auto; text-align:justify;">
+              <h5 class="card-title text-center p-5">DAEE junto ao <strong>estado</strong> no Plantão de Emergências</h5>
+              <i class="bi bi-quote"></i>As Salas de Crise são ambientes de coordenação e articulação de atores governamentais e não governamentais que são ou podem ser impactados pelos efeitos de crises hídricas ou têm alguma atuação sobre elas. A sala é, assim, uma das ferramentas utilizada na gestão de eventos hidrológicos críticos envolvendo bacias ou regiões com reservatórios ou outras infraestruturas hídricas com o objetivo de promover medidas de aumento da segurança hídrica, da capacidade de resposta e da resiliência do sistema. As reuniões acontecem periodicamente e permitem a participação tanto presencial quanto por meio de videoconferências, quando os atores envolvidos dialogam para buscar soluções para os problemas verificados.<i class="bi bi-quote"></i><br/><br/>
+            </div>
+       
+            </div><hr style="size: 10px; width: 70%; margin-left: 18%; border: black 1px solid;">
+            <ul class="p-3"style="font-weight:600;">
+              <li class="elastic-text p-3"><a href="https://www.defesacivil.sp.gov.br/" target="_blank"><i class="bi bi-indent"></i> Defesa Civil do estado de São Paulo</a></li>
+              <li class="elastic-text p-3"><a href="http://cge.prefeitura.sp.gov.br/v3/" target="_blank"><i class="bi bi-indent"></i> Centro de Gerenciamento de Emergências Climáticas da Prefeitura de São Paulo.</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+   </div>
+  </div>
+</section>
+
     <!-- ======= produtos emitidos ======= -->
     <section id="services" class="produtos pt-3" style="margin-top: 10px;">
       <div class="container">
@@ -253,7 +366,7 @@
               <div class="icon">
                 <i class="bi bi-calendar-date"></i>
               </div>
-              <h4 class="title"><a href="https://www.climatempo.com.br/" target="_blank">Boletim Diário</a></h4>
+              <h4 class="title"><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target="_blank">Boletim Diário</a></h4>
             </div>
           </div>
 
@@ -262,7 +375,7 @@
               <div class="icon">
                 <i class="bi bi-calendar-month"></i>
               </div>
-              <h4 class="title"><a href="https://www.cptec.inpe.br/" target="_blank">Boletim Mensal</a></h4>
+              <h4 class="title"><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFlnw" target="_blank">Boletim Mensal</a></h4>
             </div>
           </div>
 
@@ -271,279 +384,16 @@
               <div class="icon">
                 <i class="bi bi-broadcast-pin"></i>
               </div>
-              <h4 class="title"><a href="http://www.defesacivil.sp.gov.br/meteorologia/" target="_blank">Telemétrica:: Alto Tietê e Cubatão</a></h4>
+              <h4 class="title"><a href="https://docs.google.com/spreadsheets/d/1hOoAuCX9U9sMsJJ6vjXBgj4DM5FAUB7ZF9jD3t7lyNc/edit#gid=1218484926" target="_blank">Telemétrica:: Alto Tietê e Cubatão</a></h4>
             </div>
           </div>
         </div>
     </section>
 
-
-
-
-<!---teste de Prevsão do tempo-->
-    <style>
-        .weather-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            margin-top: 0;
-        }
-        p {
-            margin: 5px 0;
-        }
-    </style>
-    <!-- <div class="weather-container">
-        <h2>Previsão do Tempo</h2>
-        <div id="weather-data">
-            Carregando...
-        </div>
-    </div> -->
-    <!-- Script para fazer a solicitação à API -->
-    <script>
-        // Chave da API do OpenWeatherMap (substitua pela sua chave)
-        const apiKey = 'sua_chave_de_api';
-
-        // Cidade para a qual você deseja obter a previsão do tempo (substitua pela cidade desejada)
-        const city = 'São Paulo';
-
-        // URL da API do OpenWeatherMap
-        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
-
-        // Função para obter os dados meteorológicos
-        async function getWeatherData() {
-            try {
-                const response = await fetch(apiUrl);
-                const data = await response.json();
-
-                // Extrair informações relevantes dos dados
-                const temperature = data.main.temp;
-                const description = data.weather[0].description;
-                const cityName = data.name;
-
-                // Exibir os dados na página
-                const weatherContainer = document.getElementById('weather-data');
-                weatherContainer.innerHTML = `
-                    <p><strong>Cidade:</strong> ${cityName}</p>
-                    <p><strong>Temperatura:</strong> ${temperature}°C</p>
-                    <p><strong>Descrição:</strong> ${description}</p>
-                `;
-            } catch (error) {
-                console.error('Erro ao obter os dados meteorológicos:', error);
-                const weatherContainer = document.getElementById('weather-data');
-                weatherContainer.innerHTML = 'Erro ao carregar os dados meteorológicos.';
-            }
-        }
-
-        // Chamar a função para obter os dados meteorológicos ao carregar a página
-        window.onload = getWeatherData;
-    </script>
-
-
-
-
-      <!-- <div class="row blog pt-5">
-          <div class="col-lg-8 entries" >
-            <article class="entry">
-              <div class="card-group">
-            <div class="card col-md-4" style="border: none;">
-              <h6 style="text-align: center; font-weight: bold;"><i class="bi bi-info-circle"></i> Relatos de Chuvas</h6>
-               <section id="about" class="about">
-                  <div class="video-box align-self-baseline position-relative">
-                    <img src="assets/img/chuvas/chuva.jpg" class="img-fluid" alt="" style="border-radius: 4px;">
-                     <a href="https://docs.google.com/spreadsheets/d/178Gd5AUeQ9knvSgVsRvgI44tn1RBfmDdu8uVYGFmlsU/pubhtml" class="glightbox play-btn mb-4"  style="background: rgb(0,0,0,0.2);"></a>
-                  </div>
-                    <div class="entry-meta pt-3">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> SSSP-DAEE</li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i><time datetime="0000-00-00">
-                  </li>
-                </ul>
-              </div>
-
-              <div class="entry-content">
-                <p>
-                 Acompanhe por aqui os relatos de chuvas feito manualmente de hora em hora detectadas pelos radares DAEE, IPMet e RedeMet. 
-                </p>
-                <div class="read-more">
-                  <a href="https://docs.google.com/spreadsheets/d/178Gd5AUeQ9knvSgVsRvgI44tn1RBfmDdu8uVYGFmlsU/pubhtml" target="_blank">Leia Mais</a><hr/ style="color: #94c045;">
-                </div>
-              </div>
-            </section>
-            </div>
-            <div class="card" style="border: none; margin-left: 3px; margin-right: 3px;">
-              <h6 style="text-align: center;"><i class="bi bi-moisture" ></i> <strong>Chuvas Diária Alto Tiete/Cubatão</strong> </h6>
-               <section id="about" class="about">
-                  <div class="video-box align-self-baseline position-relative">
-                    <img src="assets/img/chuvas/teleetria.png" class="img-fluid" alt="" style="border-radius: 4px;">
-                     <a href="https://docs.google.com/spreadsheets/d/1hOoAuCX9U9sMsJJ6vjXBgj4DM5FAUB7ZF9jD3t7lyNc/pubhtml" class="glightbox play-btn mb-4"  style="background: rgb(0,0,0,0.2);"></a>
-                  </div>
-            <br/>
-
-              <div class="entry-content">
-                <p>
-                 Telemetria de chuvas diária do <strong>Alto Tietê e Cubatão</strong>: média, máximo, parcial e médias mensais(MM).
-                  E estatisticas quinzenais dos postos telemétricos do Alto Tietê com escala:
-                 <p><i style="color:#FFD700;">Cor Amarela:</i> Chuvas diárias superior à média mensal dividida pelo número de dias do mês (Mp) e inferior ao dobro de Mp;</p>
-                 <i style="color:#FF6347;">Cor Rosa: </i>chuvas diárias superior ao dobro de Mp;
-                </p>
-                <div class="read-more">
-                  <a href="https://docs.google.com/spreadsheets/d/1hOoAuCX9U9sMsJJ6vjXBgj4DM5FAUB7ZF9jD3t7lyNc/pubhtml" target="_blank">Leia Mais</a>
-                </div>
-              </div>
-              </section>
-            </div>
-          </div>
-
-            </article>
-
-         </div>End blog entries list -->
-<!-- <section id="serviços" class="serviços p-5 pt-4" style="background: #f8f7ff; margin-top: 20px;;">
-  <div class="container">
-    <div class="row">
-          <div class="col-lg-12">
-            <div class="sidebar">
-              <h3 class="sidebar-title">Relatorios, Boletins e Alertas</h3>
-              <div class="sidebar-item categories">
-                <ul>
-              <li><a href="https://docs.google.com/spreadsheets/d/178Gd5AUeQ9knvSgVsRvgI44tn1RBfmDdu8uVYGFmlsU/pubhtml" target="_blank"><i class="bi bi-info-circle" style="color:#94c045;"></i> Alerta (em relatos)</a></li>
-                <li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target="_blank"><i class="bi bi-stack" style="color:#94c045;"></i> Boletins Diários</a></li>
-                <li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFlnw" target="_blank"><i class="bi bi-stack" style="color:#94c045;"></i> Boletins Mensais</a></li>
-                <li><a href="https://docs.google.com/document/d/11qxQPqNc1RW7mMYw_uXdw-Gmh7lr8UUbaH2AnG6k6g0/edit" target="_blank"><i class="bi bi-journal-text" style="color:#94c045;"></i> Último Boletim</a></li>
-                <li><a href="https://docs.google.com/document/d/1Dll5CLr8YSNwvWptklijCENRFx85dpBlYPrhqCMgwTM/" target="_blank"><i class="bi bi-file-text" style="color:#94c045;"></i> Útimas Publicações</a></li>
-                <li><a href="https://docs.google.com/spreadsheets/d/1hOoAuCX9U9sMsJJ6vjXBgj4DM5FAUB7ZF9jD3t7lyNc/pubhtml" target="_blank"><i class="bi bi-moisture" style="color:#94c045;"></i> Chuvas Diárias Alto Tietê/Cubatão</a></li>
-
-                 <li><a href="https://docs.google.com/spreadsheets/d/178Gd5AUeQ9knvSgVsRvgI44tn1RBfmDdu8uVYGFmlsU/edit#gid=1890132223" target="_blank"><i class="bi bi-globe-americas" style="color:#94c045;"></i> Imagens: Acumulada e Animação</a></li>
-                <li style="border-bottom: solid 1px #F00;"><a href="https://docs.google.com/spreadsheets/d/178Gd5AUeQ9knvSgVsRvgI44tn1RBfmDdu8uVYGFmlsU/pubhtml#" target="_blank"><i class="bi bi-thermometer-high" style="color:#F00;"></i></i> Extravazamentos</a></li>
-                 <li><a href="#"><i class="bi bi-umbrella" style="color:#94c045;"></i> Previsões CPTEC RMSP e RMPS</a></li>
-                </ul>
-              </div>
-
-            </div> 
-            <div class="card-group">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Boletim Diário</h5>
-                <p class="card-text">Boletins diário gerados através de dados de radares, satélite e postos telemetricos dentros das 24h.</p>
-                <a href="#" class="btn btn-primary">Confira Aqui</a>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Boletins Mensais</h5>
-                <p class="card-text">Boletins mensais são elaborados com dados de chuvas registrados no mês.</p>
-                <a href="#" class="btn btn-primary">Confra aqui</a>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Relatos</h5>
-                <p class="card-text">Relatos são os alertas de chuvas de 1h em 1h.</p>
-                <a href="#" class="btn btn-primary">Alertas</a>
-              </div>
-            </div>
-          </div>
-          </div>
-       </div>
-</div>
-</section> -->
-
-     <!-- ======= Features Section ======= -->
-    <!-- <section id="features" class="features" style="padding: 20px;">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Produtos</h2>
-          <p>Produtos de monitoramento e elaboração de relatos técnicos, alertas e boletins</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-            <div class="card" style="background-image: url(assets/img/radar/radar_ponte_nova.jpg);">
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Radar meteorológico DAEE</a></h5>
-                <p class="card-text">Radar de monitoramento de chuvas em tempo real, <strong><u>localizado na Barragem Ponte Nova em Biritiba Mirim.</u></strong></p>
-                <div class="read-more"><a href="https://www.saisp.br/estaticos/sitenovo/home.html" target="_blank"><i class="bi bi-arrow-right"></i> Leia mais</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up">
-            <div class="card" style="background-image: url(assets/img/radar/saisp_principal.png);">
-              <div class="card-body">
-                <h5 class="card-title"><a href="">SAISP</a></h5>
-                <p class="card-text">Mapa interativo, redes telemétricas e filtros com seus devidos produtos a serem mostrados o nível de situação.</p>
-                <div class="read-more"><a href="https://www.saisp.br/app/index.html" target="_blank"><i class="bi bi-arrow-right"></i> Clique aqui</a></div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="card" style="background-image: url(assets/img/IPMet/IPMet_radar.jpg);">
-              <div class="card-body">
-                <h5 class="card-title"><a href="">IPMet</a></h5>
-                <p class="card-text">Radar Cidades. Radar IPMet está <strong><u>localizado nas regiões de Presidente Prudente e Bauru.</u></strong></p>
-                <div class="read-more"><a href="https://www.ipmetradar.com.br/2radarCidades.php" target="_blank"><i class="bi bi-arrow-right"></i> Veja aqui</a></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="card" style="background-image: url(assets/img/REDEMET/REDEMET_radar.jpg);">
-              <div class="card-body">
-                <h5 class="card-title"><a href="">RedeMet</a></h5>
-                <p class="card-text">Radar RedeMet Rede de Meteorologia do Comando da Aeronáutica <strong><u>localizado na região de São Roque.</u></strong></p>
-                <div class="read-more"><a href="https://www.redemet.aer.mil.br/" target="_blank"><i class="bi bi-arrow-right"></i> Acesse RedeMet</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>End Features Section -->
-
-    <!-- ======= previsões de chuvas ======= -->
-  <!-- <section id="noticias" class="noticias section-bg">
-      <div class="container">
-      <div class="row">
-         <div class="col-lg-12" data-aos="fade-right">
-           <div class="row">
-              <div class="col-md-4">
-                <img src="assets/img/radar/radar_ponte_nova.jpg" class="img-fluid rounded" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Radar Meterologico de São Paulo</h5>
-                  <p class="card-text">
-                  O radar meteorológico de São Paulo é de propriedade do Departamento de Águas e Energia Elétrica - DAEE, autarquia da Secretaria de Saneamento e Energia de São Paulo.</p>
-                  <p>O radar foi fabricado pela McGill University do Canadá e está instalado na Barragem de Ponte Nova, localizada na cabeceira do rio Tietê.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-  </section> -->
-      <div id="map"></div>
-  
-      <!-- Scripts -->
-      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-      <script>
-          // Inicializar o mapa
-          var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
-  
-          // Adicionar a camada de mapa
-          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          }).addTo(map);
-  
-          // Adicionar marcador
-          var marker = L.marker([-23.5505, -46.6333]).addTo(map);
-          marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
-      </script>
-    <!-- ======= Our Clients Section ======= -->
+    
+    <!-- ======= PARCEIROS ======= -->
     <section id="clients" class="parceiros">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h2>Parceiros</h2>
           <p>Todos os parceiros que fazerm parte do monitoramento hidrologico. Trabalhando em conjunto tudo fica mais claro e objetivo nas informações de transmissão</p>
@@ -551,28 +401,18 @@
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/parceiros/daee.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/parceiros/iac.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/parceiros/ana.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/parceiros/cemaden.jpg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/parceiros/fundag.jpg" class="img-fluid" alt=""></div>
-            <!-- <div class="swiper-slide"><img src="assets/img/clients/client-6.jpg" class="img-fluid" alt=""></div>
-
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div> -->
+            <div class="swiper-slide"><a href="http://www.daee.sp.gov.br/site/hidrologia/" target="_blank"><img src="assets/img/parceiros/daee.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="https://www.iac.sp.gov.br/" target="_blank"><img src="assets/img/parceiros/iac.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="https://www.gov.br/ana/pt-br" target="_blank"><img src="assets/img/parceiros/ana.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="https://www.gov.br/cemaden/pt-br" target="_blank"><img src="assets/img/parceiros/cemaden.jpg" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a href="https://fundag.br/" target="_blank"><img src="assets/img/parceiros/fundag.jpg" class="img-fluid" alt=""></a></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section><!-- End Our Clients Section -->
+    </section>
     
-<script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-contrast.js"></script>
-<script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-tamanho-fonte.js"></script>
-<script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-scroll.js"></script>
-<script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-topo.js"></script>
-
-  
     <!-- Scripts DASHBOARD-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <script>
@@ -610,27 +450,27 @@
                 borderWidth: 1
             }]
         };
-        // Renderizar os gráficos
-        window.onload = function() {
-            const ctx1 = document.getElementById('barChart').getContext('2d');
-            new Chart(ctx1, {
-                type: 'bar',
-                data: barChartData,
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
+        // // Renderizar os gráficos
+        // window.onload = function() {
+        //     const ctx1 = document.getElementById('barChart').getContext('2d');
+        //     new Chart(ctx1, {
+        //         type: 'bar',
+        //         data: barChartData,
+        //         options: {
+        //             scales: {
+        //                 y: {
+        //                     beginAtZero: true
+        //                 }
+        //             }
+        //         }
+        //     });
 
-            const ctx2 = document.getElementById('pieChart').getContext('2d');
-            new Chart(ctx2, {
-                type: 'pie',
-                data: pieChartData
-            });
-        };
+        //     const ctx2 = document.getElementById('pieChart').getContext('2d');
+        //     new Chart(ctx2, {
+        //         type: 'pie',
+        //         data: pieChartData
+        //     });
+        // };
     </script>
 
   
@@ -639,99 +479,23 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="" style="margin-top: 10px;;">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>SSSP-DAEE</h3>
-            <p>Rede Hidrológica básica do Estado de São Paulo é operada pelo DAEE desde 1951.</p>
-            <p>Sala de Situação de São Paulo, apresenta produtos e relatos por redes sociais e e-mails. </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Boletins</h4>
-            <ul>
-              <li><a href="#">Boletins Diários</a></li>
-              <li><a href="#">Boletins Mensais</a></li>
-              <li><a href="#">Ultimos Boletim</a></li>
-            </ul>
-             <h4>Sobre</h4>
-             <ul>
-              <li><a href="sobre.php">Sobre Nós</a></li>
-              <li><a href="equipe.php">Equipes</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Situação</h4>
-            <ul>
-              <li><a href="#">Chuvas Diárias Alto Tietê/Cubatão</a></li>
-              <li><a href="#">Últimos Alertas</a></li>
-              <li><a href="#">Ultimas Publicações da SSSP / DAEE</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contato</h4>
-            <p>
-              Rua Boa Vista, 170 <br>
-              11º andar, Bloco 5<br>
-             São Paulo / SP <br>
-              <strong>Telefone:</strong> (11) 3293 - 8461<br>
-              <strong>Email:</strong> salasituacao@daee.sp.gov.br<br>
-            </p>
-
-            <div class="social-links"> <p>Redes Sociais DAEE</p>
-              <a href="https://www.facebook.com/DAEESP/" target="_black" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/daeesp/" target="_black" class="instagram"><i class="bi bi-instagram"></i></a>
-              <!-- <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
-
-              <a href="https://www.youtube.com/channel/UCOEBfJpTq7LE25rdjX9tdUQ" target="_black" class=""><i class="bi bi-youtube"></i></a>
-            </div>
-
-          </div>
-
-        <!--   <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div> -->
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        &copy;  <strong><span>SSSP-DAEE</span></strong>. 
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/serenity-bootstrap-corporate-template/ -->
-      </div>
-    </div>
   </footer><!-- End Footer -->
   <!-- Vendor JS Files -->
+      <!-- Scripts -->
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 
-      <script src="assets/js/jquery-1.11.1.min.js"></script>
-  <script src="assets/js/jquery-ui.js"></script>
-
-      
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/base.js"></script>
 </body>
 
 </html>

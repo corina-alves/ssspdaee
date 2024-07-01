@@ -355,7 +355,9 @@ h6 {
 #hero {
   width: 100%;
   height: 55vh;
-  background: url("../img/ssspdaee.jpg") top center;
+  /* background: url("../img/ssspdaee.jpg") top center; */
+  background: url("../img/37608-414086234_small.mp4") top center;
+  
   background-size: cover;
   position: relative;
   margin-bottom: -140px;
@@ -2497,7 +2499,7 @@ float: right;
 */
 
 #banner {
-    background: url('./assets/img/rain-3582_256.gif') no-repeat fixed;
+    /* background: url('./assets/img/rain-3582_256.gif') no-repeat fixed; */
     background-size: cover;
     min-height: 650px;
     position: relative;

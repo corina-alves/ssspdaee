@@ -1,0 +1,135 @@
+     <style>
+
+
+.filters {
+    display: flex;
+    align-items: center;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.filters input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.filters button {
+    padding: 5px 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.chart {
+    flex: 1;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.ranking {
+    margin: 20px 0;
+}
+
+.ranking table {
+    width: 100%;
+}
+
+#mapid {
+    height: 400px;
+    margin: 20px 0;
+}
+
+     </style>
+            <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+     
+            <div class="container">
+              <header>
+                  <h1>Relatório de Monitoramento de Chuvas</h1>
+                  <div class="filters">
+                      <label for="startDate">Data Início:</label>
+                      <input type="date" id="startDate">
+                      <label for="endDate">Data Fim:</label>
+                      <input type="date" id="endDate">
+                      <button id="filterButton">Filtrar</button>
+                  </div>
+              </header>
+              <section class="cards">
+                  <div class="card">
+                      <h2 style="font-size: 2em;">Total de Chuvas</h2>
+                      <p id="totalChuva">0 mm</p>
+                  </div>
+                  <div class="card">
+                      <h2 style="font-size: 2em;">Chuvas Fracas</h2>
+                      <p id="chuvaFraca">0 mm</p>
+                  </div>
+                  <div class="card">
+                      <h2 style="font-size: 2em;">Chuvas Moderadas</h2>
+                      <p id="chuvaModerada">0 mm</p>
+                  </div>
+                  <div class="card">
+                      <h2 style="font-size: 2em;">Chuvas Fortes</h2>
+                      <p id="chuvaForte">0 mm</p>
+                  </div>
+              </section>
+              <section class="charts">
+                  <div class="chart">
+                      <h2>Acumulado de Chuvas por Período</h2>
+                      <canvas id="rainfallChart"></canvas>
+                  </div>
+                  <div class="chart">
+                      <h2>Situação de Chuvas</h2>
+                      <canvas id="rainStatusChart"></canvas>
+                  </div>
+              </section>
+              <section class="ranking">
+                  <h2 style="font-size: 1em;">Top 10 Maiores Acumulados de Chuvas em 24h</h2>
+                  <table id="rankingTable" class="display">
+                      <thead>
+                          <tr>
+                              <th>Data</th>
+                              <th>Acumulado (mm)</th>
+                              <th>Intensidade</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <!-- Dados inseridos pelo JavaScript -->
+                      </tbody>
+                  </table>
+              </section>
+              <section class="map">
+                  <h2>Mapa de Chuvas</h2>
+                  <div id="mapid"></div>
+              </section>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+          <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+            <script src="assets/js/index.js"></script>
+    
+        
