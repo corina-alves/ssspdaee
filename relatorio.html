@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Monitoramento de Chuvas</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 1em;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+.Fraca {
+    background-color: #54bad6;
+}
+
+.Moderada {
+    background-color: #f0a314;
+}
+
+.Forte {
+    background-color: #9e0000;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Relatório de Monitoramento de Chuvas</h1>
+    </header>
+    <main>
+        <section id="report">
+            <h2>Dados de Chuvas</h2>
+            <div class="row">
+                <div class="col-lg-6">
+            <table id="rainfall-table" style="width: 600px;">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Quantidade de Chuva (mm)</th>
+                        <th>Intensidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados serão inseridos aqui pelo JavaScript -->
+                </tbody>
+            </table>
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Relatório de Monitoramento de Chuvas</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

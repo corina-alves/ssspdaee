@@ -7,50 +7,59 @@ window.onload = function(){
     //  carregarRelatosModal()
     // CarregaMap()
     // categorizarValores()
-    carregaPrevisao()
+    // carregaPrevisao()
     // teste()
 }
 
-function carregarTabelaDado(){
-   fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true").then(function(response){
-         response.json().then(function(dados){
-             console.log(dados);
-             let medicoes = dados.json
-            //ordenar e cortar as  maiores
-             let maiores = medicoes.sort((a,b)=>b.value-a.value).slice(0,8)
-            //intancia tabela
-            let tabela = document.getElementById("tabela_eventos")
-            //instancia corpo tabela
-           let tbody = tabela.getElementsByTagName("tbody")[0]
-             //apaga os dados da tabela
-            tbody.innerHTML = null
-            //para cada medicao..
-             maiores.forEach(maior => {
-                 //criar linha tabela
-                let tr = document.createElement("tr")
-                //preencher linha tabela
-                tr.innerHTML = "<td>"+maior.city+
-                "</td><td>"+maior.value.toFixed(1)+
-                "</td><td>"+maior.station_prefix_id+
-                "</td><td>"+maior.value.toFixed(1)
-                +"</td>"
-                //append = anexar linha no corpo da tabela
-                 tbody.appendChild(tr)
+function carregarTabelaDado() {
+    fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
+        .then(function(response) {
+            response.json().then(function(dados) {
+                console.log(dados);
+                let medicoes = dados.json;
+                // Ordenar e cortar as maiores
+                let maiores = medicoes.sort((a, b) => b.value - a.value).slice(0, 8);
+                // Instanciar tabela
+                let tabela = document.getElementById("tabela_eventos");
+                // Instanciar corpo tabela
+                let tbody = tabela.getElementsByTagName("tbody")[0];
+                // Apagar os dados da tabela
+                tbody.innerHTML = null;
+                // Para cada medição..
+                maiores.forEach(maior => {
+                    // Criar linha tabela
+                    let tr = document.createElement("tr");
+
+                    // Definir cor com base no valor da precipitação
+                    if (maior.value > 50) {
+                        tr.style.backgroundColor = 'red'; // Chuva forte
+                    } else if (maior.value >= 20 && maior.value <= 50) {
+                        tr.style.backgroundColor = 'orange'; // Chuva moderada
+                    } else {
+                        tr.style.backgroundColor = '#0299d8'; // Chuva fraca
+                    }
+
+                    // Preencher linha tabela
+                    tr.innerHTML = "<td><strong>" + maior.city +
+                        "</strong></td><td>" + maior.value.toFixed(1) +
+                        "</td><td>" + maior.station_prefix_id +
+                        "</td><td>" + maior.value.toFixed(1) +
+                        "</td>";
+                    // Anexar linha no corpo da tabela
+                    tbody.appendChild(tr);
+                });
+
+                if (maiores.length == 0) {
+                    let tr = document.createElement("tr");
+
+                    tr.innerHTML = "<td colspan='4'>Sem Dados</td>";
+
+                    tbody.appendChild(tr);
+                }
             });
-
-             if(maiores.length == 0){
-                let tr = document.createElement("tr")
-
-                tr.innerHTML = "<td colspan='4'>Sem Dados</td>"
-
-                 tbody.appendChild(tr)
-             }
-        })
-      })
-   }
-function carregaChuva{
-
+        });
 }
+
 
  function carregarRelatos(){
     
@@ -77,33 +86,106 @@ function carregaChuva{
      })
 
 }
-function carregaPrevisao(){
+// function carregaPrevisao(){
 
+//     let latLngs = [
+       
+//         {text:'-23.031009, -45.566196', name:'Taubaté'},
+//         {text:'-21.172541, -47.812758', name:'Ribeirão Preto'},
+//         {text:'-22.738662, -47.645608', name:'Piracicaba'},
+//         {text:'-23.624199, -46.676390', name:'São Paulo'},
+//     ]
+
+//     latLngs.forEach(latLng=>{
+//         fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+latLng.text+"?unitGroup=metric&key=F25Q6KUDD73CMRSWWS8US97X6&contentType=json").then(function(response){
+//             response.json().then(function(previsao){
+//                 console.log(previsao);
+
+//                 let climaAgora = previsao.currentConditions    
+//                 let data = previsao.days[0]      
+                
+//                 let previsaoTempo = document.createElement("div") 
+               
+//                 previsaoTempo.innerHTML = "<div class='row'><div class='col-lg-2'>"+ data.datetime + "<br/>"+ 
+//                 latLng.name+ "<br/>" +climaAgora.temp + "°C"+
+//                 "</div></div>"
+
+//                 let prev = document.getElementById("previsao")
+
+//                 prev.appendChild(previsaoTempo)
+
+//             })
+            
+//         })
+//     })
+
+// }
+
+function carregaPrevisao() {
     let latLngs = [
-        {text:'-23.624199, -46.676390', name:'Centro'},
-        {text:'-23.556239, -46.424378', name:'Zona Leste'}
-    ]
+        { text: '-23.031009, -45.566196', name: 'Taubaté' },
+        { text: '-21.172541, -47.812758', name: 'Ribeirão Preto' },
+        { text: '-22.738662, -47.645608', name: 'Piracicaba' },
+        { text: '-23.624199, -46.676390', name: 'São Paulo' },
 
-    latLngs.forEach(latLng=>{
-        fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/"+latLng.text+"?unitGroup=metric&key=F25Q6KUDD73CMRSWWS8US97X6&contentType=json").then(function(response){
-            response.json().then(function(previsao){
+        { text: '-20.819188, -49.378521', name: 'São José do Rio Preto' },
+        { text: '-22.219694, -49.950266', name: 'Marília' },
+        { text: '-24.187076, -46.801280', name: 'Itanhaém' },
+        { text: '-24.496514, -47.846099', name: 'Registro' },
+        
+        
+    ];
+
+    // let weakCount = 0;
+    // let moderateCount = 0;
+    // let heavyCount = 0;
+
+    latLngs.forEach(latLng => {
+        fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + latLng.text + "?unitGroup=metric&key=F25Q6KUDD73CMRSWWS8US97X6&contentType=json")
+            .then(response => response.json())
+            .then(previsao => {
                 console.log(previsao);
 
-                let climaAgora = previsao.currentConditions    
-                let data = previsao.days        
+                let climaAgora = previsao.currentConditions;
+                let data = previsao.days[1];
 
-                let previsaoTempo = document.createElement("div") 
-                previsaoTempo.innerHTML = "<div class='card-group' style='border-solid 1px #F00;'>"+latLng.name+"</div><div>"+ "<div>"+data.description+"</div><div>"+climaAgora.datetime+"</div><div>"+climaAgora.temp +"</div>"
+                let chuva = data.precip || 0;
 
-                let prev = document.getElementById("previsao")
+                // if (chuva < 15) {
+                //     weakCount++;
+                //     document.getElementById('weakCount').innerText = weakCount;
+                // } else if (chuva >= 15 && chuva < 20) {
+                //     moderateCount++;
+                //     document.getElementById('moderateCount').innerText = moderateCount;
+                // } else if (chuva >= 20) {
+                //     heavyCount++;
+                //     document.getElementById('heavyCount').innerText = heavyCount;
+                // }
+                //formata data mes/dia/ano
+                let formattedDate = new Date(data.datetime).toLocaleDateString('pt-BR', {
+                    day: '2-digit',
+                    month: '2-digit',
+                    year: 'numeric'
 
-                prev.appendChild(previsaoTempo)
+                // ${formattedDate} <br/>
+                // ${data.datetime} <br/>
+                 });
+                let previsaoTempo = document.createElement("div");
+                previsaoTempo.classList.add('card');
+                previsaoTempo.innerHTML = `
+                    <div class='row'>
+                        <div class='col'>
+                            ${formattedDate} <br/>
+                           <strong> ${latLng.name} </strong><br/>
+                            ${climaAgora.temp} °C <br/>
+                            Chuva: ${chuva} mm
+                        </div>
+                    </div>`;
 
-            })
-        })
-    })
-
-    
+                let prev = document.getElementById("previsao");
+                prev.appendChild(previsaoTempo);
+            });
+    });
 }
 
 

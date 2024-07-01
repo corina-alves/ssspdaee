@@ -2112,7 +2112,7 @@ swiper-slide
 
 .post-item{
   box-shadow: 0px 0 15px rgba(0, 0, 0, 0.08);
-  padding: 20px;
+  padding: 14px;
 }
 
 .noticias .sidebar .recent-posts img {
@@ -2681,9 +2681,54 @@ color: #FFF;
 .detalhes{
   font-weight: bold;
   padding: 20px;
-  background-image: linear-gradient(160deg, #232525 0%, #a0a0a0 100%);
+  background-image: linear-gradient( 93.2deg,  rgba(24,95,246,1) 14.4%, rgba(27,69,166,1) 90.8% );
+
+
   color: #FFF;
 }
 .detalhes button{
   color: #FFF;
+}
+/* 
+@media(min-width: 1024) {
+    .carousel-item{
+        overflow: hidden;
+        width: 100vh;
+        height: 55vh;
+        margin: 0 auto;
+    }
+
+
+} */
+
+
+.previsao {
+  margin-bottom: 20px;
+  background-color: #FBAB7E;
+background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+}
+
+.results {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.cardPrev {
+  width: 150px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #d3d3d3;
+}
+
+.cardPrev p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
 }
