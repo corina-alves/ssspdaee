@@ -85,7 +85,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  height: 70px;
+  height: 90px;
   z-index: 997;
   transition: all 0.5s ease-in-out;
   background: #FFF;
@@ -713,25 +713,27 @@ section {
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
-.cta {
+.situacaoAtual {
 /*  background: #86b03c;*/
   padding: 50px 0;
 }
 
-.cta h3 {
-  color: #fff;
+.situacaoAtual h3 {
+  color: #4d4545;
   font-size: 28px;
   font-weight: 700;
 }
-.cta h1 {
-  color: #fff;
+.situacaoAtual h1 {
+  color: #4d4545;
   font-weight: 700;
 }
-.cta p {
-  color: #fff;
+.situacaoAtual p {
+  color: #4d4545;
 }
-
-.cta .cta-btn {
+.situacaoAtual h2 {
+  color: #4d4545;
+}
+.situacaoAtual .situacaoAtual-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -745,7 +747,7 @@ section {
   color: #fff;
 }
 
-.cta .cta-btn:hover {
+.situacaoAtual .situacaoAtual-btn:hover {
   background: #aacd6b;
   border-color: #aacd6b;
 }
@@ -2518,14 +2520,16 @@ float: right;
 }
 #banner {
   /* background: url("../img/banner/teste.jpeg") no-repeat fixed; */
-  background: url("../img/banner/coffee-7754_512.gif") no-repeat fixed;
+  /* background: url("../img/banner/coffee-7754_512.gif") no-repeat fixed; */
+    background: url("../img/banner/BarragemdaPenha.png") no-repeat fixed;
     background-size: cover;
     min-height: auto;
     position: relative;
 }
 .bg-color {
-    background-color: RGBA(28,28,28, 0.8);
-    min-height: 60vh;
+  background: #0353a4;
+    background-color: RGBA(28,28,28, 0.5);
+    min-height: auto;
 }
 .navbar {
     border-radius: 0px;
@@ -2655,28 +2659,31 @@ img{
   color: #FFF;
 }
 .totalChuva h2{
-  color: #FFF;
+  color: #292929;
 }
-.chuvaFraca{
-  background: rgb(43, 149, 230);
+/* .chuvaFraca{
+  background: #2b95e6;
   color: #f0f7e9;
-}
+} */
 .chuvaFraca h2{
+  color: #292929;
+}
+
+/* .chuvaForte{
+   background: rgba(168, 13, 13, 0.822); 
   color: #FFF;
-}
-.chuvaForte{
-  background: rgba(168, 13, 13, 0.822);
-  color: #f0f7e9;
-}
+  box-shadow:none;
+  
+} */
 .chuvaForte h2{
-  color: #FFF;
+  color: #292929;
 }
 .chuvaModerada{
-  background: rgb(241, 154, 72);
+  /* background: #f19a48; */
   color: #f0f7e9;
 }
 .chuvaModerada h2{
-color: #FFF;
+color: #292929;
 }
 .detalhes{
   font-weight: bold;
@@ -2731,4 +2738,13 @@ background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
   margin: 0;
   font-size: 16px;
   font-weight: bold;
+}
+
+
+.card-group .card{
+  margin: 0px !important;
+}
+
+.card-group .card:not(:last-child){
+  margin-right: 10px !important;
 }

@@ -4,10 +4,10 @@ window.onload = function(){
   
     //carregarTabelaDado()
     // carregarRelatos()
-    //  carregarRelatosModal()
+    // carregarRelatosModal()
     // CarregaMap()
     // categorizarValores()
-    //carregaPrevisao()
+    // carregaPrevisao()
     // teste()
 }
 
@@ -32,16 +32,16 @@ function carregarTabelaDado() {
 
                     // Definir cor com base no valor da precipitação
                     if (maior.value > 50) {
-                        tr.style.backgroundColor = 'red'; // Chuva forte
+                        tr.style.backgroundColor = '#DC143C'; // Chuva forte
                     } else if (maior.value >= 20 && maior.value <= 50) {
-                        tr.style.backgroundColor = 'orange'; // Chuva moderada
+                        tr.style.backgroundColor = '#FFA500'; // Chuva moderada
                     } else {
-                        tr.style.backgroundColor = '#0299d8'; // Chuva fraca
+                        tr.style.backgroundColor = '#1E90FF'; // Chuva fraca
                     }
 
                     // Preencher linha tabela
-                    tr.innerHTML = "<td><strong>" + maior.city +
-                        "</strong></td><td>" + maior.value.toFixed(1) +
+                    tr.innerHTML = "<td>" + maior.city +
+                        "</td><td>" + maior.value.toFixed(1) +
                         "</td><td>" + maior.station_prefix_id +
                         "</td><td>" + maior.value.toFixed(1) +
                         "</td>";
@@ -238,4 +238,19 @@ function carregaPrevisao() {
 //         tabela.appendChild(tr);
 //     });
 // }
+
+
+
+    // Inicializar o mapa
+    var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
+
+    // Adicionar a camada de mapa
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Adicionar marcador
+     var marker = L.marker([-23.5505, -46.6333]).addTo(map);
+     marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
+
 
