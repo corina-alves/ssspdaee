@@ -7,7 +7,7 @@ window.onload = function(){
     // carregarRelatosModal()
     // CarregaMap()
     // categorizarValores()
-    // carregaPrevisao()
+     carregaPrevisao()
     // teste()
 }
 
@@ -202,43 +202,6 @@ function carregaPrevisao() {
 //     // var marker = L.marker([-23.5505, -46.6333]).addTo(map);
 //     // marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
 // }
-
-
-
-// // Array de valores para categorizar e colorir
-// const valores = [0, 2, 6, 11, 3, 8, 15];
-
-// // // Função para categorizar e colorir os valores
-// function categorizarValores(valores) {
-//     const tabela = document.getElementById('valores');
-    
-//     valores.forEach(valor => {
-//         const tr = document.createElement('tr');                                                 
-        
-//         const tdValor = document.createElement('td');
-//         tdValor.textContent = valor;
-
-//         const tdCategoria = document.createElement('td');
-
-//         if (valor > 1 && valor <= 5) {
-//             tdCategoria.textContent = 'Fraca';
-//             tdCategoria.className = 'fraca';
-//         } else if (valor > 5 && valor <= 10) {
-//             tdCategoria.textContent = 'Moderada';
-//             tdCategoria.className = 'moderada';
-//         } else if (valor > 10) {
-//             tdCategoria.textContent = 'Forte';
-//             tdCategoria.className = 'forte';
-//         } else {
-//             tdCategoria.textContent = 'N/A';
-//         }
-
-//         tr.appendChild(tdValor);
-//         tr.appendChild(tdCategoria);
-//         tabela.appendChild(tr);
-//     });
-// }
-
 
 
     // Inicializar o mapa
