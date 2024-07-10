@@ -2,13 +2,55 @@
 
 window.onload = function(){
   
-    //carregarTabelaDado()
+    //  carregarTabelaDado()
     // carregarRelatos()
-    // carregarRelatosModal()
     // CarregaMap()
     // categorizarValores()
-     carregaPrevisao()
-    // teste()
+     
+    carregaPrevisao()
+    // console.log('antes');
+    carregaDadosChuva().then(resp=>{    
+        carregaCityRain(resp)
+        carregarTabelaDado(resp)
+
+        // console.log('carregou');
+     })
+    //  console.log('depois');
+}
+
+function carregaDadosChuva(){
+    return fetch(apiUrl)
+        .then(response => response.json())
+        // .then(dados => {
+            
+           
+        // });
+}
+
+// URL da API
+const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
+
+// Função para carregar e processar dados da API
+function carregaCityRain(dados) {
+    let contadores = [0,0,0,0]
+    
+    dados.json.forEach(dado=>{
+        if(dado.value >= 50){
+            contadores[0] += 1
+        }else if(dado.value >= 20){
+            contadores[1] += 1
+        }else if(dado.value < 20){
+            contadores[2] += 1
+        }else {
+            contadores[3] += 1
+        }
+    })
+    // Atualizar o conteúdo do HTML com os resultados
+    document.getElementById('chuvaForte').textContent = contadores[0];
+    document.getElementById('chuvaModerada').textContent = contadores[1];
+    document.getElementById('chuvaFraca').textContent = contadores[2];
+    document.getElementById('semChuva').textContent = contadores[3];
+
 }
 
 function carregarTabelaDado() {
@@ -32,11 +74,11 @@ function carregarTabelaDado() {
 
                     // Definir cor com base no valor da precipitação
                     if (maior.value > 50) {
-                        tr.style.backgroundColor = '#DC143C'; // Chuva forte
-                    } else if (maior.value >= 20 && maior.value <= 50) {
-                        tr.style.backgroundColor = '#FFA500'; // Chuva moderada
+                        tr.style.color = '#DC143C'; // Chuva forte
+                    } else if (maior.value >= 15 && maior.value <= 50) {
+                        tr.style.color = '#FFA500'; // Chuva moderada
                     } else {
-                        tr.style.backgroundColor = '#1E90FF'; // Chuva fraca
+                        tr.style.color = '#1E90FF'; // Chuva fraca
                     }
 
                     // Preencher linha tabela
@@ -58,8 +100,8 @@ function carregarTabelaDado() {
                 }
             });
         });
-}
 
+}
 
  function carregarRelatos(){
     fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/control_rooms/1/get_reports?limit=20&offset=0").then(function(response){
@@ -147,8 +189,8 @@ function carregaPrevisao() {
 
                 let climaAgora = previsao.currentConditions;
                 let data = previsao.days[1];
-
                 let chuva = data.precip || 0;
+                let teste = data.icon;
 
                 // if (chuva < 15) {
                 //     weakCount++;
@@ -168,17 +210,19 @@ function carregaPrevisao() {
 
                 // ${formattedDate} <br/>
                 // ${data.datetime} <br/>
+                // Agora: ${climaAgora.temp} °C <br/>
                  });
                 let previsaoTempo = document.createElement("div");
                 previsaoTempo.classList.add('card');
-                previsaoTempo.classList.add('col-lg-4');
-                previsaoTempo.classList.add('cardPrev');
+                // previsaoTempo.classList.add('col-lg-4');
+                // previsaoTempo.classList.add('cardPrev');
                 previsaoTempo.innerHTML = `
                     <div class='row'>
                         <div class='col'>
                             <strong> ${latLng.name} </strong><br/>
-                            ${climaAgora.temp} °C <br/>
+                            <i class="fa-solid fa-arrow-down" style="color:#7d9bfc;"></i> ${data.tempmin} <i class="fa-solid fa-arrow-up" style="color:#f36951;"></i> ${data.tempmax} °C <br/>
                             Chuva: ${chuva} mm
+                            
                         </div>
                     </div>`;
 
@@ -216,4 +260,63 @@ function carregaPrevisao() {
      var marker = L.marker([-23.5505, -46.6333]).addTo(map);
      marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
 
+
+// URL da API
+// const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
+        // Inicializar o mapa
+        // let map = L.map('map').setView([-23.55052, -46.633308], 6);
+
+        // // Adicionar uma camada de mapa base
+        // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        // }).addTo(map);
+        
+        // // Função para carregar e processar dados da API e adicionar ao mapa
+        // function carregarMapa() {
+        //   fetch(apiUrl)
+        //     .then(response => response.json())
+        //     .then(dados => {
+        //       console.log(dados);
+        
+        //       // Limpar camadas anteriores do mapa
+        //       map.eachLayer((layer) => {
+        //         if (!!layer.toGeoJSON) {
+        //           map.removeLayer(layer);
+        //         }
+        //       });
+        
+        //       // Adicionar a camada base novamente
+        //       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        //       }).addTo(map);
+        
+        //       // Adicionar marcadores no mapa
+        //       dados.forEach(event => {
+        //         const { latitude, longitude, municipality, value } = event;
+        
+        //         let color;
+        //         if (value > 50) {
+        //           color = '#DC143C'; // Chuva forte
+        //         } else if (value >= 15 && value <= 50) {
+        //           color = '#FFA500'; // Chuva moderada
+        //         } else if (value > 0 && value < 15) {
+        //           color = '#1E90FF'; // Chuva fraca
+        //         } else {
+        //           color = '#00FF00'; // Sem chuva
+        //         }
+        
+        //         L.circleMarker([latitude, longitude], {
+        //           radius: 8,
+        //           fillColor: color,
+        //           color: color,
+        //           weight: 1,
+        //           opacity: 1,
+        //           fillOpacity: 0.8
+        //         })
+        //         .bindPopup(`<b>Município:</b> ${municipality}<br><b>Precipitação:</b> ${value.toFixed(1)} mm`)
+        //         .addTo(map);
+        //       });
+        //     })
+        //     .catch(error => console.error('Erro ao buscar dados da API:', error));
+        // }
 

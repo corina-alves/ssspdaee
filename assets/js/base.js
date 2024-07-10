@@ -1,9 +1,8 @@
 
 
-
 const loadHeaderSp = () =>{
 
-let spgov = document.getElementById('row')
+let spgov = document.getElementById('section')
 spgov.innerHTML='  <section class="govsp-topo">'+
     '<link rel="stylesheet" type="text/css" href="https://saopaulo.sp.gov.br/barra-govsp/css/topo-padrao-govsp.min.css">'+
     '<link rel="stylesheet" type="text/css" href="https://saopaulo.sp.gov.br/barra-govsp/css/barra-contraste-govsp.min.css">  '+
@@ -80,7 +79,8 @@ const loadHeader = () =>{
 
     let el = document.getElementById('header')
 
-    el.innerHTML ='<div class="container d-flex align-items-center justify-content-between">'+
+    el.innerHTML =
+    '<div class="container d-flex align-items-center justify-content-between">'+
 
       '<div class="logo">'+
         '<a href="index.html"><img src="http://www.daee.sp.gov.br/site/wp-content/uploads/2023/05/LogoSite.png" style="width="210px; height="60px"; class="logo"></a>'+
@@ -130,31 +130,32 @@ const loadFooter = () =>{
     '<div class="container">'+
       '<div class="row">'+
 
-        '<div class="col-lg-3 col-md-6 footer-info">'+
-          '<h3>SSSP-DAEE</h3>'+
-          '<p>Rede Hidrológica básica do Estado de São Paulo é operada pelo DAEE desde 1951.</p>'+
-          '<p>Sala de Situação de São Paulo, apresenta produtos e relatos por redes sociais e e-mails. </p>'+
+        '<div class="col-lg-4 footer-info">'+
+        '<a href="index.html"><img src="http://www.daee.sp.gov.br/site/wp-content/uploads/2023/05/LogoSite.png" style="width="210px; height="60px;" class="logo"></a>'+'<br/><br/>'+
+        '<h2><STRONG>SALA DE SITUAÇÃO DO ESTADO DE SÃO PAULO</STRONG></H2>'+ 
+          '<p>Rede Hidrológica básica do Estado de São Paulo é operada pelo DAEE desde 1951.</p>'+ 
         '</div>'+
 
-        '<div class="col-lg-3 col-md-6 footer-links">'+
+        '<div class="col-lg-2 footer-links">'+
           '<h4>Boletins</h4>'+
           '<ul>'+
-            '<li><a href="#">Boletins Diários</a></li>'+
-            '<li><a href="#">Boletins Mensais</a></li>'+
-            '<li><a href="#">Ultimos Boletim</a></li>'+
+            '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target=_blank>Boletins Diários</a></li>'+
+            '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFln" target=_blank>Boletins Mensais</a></li>'+
+            
           '</ul>'+
            '<h4>Sobre</h4>'+
            '<ul>'+
-            '<li><a href="sobre.php">Sobre Nós</a></li>'+
-            '<li><a href="equipe.php">Equipes</a></li>'+
+            '<li><a href="sobre.html">Sobre Nós</a></li>'+
+            // '<li><a href="equipe.php">Equipes</a></li>'+
           '</ul>'+
         '</div>'+
-        '<div class="col-lg-3 col-md-6 footer-links">'+
-          '<h4>Situação</h4>'+
+        '<div class="col-lg-3 footer-links">'+
+          '<h4>Links Úteis</h4>'+
           '<ul>'+
-            '<li><a href="#">Chuvas Diárias Alto Tietê/Cubatão</a></li>'+
-            '<li><a href="#">Últimos Alertas</a></li>'+
-            '<li><a href="#">Ultimas Publicações da SSSP / DAEE</a></li>'+
+            '<li><a href="https://www.defesacivil.sp.gov.br/" target=_blank>Defesa Civil</a></li>'+
+            '<li><a href="https://www.gov.br/cemaden/pt-br/assuntos/monitoramento" target=_blank>CEMADEN</a></li>'+
+            '<li><a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target=_blank>Portal Queimadas</a></li>'+
+            '<li><a href="https://tempo.cptec.inpe.br/" target=_blank>CPTEC/INPE</a></li>'+
           '</ul>'+
         '</div>'+
 
@@ -182,15 +183,46 @@ const loadFooter = () =>{
     '</div>'+
   '</div>'+
 
-  '<div class="container">'+
+  
     '<div class="copyright">'+
       '&copy;  <strong><span>SSSP-DAEE</span></strong>. '+
     '</div>'+
     '<div class="credits">'+
+
+  '</div>'+
+
+  '<section id="govsp-rodape">'+
+
+  '<link rel="stylesheet" type="text/css" href="https://www.saopaulo.sp.gov.br/barra-govsp/css/rodape-padrao-govsp.min.css">'+
+
+  '<div class="container">'+
+   '<div class="linha-botoes">'+
+    '<div class="coluna-4">'+
+          '<a href="https://www.ouvidoria.sp.gov.br/Portal/Default.aspx" target="_blank" class="btn btn-model">Ouvidoria</a>'+
+        '</div> '+
+
+        '<div class="coluna-4">'+
+          '<a href="http://www.transparencia.sp.gov.br/" target="_blank" class="btn btn-model">Transparência</a>'+
+        '</div>'+ 
+
+        '<div class="coluna-4">'+
+          '<a href="http://www.sic.sp.gov.br/" target="_blank" class="btn btn-model">SIC</a>'+
+        '</div>'+ 
     '</div>'+
-  '</div>';
+    '</div>'+
+
+    '<div class="container rodape">'+    
+      '<div class="logo-rodape">'+
+        '<a href="https://www.saopaulo.sp.gov.br/" target="_blank">'+
+        '<img decoding="async" loading="lazy" src="https://www.saopaulo.sp.gov.br/barra-govsp/img/logo-rodape-governo-do-estado-sp.png" alt="Governo do Estado de SP" width="206" height="38"></a>'+
+      '</div>'+
+
+    '</div>'+
+'</section>'
+
+
 }
 
 loadHeader()
 loadFooter()
-loadHeaderSp()
+// loadHeaderSp()
