@@ -28,7 +28,7 @@ function carregaDadosChuva(){
 }
 
 // URL da API
-const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
+const apiUrl = 'https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
 
 // Função para carregar e processar dados da API
 function carregaCityRain(dados) {
@@ -54,7 +54,7 @@ function carregaCityRain(dados) {
 }
 
 function carregarTabelaDado() {
-    fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
+    fetch("https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
         .then(function(response) {
             response.json().then(function(dados) {
                 console.log(dados);
@@ -74,18 +74,18 @@ function carregarTabelaDado() {
 
                     // Definir cor com base no valor da precipitação
                     if (maior.value > 50) {
-                        tr.style.color = '#DC143C'; // Chuva forte
+                        tr.style.backgroundColor = '#DC143C'; // Chuva forte
                     } else if (maior.value >= 15 && maior.value <= 50) {
-                        tr.style.color = '#FFA500'; // Chuva moderada
+                        tr.style.backgroundColor = '#FFA500'; // Chuva moderada
                     } else {
-                        tr.style.color = '#1E90FF'; // Chuva fraca
+                        tr.style.backgroundColor = '#1E90FF'; // Chuva fraca
                     }
 
                     // Preencher linha tabela
-                    tr.innerHTML = "<td>" + maior.city +
-                        "</td><td>" + maior.value.toFixed(1) +
-                        "</td><td>" + maior.station_prefix_id +
-                        "</td><td>" + maior.value.toFixed(1) +
+                    tr.innerHTML = "<td> <strong>" + maior.city +
+                        "</td> </strong><td>" + maior.value.toFixed(1) +
+                        "</td><td>" + " - " +
+                        "</td><td>" + " - " +
                         "</td>";
                     // Anexar linha no corpo da tabela
                     tbody.appendChild(tr);
@@ -102,9 +102,10 @@ function carregarTabelaDado() {
         });
 
 }
+// https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/control_rooms/1/get_reports?limit=20&offset=0
 
  function carregarRelatos(){
-    fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/control_rooms/1/get_reports?limit=20&offset=0").then(function(response){
+    fetch("https://cth.daee.sp.gov.br/sibh/api/v1/control_rooms/1/get_reports?limit=20&offset=0").then(function(response){
          response.json().then(function(relatos){
             // let relatos = []
             console.log(relatos);

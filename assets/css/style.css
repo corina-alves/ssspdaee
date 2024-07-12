@@ -893,15 +893,17 @@ section {
   padding-bottom: 60px;;
 }
 
-.parceiros .swiper-slide img {
-  opacity: 0.8;
-  transition: 0.3s;
+.parceiros img {
+  /* opacity: 0.8;
+  transition: 0.3s; */
+  width: auto%;
+  height: 80px;;
 }
 
-.parceiros a img:hover{
+/* .parceiros a img:hover{
   -webkit-transform: scale(1.5);
   transform: scale(1.5);
-}
+} */
 
 /*--------------------------------------------------------------
 # estacoes

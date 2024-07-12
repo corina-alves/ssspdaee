@@ -89,7 +89,7 @@ const loadHeader = () =>{
       '<nav id="navbar" class="navbar ">'+
         '<ul>'+
           '<li><a class="active" href="index.html">Home</a></li>'+
-          '<li><a href="http://hidroapp.daee.sp.gov.br/mapa">Mapa</a></li>'+
+          '<li><a href="http://hidroapp.daee.sp.gov.br/">Mapa</a></li>'+
           '<li><a href="noticias.html">Notícias</a></li>'+
           '<li class="dropdown"><a href="#"><span>Sala de Situação</span> <i class="bi bi-chevron-down"></i></a>'+
 
