@@ -7,7 +7,7 @@ window.onload = function(){
     // CarregaMap()
     // categorizarValores()
      
-    carregaPrevisao()
+    // carregaPrevisao()
     // console.log('antes');
     carregaDadosChuva().then(resp=>{    
         carregaCityRain(resp)
@@ -28,7 +28,9 @@ function carregaDadosChuva(){
 }
 
 // URL da API
-const apiUrl = 'https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
+//  const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
+
+// const apiUrl = 'https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
 
 // Função para carregar e processar dados da API
 function carregaCityRain(dados) {
@@ -53,9 +55,10 @@ function carregaCityRain(dados) {
 
 }
 
-function carregarTabelaDado() {
-    fetch("https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
-        .then(function(response) {
+// function carregarTabelaDado() {
+//      fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
+//     // fetch("https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
+//         .then(function(response) {
             response.json().then(function(dados) {
                 console.log(dados);
                 let medicoes = dados.json;

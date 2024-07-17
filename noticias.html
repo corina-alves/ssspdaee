@@ -14,8 +14,10 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><!-- maps -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><!-- maps -->
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -36,25 +38,24 @@
 </head>
 
 <body>
-
-    <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
-
   </header>
   <main id="main">
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="breadcrumb-hero">
         <div class="container">
           <div class="breadcrumb-hero">
-            <h2>Noticias em tempo real</h2>
-            <p>Acompanhe as notícias referente ao monitoramento de cheias em tempo real, tudo que a SSSP faz dentro de 24h para atualizar sobre o estado de alerta, crítico, e geração de relatorios aqui.</p>
+            <h2><strong style="font-weight: 900; font-size: 40px;">NOTÍCIAS</strong></h2>
+            <h6>Acompanhe as notícias referente ao monitoramento de cheias em tempo real, tudo que a SSSP faz no período de
+              24h para atualizar sobre o estado de alerta, evento crítico, e gerando relatorios.</h6>
           </div>
         </div>
       </div>
       <div class="container">
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>Montoramento de Recursos Hídricos</li>
+          <li>Notícias</li>
         </ol>
       </div>
     </section><!-- End Breadcrumbs -->
@@ -66,8 +67,8 @@
           <div class="col-lg-8 entries">
             <article class="entry">
               <div class="entry-img maps">
-                    <div id="map"></div>
-                        <!-- Scripts -->
+              <div id="map"></div>
+                   
                         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
                         <script>
                             // Inicializar o mapa
@@ -81,30 +82,32 @@
                             // Adicionar marcador
                             var marker = L.marker([-23.5505, -46.6333]).addTo(map);
                             marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
-                        </script>
-              </div>
-
+                        </script> 
+                       <!-- <p> <small>Font: https://clima.inmet.gov.br/ </small></p> -->
+              </div> 
+<!-- 
               <h2 class="entry-title">
-                <a href="#">Monitoramento de Cheias no estado</a>
+                <a href="#">Precipitação Total Prevsta</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">Sala de Situação do estado</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="2020-01-01">dia, ano</time></li>
-                  <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> -->
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">Post: Sala de Situação
+                      do estado</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time
+                      datetime="2020-01-01">16/07/2024 </time></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> 
                 </ul>
-              </div>
+              </div> 
 
               <div class="entry-content">
                 <p>
-                <!-- monitoramento dos recursos hídricos é operado em processo de coleta de dados  -->
-                As Redes Telemétricas, são um conjunto de equipamentos que transmitem dados de sensores de chuva e nível para o SIBH e a SSSP, permitindo o acompanhamento de chuvas intensas, escassez hídrica, níveis dos rios, reservatórios e piscinões. Através do SIBH, os dados de várias entidades são normalizados e centralizados para um fácil acesso as informações
+                    Com a imagem de precipitação acima ...
                 </p>
                 <div class="read-more">
                   <a href="#">Leia mais</a>
                 </div>
-              </div>
+              </div>-->
 
             </article>
 
@@ -115,23 +118,32 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba sofre com falta de chuva e ameaça abastecimento</a>
+                <a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/"
+                  target="_blank">Rio Piracicaba sofre com falta de chuva e ameaça abastecimento</a>
               </h2>
 
               <div class="entry-meta">
                 <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Font: materia da vtvnews</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="2020-01-01">dia, ano</time></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                      href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/"
+                      target="_blank">Font: materia da vtvnews</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time datetime="2020-01-01">dia,
+                      ano</time></li>
                   <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> -->
                 </ul>
               </div>
 
               <div class="entry-content">
                 <p>
-                  "O Rio Piracicaba sofre os efeitos do baixo volume de chuva de abril e maio, que segundo dados da sala de situação do PCJ ficou abaixo do esperado. Na região da rua do Porto a vazão, e o nível estão abaixo das expectativas. Na manhã desta sexta-feira (17/05), o manancial estava em 24,97 m3/s 69,51% menor que o ideal nesse período do ano. A vazão média histórica para maio é de 81,90 mil litros de água por segundo."
+                  "O Rio Piracicaba sofre os efeitos do baixo volume de chuva de abril e maio, que segundo dados da sala
+                  de situação do PCJ ficou abaixo do esperado. Na região da rua do Porto a vazão, e o nível estão abaixo
+                  das expectativas. Na manhã desta sexta-feira (17/05), o manancial estava em 24,97 m3/s 69,51% menor
+                  que o ideal nesse período do ano. A vazão média histórica para maio é de 81,90 mil litros de água por
+                  segundo."
                 </p>
                 <div class="read-more">
-                  <a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Leia mais</a>
+                  <a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/"
+                    target="_blank">Leia mais</a>
                 </div>
               </div>
 
@@ -140,7 +152,7 @@
 
           <div class="col-lg-4">
             <div class="noticiasRecentes">
-              <h3 class="noticiasRecentes-title">Categorias</h3>
+              <!-- <h3 class="noticiasRecentes-title">Categorias</h3> -->
               <div class="noticiasRecentes-item categories">
                 <ul>
                   <li><a href="#">Alertas </a></li>
@@ -149,32 +161,29 @@
                 </ul>
               </div>
 
-              <h3 class="noticiasRecentes-title">Matérias Recentes</h3>
+              <h3 class="noticiasRecentes-title">Matérias Relevantes</h3>
               <div class="noticiasRecentes-item recent-posts">
                 <div class="post-item clearfix">
+                  <img src="assets/img/noticias/map.png" alt="">
+                  <h4><a href="https://pt.weatherspark.com/m/30268/7/Condi%C3%A7%C3%B5es-meteorol%C3%B3gicas-caracter%C3%ADsticas-de-S%C3%A3o-Paulo-Brasil-em-julho"
+                      target="_blank">Condições Meteorológicas em julho em São Paulo</a></h4>
+                  <time datetime="2020-01-01">Jul 17, 2024</time>
+                </div>
+
+                <div class="post-item clearfix">
                   <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
-                  <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
+                  <h4><a href="https://mananciais.sabesp.com.br/HidroMapas"
+                      target="_blank">Manaciais - HidroMapas</a></h4>
+                  <time datetime="2020-01-01">Jul 17, 2024</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
+                  <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/"
+                      target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
                   <time datetime="2020-01-01">Mai 17, 2024</time>
                 </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
-                  <h4><a href="#">Mudanças Climáticas </a></h4>
-                  <time datetime="2020-01-01">Jan 1, 2020</time>
-                </div>
-
-                <div class="post-item clearfix">
-                    <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
-                    <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
-                    <time datetime="2020-01-01">Mai 17, 2024</time>
-                  </div>
-
-                  <div class="post-item clearfix">
-                    <img src="assets/img/noticias/rio_piracicaba.jpeg" alt="">
-                    <h4><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/" target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></h4>
-                    <time datetime="2020-01-01">Mai 17, 2024</time>
-                  </div>
-               </div>
+              </div>
 
               <h3 class="noticiasRecentes-title"><i class="bi bi-tag-fill"></i> Tags </h3>
               <div class="noticiasRecentes-item tags">
@@ -183,9 +192,10 @@
                   <li><a href="https://monitordesecas.ana.gov.br/mapa?mes=4&ano=2024" target="_blank">Seca</a></li>
                   <li><a href="#">El Niño</a></li>
                   <li><a href="https://www.gov.br/inpe/pt-br" target="_blank">INPE/CPTEC</a></li>
-                  <li><a href="https://www.windy.com/pt/-Radar-meteorol%C3%B3gico-radar?radar,-22.231,-47.939,8,m:dc0afoe" target="_blank">Wind</a></li>
+                  <li><a href="https://www.windy.com/pt/-Radar-meteorol%C3%B3gico-radar?radar,-22.231,-47.939,8,m:dc0afoe"target="_blank">Wind</a></li>
                   <li><a href="https://cth.daee.sp.gov.br/sibh/" target="_blank">SIBH</a></li>
-                  <li><a href="https://somarmeteorologia.com.br/security/defesa_civil/pontual.php?tipo=Mapas" target="_blank">Defesa Civil</a></li>
+                  <li><a href="https://somarmeteorologia.com.br/security/defesa_civil/pontual.php?tipo=Mapas"
+                      target="_blank">Defesa Civil</a></li>
                   <li><a href="https://semil.sp.gov.br/tag/integratiete/" target="_blank">SEMIL</a></li>
                   <li><a href="http://www.daee.sp.gov.br/site/hidrologia/" target="_blank">Recursos Hídricos</a></li>
                   <li><a href="#">Paneta</a></li>
@@ -199,15 +209,18 @@
     </section>
 
   </main>
- <!-- ======= Footer ======= -->
- <footer id="footer" class="" style="margin-top: 10px;;">
-  <script src="assets/js/base.js"></script>
- </footer>
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="" style="margin-top: 10px;;">
+    <script src="assets/js/base.js"></script>
+  </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -216,7 +229,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+
 </body>
 
 </html>
