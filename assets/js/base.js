@@ -109,9 +109,15 @@ const loadHeader = () =>{
               '<li><a href="https://docs.google.com/document/d/11qxQPqNc1RW7mMYw_uXdw-Gmh7lr8UUbaH2AnG6k6g0/edit#heading=h.7vzq6ltz512f" target="_black">Último Boletim</a></li>'+
             '</ul>'+
           '</li>'+
+   
+          '<li class="dropdown"><a href="hidrologia.html"><span>Hidrologia</span> <i class="bi bi-chevron-down"></i></a>'+
+
+          '<ul>'+
+   
           '<li><a href="estacoes.html">Estações</a></li>'+
-          '<li><a href="hidrologia.html">Hidrologia</a></li>'+
-        
+ 
+          '</ul>'+
+        '</li>'+
 
         '</ul>'+
         '<i class="bi bi-list mobile-nav-toggle"></i>'+
