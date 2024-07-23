@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-br" data-mdb-theme="white">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Relatório de chuvas</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <h1>Teste</h1> -->
+<style>
+  .btn-success{
+    background: #F00;
+  }
+    .btn-success button:hover{
+    background: #F00;
+  }
+</style>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>RELATÓRIO DA SALA DE SITUAÇÃO</h2>
+          <span>Dados baseados em radares DAEE, REDEMET e IPMet/UNESP e redes telemétricas</span>
+        <div class="card">
+          <div class="row">
+           <button type="button" class="btn btn-success col-md-3" data-mdb-ripple-init style="margin-left:12px;">Muito alto</button>
+            <button type="button" class="btn btn-danger col-md-2" data-mdb-ripple-init style="margin-left:28px;">Alto</button>
+            <button type="button" class="btn btn-warning col-md-3" data-mdb-ripple-init style="margin-left:28px;">Moderado</button>
+            <button type="button" class="btn btn-info col-md-2" data-mdb-ripple-init style="margin-left:28px;">Baixo</button>
+          </div>
+            <img src="img/interpolacao.jpeg" class="card-img-top" alt="Fissure in Sandstone"/>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Card title</h5> -->
+              <p class="card-text">Acumulado de chuva em 24h no estado de São Paulo.</p>
+              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Ver mais</a>
+            </div>
+        </div></div>
+ <div class="col">
+  <table class="table table-striped">
+  <thead>
+
+   <tr>
+     <th colspan="3"><h4><strong><i class="fas fa-cloud-rain"></i> CLASSIFICAÇÃO</strong></h4></th>
+     <th colspan="2"><button type="button" class="btn btn-primary" data-mdb-ripple-init>CHUVOSO</button></th>
+   </tr> 
+    <tr style=" border-top: solid 4px #000"><TH colspan=4> <center>Os 8 municípios com maiores volume de chuva no <strong>período de 24h.</strong></center></TH></tr>
+    <tr>
+      <th scope="col">Municipios</th>
+      <th scope="col">Chuva Total (mm)</th>
+      <th scope="col">Evento Máx. (mm)</th>
+      <th scope="col">Média Hstórica (mensal)</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    
+    <tr>
+      <th scope="row">Terra Roxa</th>
+      <td>81.8</td>
+      <td>13.7</td>
+      <td>112.0</td>
+    </tr>
+    <tr>
+      <th scope="row">Araras</th>
+      <td>81.2</td>
+      <td>14.4</td>
+      <td>56.0</td>
+    </tr>
+    <tr>
+      <th scope="row">Mococa</th>
+      <td>78.5</td>
+      <td>36</td>
+      <td>114.0</td>
+    </tr>
+    <tr>
+      <th scope="row">Cássia dos Coqueiros</th>
+      <td>75,9</td>
+      <td>25.7</td>
+      <td>112.0</td>
+    </tr>
+        <tr>
+      <th scope="row">Colômbia - SP</th>
+      <td>69.0</td>
+      <td>2.7</td>
+      <td>112.0</td>
+    </tr>
+        <tr>
+      <th scope="row">Cajuru – SP</th>
+      <td>63.9</td>
+      <td>36</td>
+      <td>114.0</td>
+    </tr>
+            <tr>
+      <th scope="row">Rio Claro</th>
+      <td>63.9</td>
+      <td>36</td>
+      <td>114.0</td>
+    </tr>
+            <tr>
+      <th scope="row">Itapira</th>
+      <td>63.9</td>
+      <td>36</td>
+      <td>114.0</td>
+    </tr>
+  </tbody>
+</table>
+
+       </div>
+      </div>
+
+<!---------------------------------------------------------------->
+      <div class="row">
+        <div class="col">
+ <table class="table table-striped">
+  <thead>
+   <tr>
+     <th colspan="4"><h4><strong><i class="fas fa-cloud-rain"></i> EVENTOS CRÍTICOS/EXTRAVASAMENTOS</strong></h4></th>
+   </tr> 
+    <tr>
+      <th scope="col">Posto</th>
+      <th scope="col">Início</th>
+      <th scope="col">Duração (min)</th>
+      <th scope="col">Extrav. (m)</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    
+    <tr>
+      <th scope="row">Cór. Morro do S - Capão Redondo - São Paulo</th>
+      <td>18/03 15:40</td>
+      <td>35</td>
+      <td>753,43, altura <strong style="color: #F00;">0,43m</strong> </td>
+    </tr>
+    <tr>
+      <th scope="row">Rio Verde - Rua Cunha Porã - São Paulo</th>
+      <td>17/03 18:30</td>
+      <td>25</td>
+      <td>745,88, altura <strong style="color: #F00;">0,90m</strong></td>
+    </tr>
+    <tr>
+      <th scope="row">Água Vermelha - São Paulo</th>
+      <td>17/03 18:10</td>
+      <td>20</td>
+      <td>742,20, altura <strong style="color:#F00;">0,54m</strong> </td>
+    </tr>
+    <tr>
+      <th scope="row">Posto Teste – São Paulo</th>
+      <td>17/03 19:00</td>
+      <td>30</td>
+      <td>742,20, altura <strong style="color:#F00;">0,54m</strong></td>
+    </tr>
+        <tr>
+      <th scope="row">Posto Teste – São Paulo</th>
+      <td>17/03 17:30</td>
+      <td>30</td>
+      <td>742,20, altura <strong style="color:#F00">0,54m</strong></td>
+    </tr>
+        
+  </tbody>
+</table>
+</div>
+ <div class="col">
+ <div class="card">
+  <div class="card-header">Monitoramento de piscinões DAEE</div>
+  <div class="card-body">
+    <h4 class="card-title" style="color: #3B71CA;"> <strong><i class="fas fa-water" ></i> PISCINÕES</strong></h4>
+    <p class="card-text">Monitoramento dos piscinões DAEE está com capacidade atual <strong>acima</strong> de 85%, com dados referentes ao mês de dezembro de 2023. Estado <strong>Normal</strong>..</p>
+    <a href="#" class="btn btn-primary" data-mdb-ripple-init>Ver mais</a>
+  </div>
+</div>
+
+       </div>
+      </div>
+
+<!------------------------------------------------------------------------------------------->
+      <div class="row">
+        <div class="col">
+          <h3>Riscos de deslizamento em 72h</h3>
+          
+        <div class="card">
+   
+            <img src="img/ppdc.png" class="card-img-top" alt="Fissure in Sandstone"/>
+            <div class="card-body">
+              <!-- <h5 class="card-title">Card title</h5> -->
+              <p class="card-text"><strong>Obs:</strong> Riscos de deslizamentos associados aos lmiares de chuva acumulada em até 72h.</p>
+              <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Ver mais</a>
+            </div>
+        </div></div>
+ <div class="col">
+  <table class="table table-striped">
+  <thead>
+
+<!--    <tr>
+     <th colspan="3"><h4><strong><i class="fas fa-cloud-rain"></i> CLASSIFICAÇÃO</strong></h4></th>
+     <th colspan="2"><button type="button" class="btn btn-primary" data-mdb-ripple-init>CHUVOSO</button></th>
+   </tr> 
+    <tr style=" border-top: solid 4px #000"><TH colspan=4> <center>Os 8 municípios com maiores volume de chuva no <strong>período de 24h.</strong></center></TH></tr> -->
+    <tr>
+      <th scope="col">Municipios</th>
+      <th scope="col">Acum.(mm)</th>
+      <th scope="col">PPDC (mm)</th>
+      <th scope="col">IPT</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    
+    <tr>
+      <th scope="row">Cananéia</th>
+      <td>86.9</td>
+      <td></td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th scope="row">Barra do Turvo</th>
+      <td>87.6</td>
+      <td></td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <th scope="row">Juquitiba</th>
+      <td>87.6</td>
+      <td>80</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Ibiúna</th>
+      <td>70.2</td>
+      <td>60</td>
+      <td></td>
+    </tr>
+        <tr>
+      <th scope="row">São José da Bela Vista</th>
+      <td>89.7</td>
+      <td></td>
+      <td>70</td>
+    </tr>
+       
+  </tbody>
+</table>
+
+       </div>
+      </div>
+
+<!-- <iframe src="https://api.wo-cloud.com/content/widget/?geoObjectKey=3705599&language=pt&region=BR&timeFormat=HH:mm&windUnit=kmh&systemOfMeasurement=metric&temperatureUnit=celsius" name="CW2" scrolling="no" width="290" height="318" frameborder="0" style="border: 1px solid #10658E;border-radius: 8px"></iframe> -->
+
+    </div>
+
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.js">
+    </script>
+  </body>
+</html>

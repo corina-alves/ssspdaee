@@ -17,17 +17,17 @@ window.onload = function(){
     //  console.log('depois');
 }
 
-function carregaDadosChuva(){
-    return fetch(apiUrl)
-        .then(response => response.json())
-        // .then(dados => {
+// function carregaDadosChuva(){
+//     return fetch(apiUrl)
+//         .then(response => response.json())
+//         // .then(dados => {
             
            
-        // });
-}
+//         // });
+// }
 
 // URL da API
-const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
+ const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
 
 // const apiUrl = 'https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
 
@@ -44,6 +44,8 @@ function carregaCityRain(dados) {
             contadores[2] += 1
         }else if(dado.value < 0){
             contadores[3] += 1
+        }else{
+            contadores +=1
         }
     })
     // Atualizar o conteúdo do HTML com os resultados
@@ -55,7 +57,7 @@ function carregaCityRain(dados) {
 }
 
 function carregarTabelaDado() {
-     fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
+      fetch("https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
     // fetch("https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
         .then(function(response) {
             response.json().then(function(dados) {
@@ -80,7 +82,7 @@ function carregarTabelaDado() {
                     } else if (maior.value >= 15 && maior.value <= 50) {
                         tr.style.backgroundColor = '#FFA500'; // Chuva moderada
                     } else {
-                        tr.style.backgroundColor = '#1E90FF'; // Chuva fraca
+                        tr.style.backgroundColor = '#0D6EFD'; // Chuva fraca
                     }
 
                     // Preencher linha tabela
@@ -204,9 +206,9 @@ function carregaPrevisao() {
                     month: '2-digit',
                     year: 'numeric'
 
-                // // ${formattedDate} <br/>
-                // // ${data.datetime} <br/>
-                // // Agora: ${climaAgora.temp} °C <br/>
+                // ${formattedDate} <br/>
+                // ${data.datetime} <br/>
+                // Agora: ${climaAgora.temp} °C <br/>
                  });
                 let previsaoTempo = document.createElement("div");
                 previsaoTempo.classList.add('card');
@@ -215,6 +217,7 @@ function carregaPrevisao() {
                 previsaoTempo.innerHTML = `
                     <div class='row'>
                         <div class='col'>
+                         Agora: ${climaAgora.temp} °C <br/>
                             <strong> ${latLng.name} </strong><br/>
                             <i class="fa-solid fa-arrow-down" style="color:#7d9bfc;"></i> ${data.tempmin} <i class="fa-solid fa-arrow-up" style="color:#f36951;"></i> ${data.tempmax} °C <br/>
                             Chuva: ${chuva} mm
@@ -228,99 +231,33 @@ function carregaPrevisao() {
     });
 }
 
-// function carregaPrevisao() {
-//     let latLngs = [
-//         { text: '-23.031009, -45.566196', name: 'Taubaté' },
-//         { text: '-21.172541, -47.812758', name: 'Ribeirão Preto' },
-//         { text: '-22.738662, -47.645608', name: 'Piracicaba' },
-//         { text: '-23.624199, -46.676390', name: 'São Paulo' },
 
-//         { text: '-20.819188, -49.378521', name: 'São José do Rio Preto' },
-//         { text: '-22.219694, -49.950266', name: 'Marília' },
-//         { text: '-24.187076, -46.801280', name: 'Itanhaém' },
-//         { text: '-24.496514, -47.846099', name: 'Registro' },
-        
-        
-//     ];
+// function CarregaMap(){
+//     // Inicializar o mapa
+//     var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
+  
+//     // Adicionar a camada de mapa
+//     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//     }).addTo(map);
 
-//     // let weakCount = 0;
-//     // let moderateCount = 0;
-//     // let heavyCount = 0;
-
-//     latLngs.forEach(latLng => {
-//         fetch("https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + latLng.text + "?unitGroup=metric&key=F25Q6KUDD73CMRSWWS8US97X6&contentType=json")
-//             .then(response => response.json())
-//             .then(previsao => {
-//                 console.log(previsao);
-
-//                 let climaAgora = previsao.currentConditions;
-//                 let data = previsao.days[1];
-
-//                 let chuva = data.precip || 0;
-
-//                 // if (chuva < 15) {
-//                 //     weakCount++;
-//                 //     document.getElementById('weakCount').innerText = weakCount;
-//                 // } else if (chuva >= 15 && chuva < 20) {
-//                 //     moderateCount++;
-//                 //     document.getElementById('moderateCount').innerText = moderateCount;
-//                 // } else if (chuva >= 20) {
-//                 //     heavyCount++;
-//                 //     document.getElementById('heavyCount').innerText = heavyCount;
-//                 // }
-//                 //formata data mes/dia/ano
-//                 let formattedDate = new Date(data.datetime).toLocaleDateString('pt-BR', {
-//                     day: '2-digit',
-//                     month: '2-digit',
-//                     year: 'numeric'
-
-//                 // ${formattedDate} <br/>
-//                 // ${data.datetime} <br/>
-//                  });
-//                 let previsaoTempo = document.createElement("div");
-//                 previsaoTempo.classList.add('card');
-//                 previsaoTempo.innerHTML = `
-//                     <div class='row'>
-//                         <div class='col'>
-//                             ${formattedDate} <br/>
-//                            <strong> ${latLng.name} </strong><br/>
-//                             ${climaAgora.temp} °C <br/>
-//                             Chuva: ${chuva} mm
-//                         </div>
-//                     </div>`;
-
-//                 let prev = document.getElementById("previsao");
-//                 prev.appendChild(previsaoTempo);
-//             });
-//     });
+//     // Adicionar marcador
+//     // var marker = L.marker([-23.5505, -46.6333]).addTo(map);
+//     // marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
 // }
 
-function CarregaMap(){
+
     // Inicializar o mapa
     var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
-  
+
     // Adicionar a camada de mapa
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
     // Adicionar marcador
-    // var marker = L.marker([-23.5505, -46.6333]).addTo(map);
-    // marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
-}
-
-
-    // // Inicializar o mapa
-    // var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
-
-    // // Adicionar a camada de mapa
-    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    // }).addTo(map);
-
-    // // Adicionar marcador
-    //  var marker = L.marker([-23.5505, -46.6333]).addTo(map);
-    //  marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
+     var marker = L.marker([-23.5505, -46.6333]).addTo(map);
+     marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
 
 
 // URL da API

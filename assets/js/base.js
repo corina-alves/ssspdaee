@@ -147,15 +147,25 @@ const loadFooter = () =>{
           '<ul>'+
             '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target=_blank>Boletins Diários</a></li>'+
             '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFln" target=_blank>Boletins Mensais</a></li>'+
+            '<li><a href="http://hidroapp.daee.sp.gov.br/" target=_blank>Mapas</a></li>'+
             
           '</ul>'+
-           '<h4>Sobre</h4>'+
+           '<h4>-</h4>'+
            '<ul>'+
             '<li><a href="sobre.html">Sobre Nós</a></li>'+
+            '<li><a href="monitoramento.html">Monitoramento</a></li>'+
+            '<li><a href="salas-de-situacao.html">Salas de Situação</a></li>'+
+            '<li><a href="noticias.html">Notícias</a></li>'+
             // '<li><a href="equipe.php">Equipes</a></li>'+
           '</ul>'+
         '</div>'+
         '<div class="col-lg-3 footer-links">'+
+        '<h4> veja mais</h4>'+
+        '<ul>'+
+          '<li><a href="hidrologia.html">Hidrologia</a></li>'+
+          '<li><a href="estacoes.html">Estações</a></li>'+
+        
+        '</ul>'+
           '<h4>Links Úteis</h4>'+
           '<ul>'+
             '<li><a href="https://www.defesacivil.sp.gov.br/" target=_blank>Defesa Civil</a></li>'+
@@ -163,6 +173,7 @@ const loadFooter = () =>{
             '<li><a href="https://terrabrasilis.dpi.inpe.br/queimadas/portal/" target=_blank>Portal Queimadas</a></li>'+
             '<li><a href="https://tempo.cptec.inpe.br/" target=_blank>CPTEC/INPE</a></li>'+
           '</ul>'+
+          
         '</div>'+
 
         '<div class="col-lg-3 col-md-6 footer-contact">'+

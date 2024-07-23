@@ -1,0 +1,149 @@
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<div id="map" class="map"></div>
+
+<style>
+h1 {
+margin: 20px 0;
+}
+
+.map {
+width: 80%;
+height: 400px;
+margin-bottom: 20px;
+}
+
+.charts-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+width: 80%;
+}
+
+canvas {
+max-width: 100%;
+margin: 20px 0;
+}
+</style>
+<div class="container">
+<div class="charts-container">
+  <div class="col-lg-4">  <canvas id="barChart"></canvas></div>
+  <div class="col-lg-4">  <canvas id="lineChart"></canvas></div>
+    <div class="col-lg-4">  <canvas id="pieChart"></canvas></div>
+</div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+// Dados dos eventos de chuva
+const eventos = [
+  { nome: 'Evento 1', quantidade: 100, localizacao: [-23.5505, -46.6333] },
+  { nome: 'Evento 2', quantidade: 200, localizacao: [-22.9068, -43.1729] },
+  { nome: 'Evento 3', quantidade: 150, localizacao: [-19.9167, -43.9345] },
+  { nome: 'Evento 4', quantidade: 250, localizacao: [-30.0277, -51.2287] },
+  { nome: 'Evento 5', quantidade: 300, localizacao: [-25.4284, -49.2733] },
+  { nome: 'Evento 6', quantidade: 50, localizacao: [-3.71722, -38.5434] },
+  { nome: 'Evento 7', quantidade: 180, localizacao: [-12.9714, -38.5014] },
+  { nome: 'Evento 8', quantidade: 120, localizacao: [-8.04756, -34.877] },
+  { nome: 'Evento 9', quantidade: 80, localizacao: [-1.45583, -48.5044] },
+  { nome: 'Evento 10', quantidade: 90, localizacao: [-15.7942, -47.8822] }
+];
+
+// Mapa
+const map = L.map('map').setView([-15.7942, -47.8822], 4);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+}).addTo(map);
+
+eventos.forEach(evento => {
+  L.marker(evento.localizacao).addTo(map)
+      .bindPopup(`<b>${evento.nome}</b><br>Precipitação: ${evento.quantidade} mm`);
+});
+
+// Gráficos
+const ctxBar = document.getElementById('barChart').getContext('2d');
+const ctxLine = document.getElementById('lineChart').getContext('2d');
+const ctxPie = document.getElementById('pieChart').getContext('2d');
+
+const labels = eventos.map(e => e.nome);
+const data = eventos.map(e => e.quantidade);
+
+new Chart(ctxBar, {
+  type: 'bar',
+  data: {
+      labels: labels,
+      datasets: [{
+          label: 'Precipitação (mm)',
+          data: data,
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 1
+      }]
+  },
+  options: {
+      scales: {
+          y: {
+              beginAtZero: true
+          }
+      }
+  }
+});
+
+new Chart(ctxLine, {
+  type: 'line',
+  data: {
+      labels: labels,
+      datasets: [{
+          label: 'Precipitação (mm)',
+          data: data,
+          fill: false,
+          borderColor: 'rgba(75, 192, 192, 1)',
+          tension: 0.1
+      }]
+  },
+  options: {
+      scales: {
+          y: {
+              beginAtZero: true
+          }
+      }
+  }
+});
+
+new Chart(ctxPie, {
+  type: 'pie',
+  data: {
+      labels: labels,
+      datasets: [{
+          data: data,
+          backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)'
+          ],
+          borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)',
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)'
+          ],
+          borderWidth: 1
+      }]
+  }
+});
+});
+
+</script>

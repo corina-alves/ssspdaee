@@ -21,7 +21,7 @@
   <!-- Estilos CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><!--maps--->
   <link href="assets/css/style.css" rel="stylesheet">
-
+  <link href="assets/css/sobre.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Serenity - v4.11.0
@@ -32,81 +32,74 @@
 </head>
 
 <body>
-
+<style>
+  p{
+    text-align: justify;
+  }
+  ul li{
+    text-align: justify;
+    line-height: 1,5;
+  }
+</style>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center"></header>
 
   <main id="main">
-
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="breadcrumb-hero">
-        <div class="container">
-          <div class="breadcrumb-hero">
-            <h2 style=" font-weight: 900; font-size: 40px;">QUEM É SSSP</h2>
-            
-            <p>Operando como central de monitoramento em tempo real, a Sala de Situação tem o objetivo de acompanhar condições hidrometeorológicas e ocorrência de eventos críticos, além de subsidiar a gestão de recursos hídricos</p>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>SSSP</li>
-        </ol>
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="sobre">
-      <div class="container">
-        <!-- <div class="row justify-content-end">
-          <div class="col-lg-11">
-            <div class="row justify-content-end">
-
-              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                <div class="count-box py-5">
-                    <i class="bi bi-pin-map"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="7" class="purecounter">0</span>
-                  <p>Salas de situação</p>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                <div class="count-box py-5">
-                    <i class="bi bi-r-square"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="1" class="purecounter">0</span>
-                  <p>Radares de chuvas - SAISP</p>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                <div class="count-box pb-5 pt-0 pt-lg-5">
-                    <i class="bi bi-ev-station"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="2200" class="purecounter">0</span>
-                  <p>Pontos Telemétricos</p>
-                </div>
-              </div>
-
-              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
-                <div class="count-box pb-5 pt-0 pt-lg-5">
-                    <i class="bi bi-journal-check"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="3" class="purecounter">0</span>
-                  <p>Produtos</p>
-                </div>
-              </div>
-
+     <section id="sobre" class="sobre section dark-background">
+      <div id="sobre-carousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-item active">
+            <div class="carousel-container">
+              <h2 class="animate__animated animate__fadeInDown">SALA DE SITUAÇÃO <span>DO ESTADO DE SÃO PAULO</span></h2>
+              <p class="animate__animated animate__fadeInUp">A sala de Situação do Estado de São Paulo é responsável pelo monitoramento dos Recursos Hídricos.</p>
+              <a href="http://hidroapp.daee.sp.gov.br/" target="_blank" type="button" class="btn btn-outline-info">Acompanhe no <strong>HidroApp</strong></a>
             </div>
+        </div>
+<!-- 
+         <div class="carousel-item">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
+            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
           </div>
         </div> -->
+        <!-- <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
 
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a> -->
+      </div>
+      <svg class="sobre-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+    </section>
+    <section id="breadcrumbs" class="breadcrumbs SobreSSSP">
+      <div class="container">
+        <ol>
+          <li class="active"><a href="index.html"><strong>Home</strong></a></li>
+          <li>Sala de Situação </li>
+        </ol>
+      </div>
+    </section> 
+    <section id="about" class="sobreRecursosHidricos" style="text-align: justify;">
+      <div class="container">
         <div class="row pt-4">
-
           <div class="col-lg-6 video-box align-self-baseline position-relative">
             <img src="assets/midea/sssp.png" class="img-fluid" alt="">
             <a href="assets/midea/sssp.mp4" class="glightbox play-btn mb-4"></a>
           </div>
-
           <div class="col-lg-6 pt-3 pt-lg-0 content">
             <h3>Sala de Situação de São Paulo.</h3>
             <p class="fst-italic">
@@ -114,17 +107,15 @@
             </p>
             <ul>
               <!-- <li><i class="bx bx-check-double"></i>Monitoramento realizados através de satélite, radares, postos telemétricos.</li> -->
-              <li><i class="bx bx-check-double"></i>A SSSP conta com diversas ferramentas de monitoramento climático, tais como radares, satélite, postos telemétricos, Windy, Climatempo, imagens de satélite NOAA e EUMESAT, tais ferramentas permitem aos técnicos da SSSP uma compreensão cada vez melhor sobre os eventos hidrológicos extremos</li>
-              <li><i class="bx bx-check-double"></i> O radar meteorológico do DAEE, localizado no munícipio de Salesópolis tem uma área de cobertura de 240km, cobrindo a RMSP e cidades limítrofes, permitindo o monitoramento de eventos de chuvas e tempestades em potencial, as informações são recebidas em tempo real na SSSP o que permite a emissão de alertas com objetivo de amenizar as consequências dos eventos extremos</li>
+              <li><i class="bx bx-check-double"></i>A SSSP conta com diversas ferramentas de monitoramento climático, tais como radares, satélite, postos telemétricos, Windy, Climatempo, imagens de satélite NOAA e EUMESAT, tais ferramentas permitem aos técnicos da SSSP uma compreensão cada vez melhor sobre os eventos hidrológicos extremos.</li>
+              <li><i class="bx bx-check-double"></i> O <strong>radar meteorológico do DAEE</strong>, localizado no munícipio de <strong>Salesópolis</strong> tem uma área de cobertura de 240km, cobrindo a RMSP e cidades limítrofes, permitindo o <strong>monitoramento de eventos de chuvas e tempestades em potencial</strong>, as informações são recebidas em tempo real na SSSP o que permite a emissão de <strong>alertas </strong>com objetivo de amenizar as consequências dos eventos extremos.</li>
             </ul>
             <p>
                 <a href=""><strong>O SIBH (Sistema Integrado de Bacias Hidrográficas)</strong></a> é um sistema de monitoramento
-                e gestão de dados hidrológicos que concentra informações sobre chuva, nível e vazão nos pontos monitorados pelo DAEE e entidades parceiras como ANA, CEMADEN, IAC/CIIAGRO, INMET, SABESP entre outros. Seus principais produtos, permitem o acompanhamento de eventos extremos em todo o Estado de São Paulo, dado apoio a Defesa Civil e órgãos competentes.
+                e gestão de dados hidrológicos que concentra informações sobre <strong>chuva, nível e vazão</strong> nos pontos monitorados pelo DAEE e entidades parceiras como ANA, CEMADEN, IAC/CIIAGRO, INMET, SABESP entre outros. Seus principais produtos, permitem o acompanhamento de<strong> eventos extremos </strong>em todo o Estado de São Paulo, dado apoio a Defesa Civil e órgãos competentes.
             </p>
           </div>
-
         </div>
-
       </div>
     </section>
 
