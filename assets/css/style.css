@@ -90,6 +90,7 @@ h6 {
   transition: all 0.5s ease-in-out;
   background: #FFF;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 20px;;
 }
 
 #header .logo h1 {
@@ -1746,6 +1747,9 @@ img{
   flex: 1;
   margin: 0px 4px; 
 }
+.noticiasRecentes{
+  border: solid 0px #F00!important;
+}
 .totalChuva{
   background: rgb(129, 125, 125);
   color: #FFF;
@@ -1822,18 +1826,21 @@ color: #FFFFFF;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    border: solid 0px #000;
+    margin-top: 100px;
 }
-
 .rachstag {
-    background-color: #007BFF;
+    /* background-color: #007BFF; */
+    background-color: rgb(129, 125, 125, 0.5);
     color: #fff;
     padding: 10px 20px;
     border-radius: 10px;
     font-size: 1.2em;
+    opacity: 5;
+    z-index: 1;
 }
-
 .rachstag:hover {
-    background-color: #0056b3;
+    background-color: rgba(91, 198, 219, 0.5);
 }
 
 #rachstag {
@@ -2001,7 +2008,7 @@ font-size: 16px;;
   justify-content: center;
   z-index: 1;
   overflow: hidden;
-  background-image: radial-gradient(circle at 100% 0%, #9fe3ff 0, #78d1ff 25%, #46bef9 50%, #00abf2 75%, #0099ec 100%);
+  background-image: radial-gradient(circle at 100% 0%, #0c7dad 0, #61aacf 25%, #46bef9 50%, #00abf2 75%, #13455f 100%);
   
 }
 
@@ -2111,16 +2118,16 @@ font-size: 16px;;
 }
 
 
-/* .she::before,
+ /* .shepe::before,
 .FundoHeader::after {
   content: '';
   position: absolute;
   width: 100px;
   height: 100px;
-  background: #ffffff;
-}
+  background: #1b0eca;
+} */
 
- .FundoHeader::before {
+ /* .FundoHeader::before {
   top: 98px;
   left: 20px;
   clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
@@ -2131,4 +2138,4 @@ font-size: 16px;;
   right: 20px;
   clip-path: polygon(0% 100%, 100% 0%, 100% 100%); 
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-}  */
+}   */

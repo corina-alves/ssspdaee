@@ -7,6 +7,7 @@ window.onload = function(){
     CarregaMap()
     // categorizarValores()
     carregaPrevisao()
+    icon()
     //console.log('antes');
     carregaDadosChuva().then(resp=>{    
     carregaCityRain(resp)
@@ -175,8 +176,7 @@ function carregaPrevisao() {
         { text: '-22.219694, -49.950266', name: 'Marília' },
         { text: '-24.187076, -46.801280', name: 'Itanhaém' },
         { text: '-24.496514, -47.846099', name: 'Registro' },
-        
-        
+
     ];
 
     latLngs.forEach(latLng => {
@@ -230,22 +230,6 @@ function carregaPrevisao() {
             });
     });
 }
-
-
-// function CarregaMap(){
-//     // Inicializar o mapa
-//     var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
-  
-//     // Adicionar a camada de mapa
-//     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//     }).addTo(map);
-
-//     // Adicionar marcador
-//     // var marker = L.marker([-23.5505, -46.6333]).addTo(map);
-//     // marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
-// }
-
 
     // Inicializar o mapa
     var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo

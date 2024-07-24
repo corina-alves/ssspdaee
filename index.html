@@ -25,15 +25,27 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><!--maps--->
   <!-- Estilos CSS  dashboard-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let iconeDroplet = document.getElementById('icon');
+        let context = iconeDroplet.getContext('2d');
+        let icon = '\uf043'; // Unicode do ícone fa-droplet
+        // Definir o tamanho e a fonte do ícone
+        context.font = '38px FontAwesome';
+        context.fillStyle = '#00d4ff'; // Cor do ícone
+        // Desenhar o ícone no canvas
+        context.fillText(icon, 10, 42);
+    });
+</script>
 </head>
-
 <body>
  <header id="header" class="header d-flex align-items-center fixed-top"> </header> 
 
   <section id="FundoHeader" class="FundoHeader sssp topo section dark-background">
     <div class="container">
         <h1>CONHEÇA AS ÁGUAS PAULISTAS:<BR/>
-        UM TESOURO A SER PROTEGIDO! <i class="fa-solid fa-droplet"></i></H1>
+        UM TESOURO A SER PROTEGIDO! <canvas id="icon" width="50" height="50" style="border: solid 0px #000;"></canvas></span></H1>
+        
         <h2>Bem-vindo ao Site da <strong>Sala de Situação do Estado de São Paulo! </strong></h2>
         <p>
           Aqui você encontra tudo sobre os <strong>recursos hídricos de São Paulo</strong>. Explore as diversas opções
@@ -85,26 +97,26 @@
           </div>
         
       </div>
+    
+        <!-- <h5>Navegue pelo nosso site e mergulhe em um universo de informações sobre as águas paulistas</h5> -->
+        <div class="rachstags">
+            <span class="rachstag">#ÁguasPaulistas</span>
+            <span class="rachstag">#RecursosHídricos</span>
+            <span class="rachstag">#GestãoHídrica</span>
+            <span class="rachstag">#SegurançaHídrica </span>
+            <span class="rachstag">#Sustentabilidade</span>
+            <span class="rachstag">#MeioAmbiente</span>
+        </div>
+  
  </div>
  
   </section>
 
-    <section class="content">
-      <h5>Navegue pelo nosso site e mergulhe em um universo de informações sobre as águas paulistas</h5>
-      <div class="rachstags">
-          <span class="rachstag">#ÁguasPaulistas</span>
-          <span class="rachstag">#RecursosHídricos</span>
-          <span class="rachstag">#GestãoHídrica</span>
-          <span class="rachstag">#SegurançaHídrica </span>
-          <span class="rachstag">#Sustentabilidade</span>
-          <span class="rachstag">#MeioAmbiente</span>
-      </div>
-  </section>
   <!-- ======= carousel e materias recentes ======= -->
   <section id="noticias" class="noticias pt-4">
     <div class="container" data-aos="fade-up">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-7">
           <div id="demo" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -116,17 +128,24 @@
             </div>
             <div class="carousel-inner rounded">
               <div class="carousel-item active">
+                <img src="assets/img/noticias/seca_sp.png" class="d-block w-100" alt="..." style="height: 55vh;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p><a href="https://www.windy.com/pt/-Menu/menu?drought100,-21.264,-49.098,7,m:cXyaeUE" target="_blank">Fique por dentro</a></p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/chuvas/indicadorChuvaJun2024.png" class="d-block w-100" alt="..." style="height: 55vh;">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p><a href="http://hidroapp.daee.sp.gov.br/" target="_blank">Acompanhe no HidroApp</a></p>
+                </div>
+              </div>
+              <div class="carousel-item">
                 <img src="assets/img/mapa/IGC_UGRHI_2014.jpg" class="d-block w-100" alt="..." style="height: 55vh;">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>UGHIs</h5>
                   <p>Unidade Hidrográficas de Gerenciamento  de Recursos Hídricos do Estado de São Paulo.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="assets/img/campo/1.VERTEDOR.jpeg" class="d-block w-100" alt="..." style="height: 55vh;">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Medição de Vazão</h5>
-                  <p>Medição de Vazão hidrologico</p>
                 </div>
               </div>
             </div>
@@ -140,7 +159,7 @@
             </button>
           </div>
         </div>
-        <div class="col-lg-2">
+        <!-- <div class="col-lg-2">
           <div class="card noticia_diaria">
             <img src="assets/img/materia/seguranca_barragem.jpeg" class="card-img-top" alt="Fissure in Sandstone"/>
               <h6 class="card-text"><a href=""  data-bs-toggle="modal"
@@ -158,39 +177,49 @@
               <a href=""  data-bs-toggle="modal" data-bs-target="#modalMateriaTCE">
                 Técnicos do TCE visitam obras do Piscinão Jaboticabal</a></h6>
           </div>
-        </div>
+        </div> -->
 
-        <div class="col-lg-4 noticiasRecentes">
+        <div class="col-lg-5">
             <h3 class="noticiasRecentes-title text-center">Matérias Recentes</h3>
             <div class="noticiasRecentes-item">
-              <div class="post-item">
-                <h6 style="font-weight: bold;">Condições Meteorológicas em julho em São Paulo</h6>
-                <p><a href="https://pt.weatherspark.com/m/30268/7/Condi%C3%A7%C3%B5es-meteorol%C3%B3gicas-caracter%C3%ADsticas-de-S%C3%A3o-Paulo-Brasil-em-julho" target="_blank">
-                  As temperaturas máximas diárias ficam por volta de 22 °C, raramente caindo abaixo de 16 °C. </a></p>
-                <time datetime="2020-01-01">Jul 17, 2024</time>
+              <div class="card noticiasRecentes mb-3">
+                <div class="row g-0 post-item" style="border: solid 0px #eee;">
+                  <div class="col-md-2"><img src="assets/img/mapa/120_junho2024.png" alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+                  </div>
+                  <div class="col-md-10">
+                      <h6 class="p-2"><a href=""data-bs-toggle="modal" data-bs-target="#modalMateG1">Em São Paulo, devido à persistência de chuvas abaixo da média, houve o avanço da seca fraca</a></h6>
+                      <p class="card-text">
+                        <time datetime="2020-01-01">Jul 17, 2024</time>
+                      </p>
+                  </div>
+                </div>
               </div>
-              <div class="post-item">
-                <h6 style="font-weight: bold;">Alerta de Chuva</h6>
-                <p><a href="#">Sem registros de chuvas no estado de SP</a></p>
-                <time datetime="2020-01-01">Jun 29, 2024</time>
+              <div class="card noticiasRecentes mb-3">
+                <div class="row g-0 post-item" style="border: solid 0px #eee;">
+                  <div class="col-md-4"><img src="assets/img/materia/seguranca_barragem.jpeg" alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+                  </div>
+                  <div class="col-md-8">
+                      <h6 class="p-2"><a href="" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2">Monitoramento do nível do Reservatório dos Motas na DBPB</a></h6>
+                      <p class="card-text">
+                        <time datetime="2020-01-01">Jul 17, 2024</time>
+                      </p>
+                  </div>
+                </div>
               </div>
-              <div class="post-item">
-                <h6 style="font-weight: bold;">Segurança Hídrica</h6>
-                <p><a href="http://www.daee.sp.gov.br/site/planodiretordemacrometropole/" target="_blank">Segurança
-                    hídrica com destaque para abastecimento público até o horizonte de 2035</a></p>
-                <time datetime="2020-01-01">maio, 2024</time>
+              <div class="card noticiasRecentes mb-3">
+                <div class="row g-0 post-item" style="border: solid 0px #eee;">
+                  <div class="col-md-4"><img src="assets/img/materia/tecnicosTCE.webp" alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+                  </div>
+                  <div class="col-md-8">
+                      <h6 class="p-2"> <a href=""  data-bs-toggle="modal" data-bs-target="#modalMateriaTCE">
+                        Técnicos do TCE visitam obras do Piscinão Jaboticabal</a></h6>
+                      <p class="card-text">
+                        <time datetime="2020-01-01">Jul 17, 2024</time>
+                      </p>
+                  </div>
+                </div>
               </div>
-              <!-- <div class="post-item">
-                <p><a href="http://www.daee.sp.gov.br/site/piscinoes/" target="_blank">Reservatórios de contenção de
-                    cheias para auxílio no combate a enchentes </a></p>
-                <time datetime="2020-01-01">maio, 2024</time>
-              </div> -->
-              <div class="post-item">
-                <h6 style="font-weight: bold;">Seca no Município</h6>
-                <p><a href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/"
-                    target="_blank">Rio Piracicaba com cota baixa, seca de 2024</a></p>
-                <time datetime="2020-01-01">Mai 17, 2024</time>
-            </div>
           </div>
         </div>
       </div>
@@ -202,8 +231,9 @@
       <div class="section-title" data-aos="fade-up">
         <div class="row">
           <h1 style="font-weight: bold;">Resumo de chuva diário</h1>
-          <p class="pt-3 p-3 fst-italic">Acompanhe os alertas dos munícipios no momento atual, baseados em dados de
-            postos telemétricos. </p>
+          <!-- <p class="pt-3 p-3 fst-italic">Acompanhe os alertas dos munícipios no momento atual, baseados em dados de
+            postos telemétricos. </p> -->
+              <p class="pt-3 p-3 fst-italic">Os Municípios com maiores volumes de chuvas acumulados em 24h</p>
           <!-- <row class="card-group p-3"> 
             <div class=" card semChuva" style="border-left: solid 10px #858a8d; border-radius: 2px;">
               <h2>Sem Chuvas</h2>
@@ -262,7 +292,7 @@
               </button>
               </div>
               </div>
-              <h6>Os Municípios com maiores volumes de chuvas acumulados em 24h</h6>
+              <!-- <h6>Os Municípios com maiores volumes de chuvas acumulados em 24h</h6> -->
               <table id="tabela_eventos" >
                 <thead>
                   <tr>
@@ -292,22 +322,37 @@
        <div class="col detalhes text-center">Boletim Diário da Sala de Situação de Monitoramento de Recursos Hídricos do
         estado de São Paulo
         <a href="boletins/Boletim_SSSP_20240628.pdf" target="_blank" data-bs-toggle="modal"
-          data-bs-target="#exampleModal" type="button" class="btn btn-warning">Relatório</a>
+          data-bs-target="#modalRelatorio" type="button" class="btn btn-warning">Relatório</a>
       </div>
     </div>
   </div>
 
-      <!----Modals -->
+     <!----Modals -->
     <div class="container materiaCentral">
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="modalRelatorio" aria-hidden="true" >
+      <div class="modal fade" id="modalRelatorio" tabindex="-1" aria-labelledby="modalRelatorio" aria-hidden="true" >
         <div class="modal-dialog " >
           <div class="container modal-content " style="width:800px;">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="modalRelatorio">Boletim Diário da Sala de Situação de Monitoramento de São Paulo</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="relatosModal">
               <object type="application/pdf" data="https://docs.google.com/document/d/1_sqnTw-cL0lk2Kbhv8iUi4qN7wHsxvz1Ly-wpVkPaY4/edit" width="100%" height="500" style="height: 85vh;"></object>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalMateG1" tabindex="-1" aria-labelledby="MateriaG1Seca" aria-hidden="true" >
+        <div class="modal-dialog " >
+          <div class="container modal-content " style="width:800px;">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="relatosModal">
+              <object type="application/pdf" data="https://g1.globo.com/meio-ambiente/noticia/2024/07/24/brasil-tem-mais-de-mil-cidades-em-situacao-de-seca-extrema-ou-severa-confira-a-situacao-onde-voce-mora.ghtml" width="100%" height="500" style="height: 85vh;"></object>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
@@ -336,33 +381,6 @@
                 <div class="modal-footer">
                   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
                 </div>
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="modalDH" tabindex="-1" aria-labelledby="modalRelatorio" aria-hidden="true" >
-        <div class="modal-dialog " >
-          <div class="container modal-content">
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="relatosModal">
-                    <img src="assets/img/materia/desenvolvimentoSustentavel.jpeg" class="card-img-top" alt="Fissure in Sandstone"/>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="card-body">
-                      <h5 class="card-title">Diretoria de Recursos Hídricos participa de encontro sobre desafios da bacia do Tietê-Paraná em evento fluvial </h5><hr style="border: solid #044070 2px;">
-                      <p class="" style="text-align: justify;">
-                        O Consórcio Intermunicipal Tietê-Paraná realizou um encontro de líderes municipais a bordo do Navio Homero Krahenbuhl, com a participação do DAEE. O evento teve como foco principal a discussão dos desafios e oportunidades da bacia hidrográfica, abordando temas como meio ambiente, recursos hídricos, desenvolvimento econômico e educação.
-                        "Eventos como este são fundamentais para promover a gestão integrada dos recursos hídricos e o desenvolvimento sustentável da bacia do Tietê-Paraná", afirmou Dante Ragazzi Pauli, diretor de Recursos Hídricos do DAEE.
-                        O Encontro contou com a participação de autoridades locais e membros do Consórcio Intermunicipal Tietê-Paraná.
-                        Confira as fotos no nosso Instagram 👇🏻
-                        https://www.instagram.com/p/C8huhFaA3Wj/
-                      </p>
-                     </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
-            </div>
           </div>
         </div>
       </div>
@@ -399,10 +417,11 @@
         <div class="col-lg-2" id="previsao" style="color: #F00;"></div>
       </div>
     </div> -->
-      <div class=" container p-4" onload="carregaPrevisao()">
+    
+      <!-- <div class=" container p-4" onload="carregaPrevisao()">
         <h2 class="text-center">Previsão do Tempo</h2>
         <div id="previsao" class="card-group"></div>
-      </div>
+      </div> -->
 
       <!-- </section> -->
 
