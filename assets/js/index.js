@@ -1,9 +1,9 @@
 window.onload = function(){
   
-    carregarTabelaDado()
+    //  carregarTabelaDado()
     // carregarRelatos()
-    // CarregaMap()
-    //categorizarValores()
+    CarregaMap()
+    // categorizarValores()
     carregaPrevisao()
     icon()
      //console.log('antes');
@@ -22,8 +22,8 @@ window.onload = function(){
 // const apiUrl = 'https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
 
 // Função para carregar e processar dados da API
-function carregaCityRain(dados) {
-    let contadores = [0,0,0,0]
+// function carregaCityRain(dados) {
+//     let contadores = [0,0,0,0]
     
     dados.json.forEach(dado=>{
         if(dado.value >= 50){
@@ -34,8 +34,6 @@ function carregaCityRain(dados) {
             contadores[2] += 1
         }else if(dado.value < 0){
             contadores[3] += 1
-        }else{
-            contadores +=1
         }
     })
     // Atualizar o conteúdo do HTML com os resultados
@@ -43,7 +41,8 @@ function carregaCityRain(dados) {
     document.getElementById('chuvaModerada').textContent = contadores[1];
     document.getElementById('chuvaFraca').textContent = contadores[2];
     document.getElementById('semChuva').textContent = contadores[3];
-}
+
+
 
 function carregarTabelaDado() {
       fetch("https://cors-anywhere.herokuapp.com/https://th.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")
@@ -53,7 +52,7 @@ function carregarTabelaDado() {
                 console.log(dados);
                 let medicoes = dados.json;
                 // Ordenar e cortar as maiores
-                let maiores = medicoes.sort((a, b) => b.value - a.value).slice(0, 8);
+                let maiores = medicoes.sort((a, b) => b.value - a.value).slice(0, 10);
                 // Instanciar tabela
                 let tabela = document.getElementById("tabela_eventos");
                 // Instanciar corpo tabela
