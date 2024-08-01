@@ -516,6 +516,7 @@ section {
 
 .sobre .content {
   font-size: 15px;
+  text-align: justify;
 }
 
 .sobre .content h3 {
@@ -691,6 +692,9 @@ section {
   background: #F00;
 }
 
+.situacaoAtual .card{
+  border: solid 0px #F00;;
+}
 .situacaoAtual .situacaoAtual-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
@@ -989,7 +993,6 @@ section {
 .estacoes .card:hover .card-text {
   color: #fff;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -1815,11 +1818,24 @@ color: #FFFFFF;
 
 } */
 
-    .content {
-    padding: 40px 20px;
-    text-align: center;
+    /* .content {
+    padding: 100px 20px 0px 0px;
+    text-align: justify;
+} */
+.decEvento{
+  border-radius: 5px;
+  text-align: justify;
+  padding: 0 0 50px;
+  background: #eee;
+  
 }
-
+.boxsChuva{
+  border: solid 1px #eee;
+  margin-top: 20px;
+}
+.boxsChuva h5{
+  padding: 10px;
+}
 .rachstags {
     display: flex;
     flex-wrap: wrap;
@@ -1951,7 +1967,6 @@ font-size: 16px;;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   border-radius: 5px;
   
 }
@@ -2049,19 +2064,7 @@ font-size: 16px;;
   color: color-mix(in srgb, var(--default-color), transparent 10%);
 }
 
-.FundoHeader .icon-box {
-  padding: 30px 20px;
-  transition: ease-in-out 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  height: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  z-index: 1;
-}
+
 .FundoHeader .icon-box p{
   font-size: 14px;
 }
@@ -2140,3 +2143,7 @@ font-size: 16px;;
   clip-path: polygon(0% 100%, 100% 0%, 100% 100%); 
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
 }   */
+
+.marquee{
+  font-size: 16px;;
+}
