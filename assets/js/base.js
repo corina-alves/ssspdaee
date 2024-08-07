@@ -104,7 +104,7 @@ const loadHeader = () =>{
 
           '<li class="dropdown"><a href="#"><span>Boletins</span> <i class="bi bi-chevron-down"></i></a>'+
             '<ul>'+
-            '<li><a href="boletim.html" target="_black">Boletim</a></li>'+
+            '<li><a href="boletim.html">Boletim</a></li>'+
 
               '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target="_black">Boletim Diário</a></li>'+
               '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFlnw" target="_black">Boletim Mensal</a></li>'+

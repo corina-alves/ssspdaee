@@ -2,14 +2,13 @@ window.onload = function(){
   
     //  carregarTabelaDado()
     // carregarRelatos()
-    CarregaMap()
     // categorizarValores()
     carregaPrevisao()
-    icon()
+
      //console.log('antes');
     carregaDadosChuva().then(resp=>{    
     carregaCityRain(resp)
-    carregarTabelaDado(resp)
+    // carregarTabelaDado(resp)
 
         // console.log('carregou');
      })
