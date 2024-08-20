@@ -84,9 +84,9 @@ function fecharModel() {
         <h1>CONHEÇA AS ÁGUAS PAULISTAS:<BR/>
         UM TESOURO A SER PROTEGIDO! <canvas id="icon" width="50" height="50" style="border: solid 0px #000;"></canvas></span></H1>
         
-        <h2>Bem-vindo ao Site da <strong>Sala de Situação do Estado de São Paulo! </strong></h2>
+        <h2>Bem-vindo ao Site da <strong style="color: #fac20b;">Sala de Situação do Estado de São Paulo! </strong></h2>
         <p>
-          Aqui você encontra tudo sobre os <strong>recursos hídricos de São Paulo</strong>. Explore as diversas opções
+          Aqui você encontra tudo sobre os <strong style="color: #10d3fa;">recursos hídricos de São Paulo</strong>. Explore as diversas opções
           e fique por dentro de informações essenciais para a sustentabilidade do nosso estado.
         </p>
    
@@ -152,10 +152,10 @@ function fecharModel() {
   <!-- ======= carousel e materias recentes ======= -->
   <section id="noticias" class="noticias pt-4">
     <div class="container" data-aos="fade-up">
-      <!-- <div class="col relatoDeChuva text-center">
-        <div class="container marquee"><marquee scrolldelay="1" type="button"><strong>07/08/2024 ás 10:30:</strong> 
+       <div class="col relatoDeChuva text-center">
+        <!-- <div class="container marquee"><marquee scrolldelay="1" type="button"><strong>07/08/2024 ás 10:30:</strong> 
          Sem registros de chuvas até o momento no estado de São Paulo</marquee></div>
-     </div> -->
+     </div>  -->
       <div class="row">
         <div class="col-lg-7">
           <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -169,18 +169,19 @@ function fecharModel() {
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="assets/img/mapa/IndicePreciptacaoSPI.png" class="d-block w-100" alt="..."
+                <img src="assets/img/mapa/icon-mapa.png" class="d-block w-100" alt="..."
                   style="height: 55vh;">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Indice de Precipitação Padronizado (SPI)</h5>
-                  <p><a href="http://hidroapp.daee.sp.gov.br/" target="_blank">Acompanhe no HidroApp</a></p>
+                 <a href="http://hidroapp.daee.sp.gov.br/" target="_blank">
+                 <h5>Indice de Precipitação Padronizado (SPI)</h5>
+                  <p>Acompanhe no HidroApp</p></a>
                 </div>
               </div>
               <div class="carousel-item">
                 <img src="assets/img/mapa/IGC_UGRHI_2014.jpg" class="d-block w-100" alt="..." style="height: 55vh;">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>UGRHIs</h5>
-                  <p>Unidade Hidrográficas de Gerenciamento de Recursos Hídricos do Estado de São Paulo.</p>
+                 <a href="https://sigrh.sp.gov.br/divisaohidrografica" target="_blank"> <h5>UGRHIs</h5>
+                  <p>Unidade Hidrográficas de Gerenciamento de Recursos Hídricos do Estado de São Paulo.</p></a>
                 </div>
               </div>
             </div>
@@ -261,6 +262,13 @@ function fecharModel() {
             </div>
           </div>
         </div>
+      </div><br/>
+      <div class="col detalhes text-center d-flex gap-3 align-items-center">
+        Boletim Diário da Sala de Situação de Monitoramento de Recursos Hídricos
+        do
+        estado de São Paulo
+        <a href="boletins/Boletim_SSSP_20240628.pdf" target="_blank" data-bs-toggle="modal"
+          data-bs-target="#modalRelatorio" type="button" class="btn btn-warning">Relatório</a>
       </div>
     </div>
   </section>

@@ -924,7 +924,7 @@ section {
 .parceiros img {
   /* opacity: 0.8;
   transition: 0.3s; */
-  width: auto%;
+  width: auto;
   height: 80px;;
 }
 
@@ -957,7 +957,9 @@ section {
   border-radius: 5px;
 }
 .estacoes .icon{
-  width: 500%;
+  /* width: 500%; */
+
+  font-size: xx-large;
 }
 .estacoes .card-title {
   font-weight: 700;
@@ -1541,6 +1543,10 @@ background: #FFF;
   font-size: 14px;
   color: rgba(var(--color-default-rgb), 0.4);
 }
+.time{
+  font-size: 14px;
+  font-style: italic;
+}
 .bx-check-double{
   color: #94c045;
 }
@@ -1800,7 +1806,8 @@ color: #FFFFFF;
 .detalhes{
   font-weight: bold;
   padding: 20px;
-  background-image: linear-gradient( 93.2deg,  rgba(24,95,246,1) 14.4%, rgba(27,69,166,1) 90.8% );
+  background-image: radial-gradient(circle at 46.62% 11.32%, #aab0ff 0, #0d69f5 50%, #0030bd 100%);
+  border-radius: 5px;;
 
 
   color: #FFF;
@@ -1849,7 +1856,8 @@ color: #FFFFFF;
 }
 .rachstag {
     /* background-color: #007BFF; */
-    background-color: rgb(129, 125, 125, 0.5);
+  
+    background-color: #5bc6db80;
     color: #fff;
     padding: 10px 20px;
     border-radius: 10px;
@@ -1858,7 +1866,7 @@ color: #FFFFFF;
     z-index: 1;
 }
 .rachstag:hover {
-    background-color: rgba(91, 198, 219, 0.5);
+  background-color: rgb(129, 125, 125, 0.5);
 }
 
 #rachstag {
@@ -1871,6 +1879,7 @@ color: #FFFFFF;
   border: solid 1px #eeeaea;
   /* display: flex;
   align-items: center; */
+  font-size: 15px;
 
 
 }
@@ -1908,7 +1917,7 @@ color: #FFFFFF;
 --------------------------------------------------------------*/
 .sssp {
   width: 100%;
-  min-height: auto;
+  min-height: 60vh;
   position: relative;
   padding: 120px 0 80px 0;
   display: flex;
@@ -1929,8 +1938,7 @@ color: #FFFFFF;
 
 .sssp:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
-  position: absolute;
+  background-image: linear-gradient(225deg, #4dacff 0, #2e72bd 50%, #113d6a 100%);  position: absolute;
   inset: 0;
   z-index: 2;
 }
@@ -1975,6 +1983,7 @@ font-size: 16px;;
   border-radius: 5px;
   
 }
+
 .sssp .icon-box p{
   font-size: 14px;
 }
@@ -1982,11 +1991,11 @@ font-size: 16px;;
 .sssp .icon-box i {
   font-size: 32px;
   line-height: 1;
-  color: #00a2ff;
+  /* color: #00a2ff; */
   
 }
 
-.sssp .icon-box h3 {
+.sssp .icon-box h3 a{
   font-weight: 700;
   margin: 10px 0 0 0;
   padding: 0;
@@ -1994,6 +2003,56 @@ font-size: 16px;;
   font-size: 20px;
   line-height: 26px;
 }
+.sssp .icon-box h3{
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+.sssp .situacao{
+  background-image: linear-gradient(225deg, #4dacff 0, #2e72bd 50%, #113d6a 100%);  border: solid 2px #ccc;
+  border-radius: 5px;
+  text-align: center;
+  justify-content: center;
+ 
+}
+.sssp .icon-box.situacao{
+  padding: 30px 20px;
+  transition: ease-in-out 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  border: none;
+  
+}
+
+.sssp .icon-box .situacao p{
+  font-size: 14px;
+}
+
+.sssp .icon-box .situacao  i {
+  font-size: 32px;
+  line-height: 1;
+  /* color: #00a2ff; */
+  
+}
+
+.sssp .icon-box .situacao h3 a{
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* .sssp .icon-box.situacao:hover {
+  background-image: url('../../assets/img/radar/2024051408150500dBR_SAISP2.png');
+  opacity: 0.8;
+} */
 
 .sssp .icon-box h3 a {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -2017,7 +2076,33 @@ font-size: 16px;;
     font-size: 18px;
   }
 }
+.sssp-sala {
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+  padding: 120px 0 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
 
+.sssp img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.sssp:before {
+  content: "";
+  background-image: linear-gradient(225deg, #4dacff 0, #2e72bd 50%, #113d6a 100%);  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
 
 .FundoHeader {
   width: 100%;
@@ -2029,8 +2114,8 @@ font-size: 16px;;
   justify-content: center;
   z-index: 1;
   overflow: hidden;
-   background-image: radial-gradient(circle at 100% 0%, #0c7dad 0, #61aacf 25%, #46bef9 50%, #00abf2 75%, #13455f 100%); 
- /* background-image: radial-gradient(circle at 50% 50%, #009fc0 0, #009ec7 8.33%, #009dcd 16.67%, #009bd2 25%,
+  background-image: radial-gradient(circle at 46.62% 11.32%, #706ba2 0, #0c2a6f 50%, #000040 100%);
+      /* background-image: radial-gradient(circle at 50% 50%, #009fc0 0, #009ec7 8.33%, #009dcd 16.67%, #009bd2 25%,
   #0099d6 33.33%, #0097d9 41.67%, #1595db 50%, #3b92dc 58.33%, #5290dc 66.67%, #658ddb 75%, #7589d9 83.33%, #8486d5 91.67%, #9182d1 100%);*/
   
 }
@@ -2051,9 +2136,9 @@ font-size: 16px;;
 }
 
 .FundoHeader h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .FundoHeader p {
@@ -2152,5 +2237,9 @@ font-size: 16px;;
 }   */
 
 .marquee{
-  font-size: 16px;;
+  font-size: 16px;
+  background-image: linear-gradient(225deg, #70a8ff 0, #1083f8 50%, #0061db 100%);
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
 }
