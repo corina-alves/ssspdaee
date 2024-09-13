@@ -690,10 +690,12 @@ section {
 }
 .situacaoAtual .card-group .card .semChuva{
   background: #F00;
+  
 }
 
 .situacaoAtual .card{
-  border: solid 0px #F00;;
+  border: solid 0px #F00;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .situacaoAtual .situacaoAtual-btn {
   font-family: "Raleway", sans-serif;
@@ -1706,14 +1708,13 @@ background: #FFF;
 }
 .produtos .prod-item {
   text-align: center;
-  border: 1px solid #ccc;
   padding: 50px 20px;
   height: 100%;
   transition: all ease-in-out 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .produtos .prod-item .icon {
- 
   color: #0e50ca !important;
   margin: 0 auto;
    width: 64px;
@@ -1734,6 +1735,7 @@ background: #FFF;
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: 0.3s;
+  
 }
 
 .produtos .prod-item p {
@@ -1871,8 +1873,9 @@ img{
 }
 
  .card .chuvaForte{
-   background-image: linear-gradient(225deg, #ac5b17 0, #ae5118 10%, #af4619 20%, #af381c 30%, #af271f 40%, #ad0922 50%, #ab0026 60%, #a8002b 70%, #a40031 80%, #a00038 90%, #9b003f 100%);
+  background-image: linear-gradient(225deg, #ac5b17 0, #ae5118 10%, #af4619 20%, #af381c 30%, #af271f 40%, #ad0922 50%, #ab0026 60%, #a8002b 70%, #a40031 80%, #a00038 90%, #9b003f 100%);
   box-shadow:none;
+  
   
 } 
 .situacaoAtual .chuvaForte h2{
@@ -1887,7 +1890,9 @@ color: #FFFFFF;
 }
 
 #semChuva{
-  size: 30px;;
+  size: 30px;
+  
+
 }
 
 #chuvaModerada{
@@ -2256,7 +2261,7 @@ font-size: 16px;;
 }
 
 .FundoHeader .icon-box{
-  border: #000 solid 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 .FundoHeader .icon-box p{
   font-size: 14px;

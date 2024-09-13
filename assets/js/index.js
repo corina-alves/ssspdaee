@@ -1,6 +1,6 @@
 window.onload = function(){
   
-    //  carregarTabelaDado()
+     // carregarTabelaDado()
     // carregarRelatos()
     // categorizarValores()
     carregaPrevisao()
@@ -8,15 +8,15 @@ window.onload = function(){
      //console.log('antes');
     carregaDadosChuva().then(resp=>{    
     carregaCityRain(resp)
-    // carregarTabelaDado(resp)
+     carregarTabelaDado(resp)
 
-        // console.log('carregou');
+         console.log('carregou');
      })
     //  console.log('depois');
 }
 
 // URL da API
- const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
+ //const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
 
 // const apiUrl = 'https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
 
