@@ -1,6 +1,5 @@
 window.onload = function(){
-  
-     // carregarTabelaDado()
+    // carregarTabelaDado()
     // carregarRelatos()
     // categorizarValores()
     carregaPrevisao()
@@ -9,7 +8,7 @@ window.onload = function(){
     carregaDadosChuva().then(resp=>{    
     carregaCityRain(resp)
      carregarTabelaDado(resp)
-
+     
          console.log('carregou');
      })
     //  console.log('depois');
@@ -17,12 +16,11 @@ window.onload = function(){
 
 // URL da API
  //const apiUrl = 'https://cors-anywhere.herokuapp.com/https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
-
 // const apiUrl = 'https://cth.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true';
 
 // Função para carregar e processar dados da API
-// function carregaCityRain(dados) {
-//     let contadores = [0,0,0,0]
+function carregaCityRain(dados) {
+    let contadores = [0,0,0,0]
     
     dados.json.forEach(dado=>{
         if(dado.value >= 50){
@@ -40,8 +38,7 @@ window.onload = function(){
     document.getElementById('chuvaModerada').textContent = contadores[1];
     document.getElementById('chuvaFraca').textContent = contadores[2];
     document.getElementById('semChuva').textContent = contadores[3];
-
-
+}
 
 function carregarTabelaDado() {
       fetch("https://cors-anywhere.herokuapp.com/https://th.daee.sp.gov.br/sibh/api/v1/measurements/last_hours_events?hours=24&show_all=true")

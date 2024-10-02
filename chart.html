@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chart - graficos</title>
+</head>
+
+<body>
+    <style>
+        #nivel {
+            width: 500px;
+            height: auto;
+        }
+        #chuva {
+            width: 500px;
+            height: auto;
+        }
+        svg {
+    width: 600px;
+    height: 400px;
+}
+
+.tooltip {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+    </style>
+       <svg id="myChart"></svg>
+       <script src="https://d3js.org/d3.v7.min.js"></script>
+      
+    <div id="nivel">
+
+    </div>
+    <div id="chuva"></div>
+<script>
+    // Dados de exemplo
+const data = [
+    { x: 1, y: 5 },
+    { x: 2, y: 8 },
+    { x: 3, y: 3 },
+    // ...
+];
+
+// Selecionando o elemento SVG
+const svg = d3.select('#myChart');
+
+// Criando as escalas
+const x = d3.scaleLinear()
+    .domain([1, d3.max(data, d => d.x)])
+    .range([50, width - 50]);
+
+const y = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.y)])
+    .range([height - 50, 50]);
+
+// Criando a linha
+const line = d3.line()
+    .x(d => x(d.x))
+    .y(d => y(d.y));
+
+// Adicionando a linha ao SVG
+svg.append('path')
+    .datum(data)
+    .attr('fill', 'none')
+    .attr('stroke', 'steelblue')
+    .attr('stroke-linejoin', 'round')
+    .attr('stroke-linecap', 'round')
+    .attr('d', line);
+
+// Criando o tooltip
+const tooltip = d3.select('body')
+    .append('div')
+    .attr('class', 'tooltip');
+
+// Função para mostrar o tooltip
+const showTooltip = (event, d) => {
+    tooltip
+        .style('opacity', 1)
+        .style('left', event.pageX + 'px')
+        .style('top', event.pageY + 'px')
+        .html(`x: ${d.x}, y: ${d.y}`);
+};
+
+// Função para esconder o tooltip
+const hideTooltip = () => {
+    tooltip.style('opacity', 0);
+};
+
+// Adicionando eventos para mostrar e esconder o tooltip
+svg.selectAll('path')
+    .on('mouseover', showTooltip)
+    .on('mouseout', hideTooltip);
+
+// Adicionando a funcionalidade de arrastar
+svg.call(d3.drag()
+    .on('drag', () => {
+        svg.attr('transform', `translate(${d3.event.dx}, ${d3.event.dy})`);
+    }));
+</script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="assets/js/charts.js"></script>
+
+</body>
+
+</html>

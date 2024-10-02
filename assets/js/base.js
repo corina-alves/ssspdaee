@@ -82,14 +82,18 @@ const loadHeader = () =>{
     el.innerHTML =
     '<div class="container d-flex align-items-center justify-content-between">'+
 
-      '<div class="logo">'+
-        '<a href="index.html"><img src="http://www.daee.sp.gov.br/site/wp-content/uploads/2023/05/LogoSite.png" style="width="210px; height="60px"; class="logo"></a>'+
+      // '<div class="logo">'+
+      //   '<a href="index.html"><img src="http://www.daee.sp.gov.br/site/wp-content/uploads/2023/05/LogoSite.png" style="width="210px; height="60px"; class="logo"></a>'+
+      // '</div>'+
+
+        '<div class="logo">'+
+        '<a href="index.html"><img src="	http://www.daee.sp.gov.br/site/wp-content/uploads/2024/09/SP-4.png" style="width="auto; height="503px"; class="logo"></a>'+
       '</div>'+
 
       '<nav id="navbar" class="navbar ">'+
         '<ul>'+
           '<li><a class="active" href="index.html">Home</a></li>'+
-          '<li><a href="http://hidroapp.daee.sp.gov.br/" target="_blank">Mapa</a></li>'+
+          '<li><a href="http://hidroapp.daee.sp.gov.br/" target="_blank">Indicadores</a></li>'+
           '<li><a href="noticias.html">Notícias</a></li>'+
           '<li class="dropdown"><a href="#"><span>Sala de Situação</span> <i class="bi bi-chevron-down"></i></a>'+
 
