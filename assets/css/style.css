@@ -67,34 +67,7 @@ body {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
-  height: 90px;
-  z-index: 997;
-  transition: all 0.5s ease-in-out;
-  background: #FFF;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  border-top-left-radius: 20px;;
-}
 
-#header .logo h1 {
-  font-size: 28px;
-  margin: 0;
-  line-height: 0;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-#header .logo h1 a,
-#header .logo h1 a:hover {
-  color: #3c4133;
-  text-decoration: none;
-}
-
-#header .logo img {
-  padding: 0;
-  margin: 0;
-  max-height: 40px;
-}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -174,7 +147,7 @@ body {
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  /* box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25); */
   transition: 0.3s;
 }
 
@@ -367,6 +340,88 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+#header {
+  height: 90px;
+  z-index: 997;
+  transition: all 0.5s ease-in-out;
+  background: #FFF;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+ 
+}
+
+
+.header {
+  /* --background-color: rgba(255, 255, 255, 0); */
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  /* background-color: var(--background-color); */
+  padding: 20px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  background-color: transparent;
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 60px;
+  margin-right: 8px;
+  /* filter:invert(); */
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 25px;
+  margin: 0 0 0 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+@media (max-width: 1200px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .btn-getstarted {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 6px 15px;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+.scrolled .header {
+  padding: 10px 0;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Global Header on Scroll
+------------------------------*/
+.scrolled .header {
+  --background-color: rgba(14, 29, 52, 0.9);
+}
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -704,6 +759,9 @@ section {
 /*--------------------------------------------------------------
 # objetivo Section
 --------------------------------------------------------------*/
+.objetivo.section{
+  padding: 60px;
+}
 .objetivo .content h3 {
   font-size: 2rem;
   font-weight: 700;
@@ -1400,7 +1458,7 @@ border: solid 1px #000;
 --------------------------------------------------------------*/
 #footer {
   background: #F2F2F2;
-  padding: 0 0 30px 0;
+  padding: 0px;
   color: #1b1a1a;
   font-size: 14px;
   
@@ -1684,13 +1742,18 @@ border: solid 1px #000;
 /*--------------------------------------------------------------
 # produtos
 --------------------------------------------------------------*/
+.produtos.section{
+  background: #e6ecf1;
+  padding: 60px;
+}
 .produtos {
-  background:#FFF;
+ 
   text-align: center;
   border: 0px solid #ccc;
   padding: 50px 20px;
   height: 100%;
   transition: all ease-in-out 0.3s;
+  
 }
 .produtos .prod-item {
   text-align: center;
@@ -1698,14 +1761,16 @@ border: solid 1px #000;
   height: 100%;
   transition: all ease-in-out 0.3s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  border: solid 1px #e6e1e1;
+  background:#FFF;
+
+  
 }
 
 .produtos .prod-item .icon{
   margin: 0 auto;
    width: 64px;
   height: 64px; 
-  background: #dbe2e7;
+  background: #0151FE;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -1713,22 +1778,25 @@ border: solid 1px #000;
   margin-bottom: 20px;
   font-size: 28px;
   transition: ease-in-out 0.3s;
-  color:#00AF5B;
+  color:#ffffff;
 }
 
-
+.produtos .prod-item a{
+   text-decoration: none;
+}
 .produtos .prod-item h3 {
   font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: 0.3s;
-  
+ 
 }
 
 .produtos .prod-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+
 }
 
 .produtos .prod-item:hover {
@@ -2202,18 +2270,22 @@ font-size: 16px;;
   
 }
 
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
 .hero {
   --default-color: #ffffff;
-  --background-color: #140d0d;
+  --background-color: #2b2929;
   --heading-color: #ffffff;
   width: 100%;
-  min-height: 100%;
+  min-height: calc(100vh - 90px);
   position: relative;
   padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  color: var(--default-color);
 }
 
 .hero img {
@@ -2228,11 +2300,10 @@ font-size: 16px;;
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 25%);
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
   position: absolute;
   inset: 0;
   z-index: 2;
-  
 }
 
 .hero .container {
@@ -2246,7 +2317,11 @@ font-size: 16px;;
   font-weight: 700;
 }
 
-
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
 
 .hero .btn-get-started {
   font-weight: 400;
@@ -2254,14 +2329,17 @@ font-size: 16px;;
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 4px;
+  border-radius: 50px;
   transition: 0.3s;
   background: var(--accent-color);
   color: var(--contrast-color);
+  border: solid 2px #FFF;
+  text-decoration: none;
 }
 
 .hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--background-color), transparent 80%);
+  border: solid 2px #FFF;
 }
 
 .hero .btn-watch-video {
@@ -2293,65 +2371,6 @@ font-size: 16px;;
     font-size: 32px;
   }
 
-  .hero p {
-    font-size: 18px;
-  }
-}
-
-.hero .icon-box{
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 25px -5px, rgba(0, 0, 0, 0.09) 0px 10px 10px -5px;
-  height: 100%;
-  padding: 10px;
-  border: solid 1px rgba(222, 222, 222, 0.2);
-  z-index: 1;
- text-align: center;
-
-}
-.hero .icon-box p{
-  font-size: 14px;
-  color: #FFF;
-
-}
-
-.hero .icon-box i {
-  font-size: 32px;
-  line-height: 1;
-  color: #FFF;
-  text-align:center!important;
-  justify-items: center;
- 
-  
-  
-}
-a{text-decoration: none;}
-
-.hero .icon-box h3 {
-  font-weight: 700;
-  margin: 10px 0 0 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 20px;
-  line-height: 26px;
-  text-decoration: none;
-}
-
-/* .hero .icon-box h3 a {
-  color: #000;
-  transition: ease-in-out 0.1s;
-} */
-
-.hero .icon-box:hover {
-  border-color: color-mix(in srgb, var(--bs-info-color), transparent 100%) ;
-}
-
-.hero .icon-box:hover h3 a {
-  color: #06e1fa;
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
   .hero p {
     font-size: 18px;
   }
@@ -2510,4 +2529,70 @@ a{text-decoration: none;}
   border-radius: 5px;
   padding: 5px;
   margin-bottom: 10px;
+}
+
+.monitoring.section-bg{
+  background-color:#f3f3f3;
+  padding: 60px;
+
+
+}
+.monitoring .content h3 {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.monitoring .content p {
+  margin-bottom: 30px;
+}
+
+.monitoring .content .monitoring-btn {
+  padding: 8px 30px 9px 30px;
+  color: var(--default-color);
+  border-radius: 50px;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--accent-color);
+}
+
+.monitoring .content .monitoring-btn i {
+  font-size: 16px;
+  padding-left: 5px;
+}
+
+.monitoring .content .monitoring-btn:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.monitoring .icon-box i {
+  font-size: 40px;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.monitoring .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.monitoring .icon-box h4 a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.monitoring .icon-box p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 0;
+}
+
+.monitoring .icon-box:hover h4 a {
+  color: var(--accent-color);
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="br-pt">
 
 <head>
   <meta charset="utf-8">
@@ -8,40 +8,34 @@
   <title>Sala de Situação do estado de São Paulo - Notícias</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/logo/logo.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><!-- maps -->
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/animations.min.css" integrity="sha512-GKHaATMc7acW6/GDGVyBhKV3rST+5rMjokVip0uTikmZHhdqFWC7fGBaq6+lf+DOS5BIO8eK6NcyBYUBCHUBXA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/css/glightbox.min.css" integrity="sha512-T+KoG3fbDoSnlgEXFQqwcTC9AdkFIxhBlmoaFqYaIjq2ShhNwNao9AKaLUPMfwiBPL0ScxAtc+UYbHAgvd+sjQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /><!--maps--->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.css">
+  
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/estilo.css" rel="stylesheet">
+
 </head>
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-  </header>
+  <header id="header" class="header d-flex align-items-center fixed-top"> </header>
 
   <section id="sssp" class="top">
     <!-- <img src="assets/img/banner/sssp.png"> -->
     <div class="container">
     
       <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-xl-12 col-lg-12">
-          <h1>NOTÍCIAS <i class="fa-solid fa-droplet"></i></h1>
+        <div class="col-xl-8 col-lg-8 col-offset-2">
+          <h1>NOTÍCIAS</h1>
           <div>
             Acompanhe as notícias referente ao monitoramento dos recursos hídricos em tempo real,
             dentro do período de 24h para atualizar sobre o estado de alerta de eventos críticos.
@@ -82,52 +76,7 @@
               <p>Na quarta-feira (11) o tempo segue seco e ensolarado com formação de névoa seca na Grande São Paulo. A sensação de calor para a época do ano persiste e os termômetros devem variar entre mínimas de 20°C e máximas que podem superar os 33°C, com índices de umidade atingindo valores abaixo dos 30% no período da tarde.</p>
               <small>Fonte: CGESP </small>
             </div>
-           <!-- <article class="entry">
-              <div class="entry-img maps">
-               <div id="map"></div>
-                   
-                        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-                        <script>
-                            // Inicializar o mapa
-                            var map = L.map('map').setView([-23.5505, -46.6333], 10); // São Paulo
-                    
-                            // Adicionar a camada de mapa
-                            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                            }).addTo(map);
-                    
-                            // Adicionar marcador
-                            var marker = L.marker([-23.5505, -46.6333]).addTo(map);
-                            marker.bindPopup("<b>São Paulo</b><br>Capital do estado de São Paulo.").openPopup();
-                        </script> 
-                        <p> <small>Font: https://clima.inmet.gov.br/ </small></p> 
-              </div>  -->
-<!-- 
-              <h2 class="entry-title">
-                <a href="#">Precipitação Total Prevsta</a>
-              </h2>
-
-              <div class="entry-meta">
-                <ul>
-                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="#">Post: Sala de Situação
-                      do estado</a></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <time
-                      datetime="2020-01-01">16/07/2024 </time></li>
-                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> 
-                </ul>
-              </div> 
-
-              <div class="entry-content">
-                <p>
-                    Com a imagem de precipitação acima ...
-                </p>
-                <div class="read-more">
-                  <a href="#">Leia mais</a>
-                </div>
-              </div>
-
-            </article>-->
-
+         
             <article class="entry">
 
               <div class="entry-img">
@@ -145,7 +94,6 @@
                       href="https://vtvnews.com.br/2024/05/17/o-rio-piracicaba-sofre-com-a-falta-de-chuva/"
                       target="_blank">Font: materia da vtvnews</a></li>
                  
-                  <!-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li> -->
                 </ul>
               </div>
 
@@ -169,9 +117,12 @@
           <div class="col-lg-4" style="border: solid 0px #7e7676;">
             <div class="noticiasRecentes">
               <div class="noticiasRecentes-item p-2">
-                <h4>Ferramentas Públicas da SS-SP</h4>
+                <h4>Produtos SS-SP</h4>
                 <ul>
-                  <!-- <li><a href="#"><strong>Alertas</strong> </a></li> -->
+                  <li><a href="" target="_blank"><strong><i class="bi bi-check-circle-fill" style="color: #00AF5B;"></i> SIBH - Chuva agora </strong></a></li>
+                  <li><a href="" target="_blank"><strong><i class="bi bi-check-circle-fill" style="color: #00AF5B;"></i> SIBH - Chuva agora </strong></a></li>
+                  <li><a href="https://cth.daee.sp.gov.br/sibh/chuva_agora" target="_blank"><strong><i class="bi bi-check-circle-fill" style="color: #00AF5B;"></i> SIBH - Chuva agora </strong></a></li>
+
                   <li><a href="https://cth.daee.sp.gov.br/sibh/chuva_agora" target="_blank"><strong><i class="bi bi-check-circle-fill" style="color: #00AF5B;"></i> SIBH - Chuva agora </strong></a></li>
                   <li><a href="http://hidroapp.daee.sp.gov.br/" target="_blank"><strong><i class="bi bi-check-circle-fill" style="color: #00AF5B;"></i> HidroApp </strong></a></li>
                   <li><a href="https://www.saisp.br/estaticos/sitenovo/home.html" target="_blank"><strong><i class="bi bi-check-circle-fill" style="color: #00AF5B;"></i> SAISP </strong></a></li>
@@ -269,19 +220,52 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" integrity="sha512-BwHfrr4c9kmRkLw6iXFdzcdWV/PGkVgiIyIWLLlTSXzWQzxuSg4DiQUCpauz/EWjgk5TYQqX/kvn9pG1NpYfqg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/dist/boxicons.min.js" integrity="sha512-VTptlAlSWKaYE3DbrmwNYTzZg1zO6CtoGxplxlHxObgfLiCcRYDBqzTUWE/0ANUmyfYR7R227ZirV/I4rQsPNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js" integrity="sha512-RBWI5Qf647bcVhqbEnRoL4KuUT+Liz+oG5jtF+HP05Oa5088M9G0GxG0uoHR9cyq35VbjahcI+Hd1xwY8E1/Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/index.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let iconeDroplet = document.getElementById('icon');
+      let context = iconeDroplet.getContext('2d');
+      let icon = '\uf043'; // Unicode do ícone fa-droplet
+      // Definir o tamanho e a fonte do ícone
+      context.font = '38px FontAwesome';
+      context.fillStyle = '#00d4ff'; // Cor do ícone
+      // Desenhar o ícone no canvas
+      context.fillText(icon, 0, 42);
+    }); 
+    
+    (function() {
+    // Get the modal
+    setTimeout(function(){
+      const modal = document.getElementById("myModal");
+      modal.style.display = "block";
+    }, 2000); // 2 segundos após a página estiver pronta para abrir o PopUp
+  })();
+
+  function fecharModel() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+</script>
+
+
+  <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-topo.js"></script>
+  <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-contrast.js"></script>
+  <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-tamanho-fonte.js"></script>
+  <script src="https://saopaulo.sp.gov.br/barra-govsp/js/script-scroll.js"></script>
+
 
 </body>
 
