@@ -908,6 +908,9 @@ margin-top: 10px;
 .noticias .content ul li {
   padding-bottom: 10px;
 }
+a{
+  text-decoration: none;
+}
 
 .noticias .content ul i {
   font-size: 20px;
@@ -1743,7 +1746,6 @@ border: solid 1px #000;
 # produtos
 --------------------------------------------------------------*/
 .produtos.section{
-  background: #e6ecf1;
   padding: 60px;
 }
 .produtos {
