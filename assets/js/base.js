@@ -74,7 +74,6 @@
 
 // }
 
-
 const loadHeader = () =>{
 
     let el = document.getElementById('header')
@@ -93,18 +92,21 @@ const loadHeader = () =>{
       '<nav id="navbar" class="navbar ">'+
         '<ul>'+
           '<li><a class="active" href="index.html">Home</a></li>'+
-          '<li><a href="http://hidroapp.daee.sp.gov.br/" target="_blank">Indicadores</a></li>'+
+          // '<li><a href="http://hidroapp.daee.sp.gov.br/" target="_blank">Indicadores</a></li>'+
           '<li><a href="noticias.html">Notícias</a></li>'+
-          '<li class="dropdown"><a href="#"><span>Sala de Situação</span> <i class="bi bi-chevron-down"></i></a>'+
+          '<li><a href="sobre.html">Sobre</a></li>'+
+          '<li><a href="salas-de-situacao.html">Salas de Situação</a></li>'+
+          
+          // '<li class="dropdown"><a href="#"><span>Sala de Situação</span> <i class="bi bi-chevron-down"></i></a>'+
 
-            '<ul>'+
-              '<li><a href="sobre.html">Sobre</a></li>'+
-              '<li><a href="salas-de-situacao.html">Salas de Situação</a></li>'+
-              '<li><a href="monitoramento.html">Monitoramento</a></li>'+
+          //   '<ul>'+
+          //     '<li><a href="sobre.html">Sobre</a></li>'+
+          //     '<li><a href="salas-de-situacao.html">Salas de Situação</a></li>'+
+              // '<li><a href="monitoramento.html">Monitoramento</a></li>'+
               // '<li><a href="equipe.html">Equipe</a></li>'+
               // '<li><a href="galeria.html"> Galeria</a></li>'+
-            '</ul>'+
-          '</li>'+
+          //   '</ul>'+
+          // '</li>'+
 
           '<li class="dropdown"><a href="#"><span>Boletins</span> <i class="bi bi-chevron-down"></i></a>'+
             '<ul>'+
@@ -124,6 +126,7 @@ const loadHeader = () =>{
  
           '</ul>'+
         '</li>'+
+          '<li><a href="contato.html"> Contato</a></li>'+
 
         '</ul>'+
         '<i class="bi bi-list mobile-nav-toggle"></i>'+
@@ -145,7 +148,7 @@ const loadFooter = () =>{
         '<div class="col-lg-4 footer-info">'+
         '<a href="index.html"><img src="http://www.daee.sp.gov.br/site/wp-content/uploads/2023/05/LogoSite.png" style="width="210px; height="60px;" class="logo"></a>'+'<br/><br/>'+
         '<h2><STRONG>SALA DE SITUAÇÃO DO ESTADO DE SÃO PAULO</STRONG></H2>'+ 
-          '<p>Rede Hidrológica básica do Estado de São Paulo é operada pelo DAEE desde 1951.</p>'+ 
+          // '<p>Rede Hidrológica Básica do Estado de São Paulo é operada pela SP Águas.</p>'+ 
         '</div>'+
 
         '<div class="col-lg-2 footer-links">'+
