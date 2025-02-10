@@ -93,7 +93,7 @@ const loadHeader = () =>{
         '<ul>'+
           '<li><a class="active" href="index.html">Home</a></li>'+
           // '<li><a href="http://hidroapp.daee.sp.gov.br/" target="_blank">Indicadores</a></li>'+
-          '<li><a href="noticias.html">Notícias</a></li>'+
+          // '<li><a href="noticias.html">Notícias</a></li>'+
           '<li><a href="sobre.html">Sobre</a></li>'+
           '<li><a href="salas-de-situacao.html">Salas de Situação</a></li>'+
           
@@ -114,18 +114,12 @@ const loadHeader = () =>{
 
               '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target="_black">Boletim Diário</a></li>'+
               '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFlnw" target="_black">Boletim Mensal</a></li>'+
-              '<li><a href="https://docs.google.com/document/d/11qxQPqNc1RW7mMYw_uXdw-Gmh7lr8UUbaH2AnG6k6g0/edit#heading=h.7vzq6ltz512f" target="_black">Último Boletim</a></li>'+
+              // '<li><a href="https://docs.google.com/document/d/11qxQPqNc1RW7mMYw_uXdw-Gmh7lr8UUbaH2AnG6k6g0/edit#heading=h.7vzq6ltz512f" target="_black">Último Boletim</a></li>'+
             '</ul>'+
           '</li>'+
    
-          '<li class="dropdown"><a href="#"><span>Hidrologia</span> <i class="bi bi-chevron-down"></i></a>'+
-
-          '<ul>'+
-          '<li><a href="hidrologia.html">Hidrologia</a></li>'+
-          '<li><a href="estacoes.html">Estações</a></li>'+
- 
-          '</ul>'+
-        '</li>'+
+          '<li><a href="hidrologia.html"><span>Hidrologia</span></a>'+
+          '</li>'+
           '<li><a href="contato.html"> Contato</a></li>'+
 
         '</ul>'+
@@ -146,8 +140,8 @@ const loadFooter = () =>{
       '<div class="row">'+
 
         '<div class="col-lg-4 footer-info">'+
-        '<a href="index.html"><img src="http://www.daee.sp.gov.br/site/wp-content/uploads/2023/05/LogoSite.png" style="width="210px; height="60px;" class="logo"></a>'+'<br/><br/>'+
-        '<h2><STRONG>SALA DE SITUAÇÃO DO ESTADO DE SÃO PAULO</STRONG></H2>'+ 
+        '<a href="index.html"><img src="https://www.spaguas.sp.gov.br/site/wp-content/uploads/2024/09/SP-4.png" style="width="260px; height="90px;" class="logo"></a>'+'<br/><br/>'+
+        '<h2><STRONG>Sala de Situação do Estado de São Paulo</STRONG></h2>'+ 
           // '<p>Rede Hidrológica Básica do Estado de São Paulo é operada pela SP Águas.</p>'+ 
         '</div>'+
 
@@ -164,7 +158,7 @@ const loadFooter = () =>{
             '<li><a href="sobre.html">Sobre Nós</a></li>'+
             '<li><a href="monitoramento.html">Monitoramento</a></li>'+
             '<li><a href="salas-de-situacao.html">Salas de Situação</a></li>'+
-            '<li><a href="noticias.html">Notícias</a></li>'+
+            // '<li><a href="noticias.html">Notícias</a></li>'+
             // '<li><a href="equipe.php">Equipes</a></li>'+
           '</ul>'+
         '</div>'+

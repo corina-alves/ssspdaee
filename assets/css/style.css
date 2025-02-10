@@ -1,20 +1,18 @@
-/**
-* Template Name: Serenity - v4.11.0
-* Template URL: https://bootstrapmade.com/serenity-bootstrap-corporate-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+.dark-background {
+  --background-color: #050b0e;
+  --surface-color: #e92929;
+  --contrast-color: #2a2727;
+  --bs-info-color: #06e1fa;
+  --default-color: #212529;
+  --heading-color: #001973;
+  --accent-color: #0d42ff;
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
   background:#FFFFFF;
 }
-
-
 
 #main {
   margin-top: 70px;
@@ -64,17 +62,6 @@ body {
   }
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
 .navbar {
   padding: 0;
 }
@@ -340,6 +327,7 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+
 #header {
   height: 90px;
   z-index: 997;
@@ -1495,6 +1483,12 @@ border: solid 1px #000;
   color: #096397;
 }
 
+#footer .footer-top .footer-info h2 {
+  margin-block-start: 0;
+  margin-block-end: .9rem;
+  color:#000000;
+  ;
+}
 #footer .footer-top .footer-info p {
   font-size: 14px;
   line-height: 24px;
@@ -1579,7 +1573,7 @@ border: solid 1px #000;
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #94c045;
+  color: #0151FE;
 }
 
 #footer .footer-top .footer-contact {
@@ -2195,6 +2189,8 @@ font-size: 16px;;
   font-size: 14px;
 }
 
+
+
 .situacao.icon-box i {
   font-size: 32px;
   line-height: 1;
@@ -2207,7 +2203,46 @@ font-size: 16px;;
   
 }
 
-.sssp .icon-box .situacao h3 a{
+.icon-box .situacao h3{
+  margin: 10px 0 0 0;
+  padding: 0;
+  line-height: 1;
+  font-size:14px;
+
+}
+
+.icon-box.situacao{
+  padding:10px;
+  transition: ease-in-out 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  border: solid 1px #CCC;
+  min-height: 25vh;
+  
+}
+
+.icon-box.situacao p{
+  font-size: 16px;
+  color: #FFF;
+ 
+}
+
+.icon-box i {
+  font-size: 32px;
+  line-height: 1;
+  color: #00AF5B!important; 
+  text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 5px;
+  
+}
+
+.icon-box .situacao h3 a{
   font-weight: 700;
   margin: 10px 0 0 0;
   padding: 0;
@@ -2215,7 +2250,6 @@ font-size: 16px;;
   font-size: 20px;
 
 }
-
 /* .sssp .icon-box.situacao:hover {
   background-image: url('../../assets/img/radar/2024051408150500dBR_SAISP2.png');
   opacity: 0.8;
@@ -2281,7 +2315,7 @@ font-size: 16px;;
   --background-color: #2b2929;
   --heading-color: #ffffff;
   width: 100%;
-  min-height: calc(100vh - 90px);
+  min-height: calc(95vh - 50px);
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -2302,7 +2336,7 @@ font-size: 16px;;
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 20%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -2317,12 +2351,14 @@ font-size: 16px;;
   margin: 0;
   font-size: 48px;
   font-weight: 700;
+  text-align: center;
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #FFF;
   margin: 10px 0 0 0;
-  font-size: 24px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .hero .btn-get-started {
@@ -2378,154 +2414,7 @@ font-size: 16px;;
   }
 }
 
-
-.FundoHeader {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  padding: 120px 0 80px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  overflow: hidden;
- background: #FFF;
-/*  background-image: radial-gradient(circle at 46.62% 11.32%, #706ba2 0, #0c2a6f 50%, #000040 100%); */
-      /* background-image: radial-gradient(circle at 50% 50%, #009fc0 0, #009ec7 8.33%, #009dcd 16.67%, #009bd2 25%,
-  #0099d6 33.33%, #0097d9 41.67%, #1595db 50%, #3b92dc 58.33%, #5290dc 66.67%, #658ddb 75%, #7589d9 83.33%, #8486d5 91.67%, #9182d1 100%);*/
-  
-}
-
-.FundoHeader img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  background-color: rgb(red, green, blue);
-}
-.FundoHeader-content {
-  max-width: auto;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.FundoHeader h1 {
-  font-size: 3.5em;
-  margin-bottom: 20px;
-  font-weight: 900;
-  color: #050b0e;
-}
-.FundoHeader h2{
-  color: #050b0e;
-}
-.FundoHeader p {
-  font-size: 2rem;
-  line-height: 1.5;
-}
-.FundoHeader .fa-solid.fa-droplet{
-  color: #000;
-  margin-left: 10px;
- 
-}
-.FundoHeader p {
-  margin: 10px 0 0 0;
-  font-size: 24px;
-  color: #000;
-}
-
-.FundoHeader .icon-box{
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-}
-.FundoHeader .icon-box p{
-  font-size: 14px;
-}
-
-.FundoHeader .icon-box i {
-  font-size: 32px;
-  line-height: 1;
- 
-  
-}
-
-.FundoHeader .icon-box h3 {
-  font-weight: 700;
-  margin: 10px 0 0 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 20px;
-  line-height: 26px;
-}
-.FundoHeader:before {
-  content: "";
-  /* background-image: linear-gradient(220deg, #4dacff 0, #2e72bd 50%, #2b649c 5%);  position: absolute; */
-  background-image: linear-gradient(#e6ecf1 0, #f0f0f0 50%, #113d6a 100%);  position: absolute;  
-  inset: 0;
-  z-index: 2;
-}
-.FundoHeader .icon-box h3 a {
-  color: #000;
-  transition: ease-in-out 0.1s;
-}
-
-.FundoHeader .icon-box:hover {
-  border-color: color-mix(in srgb, var(--bs-info-color), transparent 10%) ;
-}
-
-.FundoHeader .icon-box:hover h3 a {
-  color: #06e1fa;
-}
-
-@media (max-width: 768px) {
-  .FundoHeader h2 {
-    font-size: 32px;
-  }
-  .FundoHeader p {
-    font-size: 18px;
-  }
-}
-/* .shape {
-  width: 200px;
-  height: 100px;
-  background-color: #0073e6;
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-} */
-.dark-background {
-  --background-color: #050b0e;
-  --surface-color: #e92929;
-  --contrast-color: #2a2727;
-  --bs-info-color: #06e1fa;
-  --default-color: #212529;
-  --heading-color: #001973;
-  --accent-color: #0d42ff;
-
-}
-
- /* .shepe::before,
-.FundoHeader::after {
-  content: '';
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: #1b0eca;
-} */
-
- /* .FundoHeader::before {
-  top: 98px;
-  left: 20px;
-  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-}
-
-.FundoHeader::after {
-  bottom: 20px;
-  right: 20px;
-  clip-path: polygon(0% 100%, 100% 0%, 100% 100%); 
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-}   */
-
-.marquee{
+ .marquee{
   font-size: 16px;
   background-image: linear-gradient(225deg, #70a8ff 0, #1083f8 50%, #0061db 100%);
   border-radius: 5px;
