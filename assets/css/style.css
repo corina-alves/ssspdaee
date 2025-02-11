@@ -1741,15 +1741,14 @@ border: solid 1px #000;
 --------------------------------------------------------------*/
 .produtos.section{
   padding: 60px;
+ 
 }
 .produtos {
- 
   text-align: center;
-  border: 0px solid #ccc;
   padding: 50px 20px;
   height: 100%;
   transition: all ease-in-out 0.3s;
-  
+
 }
 .produtos .prod-item {
   text-align: center;
@@ -1758,7 +1757,7 @@ border: solid 1px #000;
   transition: all ease-in-out 0.3s;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   background:#FFF;
-
+  border-radius: 5px;
   
 }
 
@@ -1788,10 +1787,11 @@ border: solid 1px #000;
  
 }
 
-.produtos .prod-item p {
+.produtos.prod-item p {
   line-height: 24px;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 0;
+  transition: all ease-in-out 0.3s;
 
 }
 
@@ -2185,8 +2185,10 @@ font-size: 16px;;
   
 }
 
-.sssp .icon-box .situacao p{
+.sssp.icon-box.situacao p{
   font-size: 14px;
+  color: #000;
+
 }
 
 
@@ -2225,7 +2227,7 @@ font-size: 16px;;
 }
 
 .icon-box.situacao p{
-  font-size: 16px;
+  font-size: 18px;
   color: #FFF;
  
 }
