@@ -344,30 +344,21 @@ section {
   overflow: hidden;
 }
 
-.section-bg {
-  background-color: #f9fbf4;
-}
-
-
-.section-title h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  padding-bottom: 0;
-  font-family: "Poppins", sans-serif;
-  color: #1a1b19;
-}
-
-
 #header {
   height: 90px;
   z-index: 997;
   transition: all 0.5s ease-in-out;
-  background: #FFF;
+  background: rgb(255, 255, 255, 0.2);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+
  
 }
-
+      /* Cor do Header ao rolar */
+      .header.scrolled {
+        background-color: #333;
+        color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.8);
+    }
 section,
 .section {
   color: var(--default-color);
@@ -396,7 +387,6 @@ section,
 .section-title h2 {
   font-size: 32px;
   font-weight: 700;
-  text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
   position: relative;
@@ -1862,7 +1852,7 @@ border: solid 1px #000;
   margin: 0 auto;
    width: 64px;
   height: 64px; 
-  background: #0151FE;
+  background: #92b3fa;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -1881,6 +1871,7 @@ border: solid 1px #000;
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: 0.3s;
+  color: #1a1a1a;
  
 }
 
@@ -2184,15 +2175,16 @@ color: #FFFFFF;
 # sssp Section
 --------------------------------------------------------------*/
 .sssp {
-  width: 100%;
-  min-height: auto;
+
+  background:rgb(235, 235, 235);
+  
+  min-height: calc(100vh - 0px);
   position: relative;
-  padding: 90px 0 80px 0;
+  padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:rgb(235, 235, 235);
- 
+  color: var(--default-color);
 }
 
 .sssp img {
@@ -2233,7 +2225,12 @@ font-size: 16px;;
 
   
 }
+h3{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
 
+}
 .sssp .icon-box {
   padding: 30px 20px;
   transition: ease-in-out 0.3s;
@@ -2405,6 +2402,84 @@ font-size: 16px;;
   
 }
 
+.hero-hidro {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-color);
+  /* background-image: radial-gradient(circle at 114.09% 20.12%, #ffffff 0, #fbfcff 50%, #c2cfef 100%); */
+  background-image: radial-gradient(circle at 114.09% 20.12%, #ffffff 0, #fbfcff 50%, #d0d9f3 100%);
+  /* background-image: linear-gradient(270deg, #ffffff 0, #ffffff 25%, #effbff 50%, #bad7e3 75%, #93bbce 100%); */
+}
+.hero-hidro-index {
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-color);
+  /* background-image: radial-gradient(circle at 114.09% 20.12%, #ffffff 0, #fbfcff 50%, #c2cfef 100%); */
+  background-image: radial-gradient(circle at 114.09% 20.12%, #ffffff 0, #fbfcff 50%, #d0d9f3 100%);
+  /* background-image: linear-gradient(270deg, #ffffff 0, #ffffff 25%, #effbff 50%, #bad7e3 75%, #93bbce 100%); */
+}
+.hero-hidro-content {
+  max-width: 50%;
+}
+
+.hero-hidro h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+}
+
+.hero-hidro-content p {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #333;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #0039C4;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #1780F8;
+}
+
+.hero-hidro-image img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-hidro-content {
+      max-width: 100%;
+  }
+
+  .hero-hidro-image img {
+      width: 100%;
+      max-width: 350px;
+      margin-top: 20px;
+  }
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -2567,7 +2642,7 @@ font-size: 16px;;
 
 .monitoring.section-bg{
   background-color:#f3f3f3;
-  padding: 60px;
+  padding: 80px;
 
 
 }
@@ -2604,12 +2679,25 @@ font-size: 16px;;
   color: var(--contrast-color);
 }
 
+.monitoring .icon-box {
+background: #FFF;
+padding:5px;
+border: none;
+box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+.monitoring .icon-box:hover {
+  box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+}
+
 .monitoring .icon-box i {
   font-size: 40px;
   color: var(--accent-color);
   margin-bottom: 10px;
+  display:inline;
 }
-
 .monitoring .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
@@ -2630,3 +2718,88 @@ font-size: 16px;;
 .monitoring .icon-box:hover h4 a {
   color: var(--accent-color);
 }
+
+
+
+    /* Estilo para o container de boletins */
+    .boletins-container {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+  }
+
+  /* Estilo para a lista de PDFs */
+  .pdf-list {
+      list-style-type: none;
+      padding: 0;
+  }
+
+  .pdf-list li {
+      margin-bottom: 10px;
+  }
+
+  .boletim-link {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+  }
+
+  .boletim-link:hover {
+      color: #0056b3;
+  }
+
+  .pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.pagina-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.pagina-link:hover {
+  background: #007bff;
+  color: white;
+}
+
+.pagina-link.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.pagina-link.disabled {
+  color: #aaa;
+  pointer-events: none;
+  border-color: #ddd;
+}
+
+  /* Estilo para mensagens de erro e caso não haja boletins */
+  .pdf-list i {
+      color: #999;
+      font-style: italic;
+  }
+
+  /* Responsividade */
+  @media (max-width: 767px) {
+      .col-lg-6 {
+          width: 100%;
+      }
+  }

@@ -290,8 +290,54 @@
       </div>
     </section>
 
+    <style>
+     
+      .pdf-list {
+          list-style: none;
+          padding: 0;
+      }
+      .pdf-list li {
+          margin: 10px 0;
+      }
+      .pdf-list a {
+          text-decoration: none;
+          color: #007bff;
+          font-weight: bold;
+      }
+      .pdf-list a:hover {
+          color: #0056b3;
+      }
+  </style>
+    <div class="container">
+      <ul id="boletins" class="pdf-list"></ul>
+  </div>
+    <script>
+      async function carregarBoletins() {
+          const pasta = 'boletins/';  // Caminho da pasta onde os PDFs estão armazenados
+          
+          try {
+              const resposta = await fetch(pasta);
+              const texto = await resposta.text();
+              
+              const regex = /href="([^"]+\.pdf)"/g;
+              let match;
+              let lista = "";
 
-  </main>
+              while ((match = regex.exec(texto)) !== null) {
+                  const arquivo = match[1];
+                  lista += `<li><a href="${arquivo}" target="_blank">${arquivo}</a></li>`;
+              }
+
+              document.getElementById("boletins").innerHTML = lista || "<li>Nenhum boletim disponível</li>";
+          } catch (error) {
+              console.error("Erro ao carregar boletins:", error);
+              document.getElementById("boletins").innerHTML = "<li>Erro ao carregar boletins</li>";
+          }
+      }
+
+      carregarBoletins();
+  </script>
+
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="" style="margin-top: 10px;;">
