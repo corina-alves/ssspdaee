@@ -23,7 +23,17 @@
 
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/sobre.css" rel="stylesheet">
-
+  <script>
+    window.addEventListener("scroll", function() {
+        var menu = document.getElementById("header");
+        if (window.scrollY > 50) {
+            menu.classList.add("scrolled");
+        } else {
+            menu.classList.remove("scrolled");
+        }
+    });
+    
+    </script>
 </head>
 
 <body>
@@ -53,97 +63,99 @@
         <a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?dmr=1&ec=wgc-drive-globalnav-goto&resourcekey=0-9rWDTUK16xaKOQnDIPFlnw" target="_blank" class="btn" data-aos="fade-up">Boletins Mensais anteriores →</a>
         </div>
 <script>
-  const boletinsPorPagina = 10;
-    let boletins = [];
-    let paginaAtual = 1;
+const boletinsPorPagina = 15;
+let boletins = [];
+let paginaAtual = 1;
 
-    async function carregarBoletins() {
-        const pasta = 'boletinsMensais/';
+async function carregarBoletins() {
+    const pasta = 'boletinsMensais/';
 
-        try {
-            const resposta = await fetch(pasta);
-            const texto = await resposta.text();
+    try {
+        const resposta = await fetch(pasta);
+        const texto = await resposta.text();
 
-            const regex = /href="([^"]+\.pdf)"/g;
-            let match;
+        const regex = /href="([^"]+\.pdf)"/g;
+        let match;
 
-            boletins = [];
+        boletins = [];
 
-            while ((match = regex.exec(texto)) !== null) {
-                const caminhoCompleto = match[1];
-                const nomeArquivo = caminhoCompleto.replace(/^.*\//, '').replace('.pdf', '');
-                const data = extrairDataDoArquivo(nomeArquivo);
+        while ((match = regex.exec(texto)) !== null) {
+            const caminhoCompleto = match[1];
+            const nomeArquivo = caminhoCompleto.replace(/^.*\//, '').replace('.pdf', '');
+            const data = extrairDataDoArquivo(nomeArquivo);
 
-                boletins.push({ nome: nomeArquivo, link: caminhoCompleto, data });
-            }
-
-            // Ordena os boletins por data (mais recente primeiro)
-            boletins.sort((a, b) => b.data - a.data);
-
-            mostrarBoletins(paginaAtual);
-            mostrarPaginas();
-        } catch (error) {
-            console.error("Erro ao carregar boletins:", error);
-            document.getElementById("boletins").innerHTML = `<tr><td colspan="3"><i>Erro ao carregar boletins.</i></td></tr>`;
-        }
-    }
-
-    function extrairDataDoArquivo(nomeArquivo) {
-        const regexData = /(\d{4})[-_]?(\d{2})[-_]?(\d{2})/; // Procura por datas no formato YYYY-MM-DD ou similar
-        const match = nomeArquivo.match(regexData);
-
-        if (match) {
-            return new Date(`${match[1]}-${match[2]}-${match[3]}`);
-            
-        }
-        return new Date(0); // Data antiga caso não seja encontrado
-    }
-
-    function formatarData(data) {
-        if (data.getTime() === 0) return "Data desconhecida";
-        return data.toLocaleDateString("pt-BR");
-    }
-
-    function mostrarBoletins(pagina) {
-        const inicio = (pagina - 1) * boletinsPorPagina;
-        const fim = inicio + boletinsPorPagina;
-        const boletinsDaPagina = boletins.slice(inicio, fim);
-
-        const lista = boletinsDaPagina.map(({ nome, link, data }, index) =>
-            `<tr>
-                <td><a href="${link}" target="_blank" class="boletim-link">${nome}</a></td>
-            </tr>`
-        ).join("");
-
-        document.getElementById("boletins").innerHTML = lista || `<tr><td colspan="3"><i>Nenhum boletim disponível no momento.</i></td></tr>`;
-    }
-
-    function mostrarPaginas() {
-        const totalPaginas = Math.ceil(boletins.length / boletinsPorPagina);
-        let paginas = "";
-
-        paginas += `<span class="pagina-link ${paginaAtual === 1 ? 'disabled' : ''}" onclick="mudarPagina(${paginaAtual - 1})">«</span>`;
-
-        const intervalo = 2;
-        let inicioPagina = Math.max(1, paginaAtual - intervalo);
-        let fimPagina = Math.min(totalPaginas, paginaAtual + intervalo);
-
-        for (let i = inicioPagina; i <= fimPagina; i++) {
-            paginas += `<span class="pagina-link ${i === paginaAtual ? 'active' : ''}" onclick="mudarPagina(${i})">${i}</span>`;
+            boletins.push({ nome: nomeArquivo, link: caminhoCompleto, data });
         }
 
-        paginas += `<span class="pagina-link ${paginaAtual === totalPaginas ? 'disabled' : ''}" onclick="mudarPagina(${paginaAtual + 1})">»</span>`;
+        // Ordena os boletins por data (mais recente primeiro)
+        boletins.sort((a, b) => b.data - a.data);
 
-        document.getElementById("pagination").innerHTML = paginas || "<span><i>Nenhuma página para exibir.</i></span>";
-    }
-
-    function mudarPagina(pagina) {
-        paginaAtual = pagina;
         mostrarBoletins(paginaAtual);
         mostrarPaginas();
+    } catch (error) {
+        console.error("Erro ao carregar boletins:", error);
+        document.getElementById("boletins").innerHTML = `<tr><td colspan="3"><i>Erro ao carregar boletins.</i></td></tr>`;
+    }
+}
+
+function extrairDataDoArquivo(nomeArquivo) {
+    const regexData = /(\d{4})(\d{2})/; // Procura por datas no formato YYYYMM
+    const match = nomeArquivo.match(regexData);
+
+    if (match) {
+        const ano = match[1];
+        const mes = match[2];
+        return new Date(`${ano}-${mes}-02`); // Define o primeiro dia do mês como referência
+    }
+    return new Date(0); // Data antiga caso não seja encontrado
+}
+
+function formatarData(data) {
+    if (data.getTime() === 0) return "Data desconhecida";
+    return data.toLocaleDateString("pt-BR", { year: 'numeric', month: 'long' });
+}
+
+function mostrarBoletins(pagina) {
+    const inicio = (pagina - 1) * boletinsPorPagina;
+    const fim = inicio + boletinsPorPagina;
+    const boletinsDaPagina = boletins.slice(inicio, fim);
+
+    const lista = boletinsDaPagina.map(({ nome, link, data }) =>
+        `<tr>
+            <td><a href="${link}" target="_blank" class="boletim-link">${nome} (${formatarData(data)})</a></td>
+        </tr>`
+    ).join("");
+
+    document.getElementById("boletins").innerHTML = lista || `<tr><td colspan="3"><i>Nenhum boletim disponível no momento.</i></td></tr>`;
+}
+
+function mostrarPaginas() {
+    const totalPaginas = Math.ceil(boletins.length / boletinsPorPagina);
+    let paginas = "";
+
+    paginas += `<span class="pagina-link ${paginaAtual === 1 ? 'disabled' : ''}" onclick="mudarPagina(${paginaAtual - 1})">«</span>`;
+
+    const intervalo = 2;
+    let inicioPagina = Math.max(1, paginaAtual - intervalo);
+    let fimPagina = Math.min(totalPaginas, paginaAtual + intervalo);
+
+    for (let i = inicioPagina; i <= fimPagina; i++) {
+        paginas += `<span class="pagina-link ${i === paginaAtual ? 'active' : ''}" onclick="mudarPagina(${i})">${i}</span>`;
     }
 
-    carregarBoletins();
+    paginas += `<span class="pagina-link ${paginaAtual === totalPaginas ? 'disabled' : ''}" onclick="mudarPagina(${paginaAtual + 1})">»</span>`;
+
+    document.getElementById("pagination").innerHTML = paginas || "<span><i>Nenhuma página para exibir.</i></span>";
+}
+
+function mudarPagina(pagina) {
+    paginaAtual = pagina;
+    mostrarBoletins(paginaAtual);
+    mostrarPaginas();
+}
+
+carregarBoletins();
+
 </script>
 
       </div>

@@ -52,12 +52,6 @@ body {
   background:#FFFFFF;
 }
 
-#main {
-  margin-top: 70px;
-  z-index: 3;
-  position: relative;
-}
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -82,7 +76,7 @@ body {
 }
 
 .back-to-top:hover {
-  background: #06e1fa;
+  background: #00AF5B;
   color: #fff;
 }
 
@@ -125,7 +119,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   font-weight: 600;
-  color: #565e49;
+  color: #131313;
   white-space: nowrap;
   transition: 0.3s;
   text-decoration: none;
@@ -516,6 +510,7 @@ section,
   height: 100%;
   width: 100%;
 }
+
 .breadcrumbs .breadcrumb-hero h2 {
   font-size: 32px;
   font-weight: 500;
@@ -1586,8 +1581,8 @@ border: solid 1px #000;
 
 #footer .footer-top .social-links a {
   display: inline-block;
-  background: #00a2ff;
-  color: #1b1a1a;
+  background: #0151FE;
+  color: #FFF;
   line-height: 1;
   margin-right: 4px;
   border-radius: 50%;
@@ -1606,7 +1601,7 @@ border: solid 1px #000;
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #94c045;
+  background: #00AF5B;
   color: #fff;
   text-decoration: none;
 }
@@ -1635,7 +1630,7 @@ border: solid 1px #000;
 }
 
 #footer .footer-top h4::after {
-  background: #00a2ff;
+  background: #00AF5B;
   width: 60px;
 }
 
@@ -1852,7 +1847,8 @@ border: solid 1px #000;
   margin: 0 auto;
    width: 64px;
   height: 64px; 
-  background: #92b3fa;
+  /* background: #92b3fa; */
+  background: rgb(0, 175, 91, 0.4);
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -2415,9 +2411,10 @@ h3{
   background-image: radial-gradient(circle at 114.09% 20.12%, #ffffff 0, #fbfcff 50%, #d0d9f3 100%);
   /* background-image: linear-gradient(270deg, #ffffff 0, #ffffff 25%, #effbff 50%, #bad7e3 75%, #93bbce 100%); */
 }
+
 .hero-hidro-index {
   width: 100%;
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 90px);
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -2436,6 +2433,7 @@ h3{
   font-size: 48px;
   font-weight: bold;
   color: #000;
+  border: solid 0px #F00;
 }
 
 .hero-hidro-content p {
@@ -2465,31 +2463,31 @@ h3{
 }
 
 @media (max-width: 900px) {
-  .hero {
+  .hero-hidro {
       flex-direction: column;
       text-align: center;
   }
 
-  .hero-hidro-content {
+  .hero-hidro-hidro-content {
       max-width: 100%;
   }
-
-  .hero-hidro-image img {
+  .hero-hidro h1{
+    padding: 50px;;
+  }
+  .hero-hidro img {
       width: 100%;
       max-width: 350px;
       margin-top: 20px;
+      padding: 10px;
   }
 }
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
 
  .hero {
   --default-color: #ffffff;
   --background-color: #2b2929;
   --heading-color: #ffffff;
   width: 100%;
-  min-height: calc(100vh - 0px);
+  min-height: calc(100vh - 90px);
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -2510,8 +2508,9 @@ h3{
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 20%);
-  position: absolute;
+ position: absolute;
+ background-image: radial-gradient(circle at 114.09% 20.12%, rgb(255, 255, 255, 0.9) 20%, rgb(251, 252, 255) 50%, rgb(208, 217, 243) 100%);
+
   inset: 0;
   z-index: 2;
 }
@@ -2526,13 +2525,13 @@ h3{
   font-size: 48px;
   font-weight: 700;
   text-align: center;
-  border: solid 0px #000;
+  color: #000000;
 }
 
 .hero p {
-  color: #FFF;
+  color: #000000;
   margin: 10px 0 0 0;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -2641,7 +2640,8 @@ h3{
 }
 
 .monitoring.section-bg{
-  background-color:#f3f3f3;
+  background-image: radial-gradient(circle at 114.09% 20.12%, rgb(255, 255, 255, 0.9) 50%, rgb(251, 252, 255) 50%, rgb(208, 217, 243) 100%);
+
   padding: 80px;
 
 
@@ -2681,7 +2681,7 @@ h3{
 
 .monitoring .icon-box {
 background: #FFF;
-padding:5px;
+padding:50px 2px 2px 2px;
 border: none;
 box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
 
@@ -2692,12 +2692,7 @@ box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-10px);
 }
 
-.monitoring .icon-box i {
-  font-size: 40px;
-  color: var(--accent-color);
-  margin-bottom: 10px;
-  display:inline;
-}
+
 .monitoring .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
@@ -2803,3 +2798,9 @@ box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
           width: 100%;
       }
   }
+
+
+  #header.scrolled {
+    background: rgba(255, 254, 254, 0.9); /* Cor escura semi-transparente */
+    padding: 10px 20px;
+}

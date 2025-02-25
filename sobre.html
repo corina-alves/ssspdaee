@@ -25,7 +25,17 @@
   <link href="assets/css/sobre.css" rel="stylesheet">
 
 </head>
-
+<script>
+  window.addEventListener("scroll", function() {
+      var menu = document.getElementById("header");
+      if (window.scrollY > 50) {
+          menu.classList.add("scrolled");
+      } else {
+          menu.classList.remove("scrolled");
+      }
+  });
+  
+  </script>
 <body>
 <style>
   p{
@@ -53,8 +63,8 @@
           <!-- <a href="https://cth.daee.sp.gov.br/sibh/" target="_blank" class="btn" data-aos="fade-up">Dados Hidrológicos →</a> -->
       </div>
       <div class="col-lg-6" data-aos="fade-left">
-        <img class="img-fluid" src="assets/img/posts/equipe.jpg">
-          </div>
+        <img class="img-fluid" src="assets/img/posts/20250219_120254.jpg">
+      </div>
       </div>
       </div>
   </div>

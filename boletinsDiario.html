@@ -23,7 +23,17 @@
 
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/sobre.css" rel="stylesheet">
-
+  <script>
+    window.addEventListener("scroll", function() {
+        var menu = document.getElementById("header");
+        if (window.scrollY > 50) {
+            menu.classList.add("scrolled");
+        } else {
+            menu.classList.remove("scrolled");
+        }
+    });
+    
+    </script>
 </head>
 
 <body>
@@ -40,7 +50,6 @@
             <thead>
                 <tr>
                     <th>Boletins diários  do ano de 2025</th>
-                    <th>Data</th>
                 </tr>
             </thead>
             <tbody id="boletins"></tbody>
@@ -115,7 +124,6 @@ const boletinsPorPagina = 10;
         const lista = boletinsDaPagina.map(({ nome, link, data }, index) =>
             `<tr>
                 <td><a href="${link}" target="_blank" class="boletim-link">${nome}</a></td>
-                <td>${formatarData(data)}</td>
             </tr>`
         ).join("");
 

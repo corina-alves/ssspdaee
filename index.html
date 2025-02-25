@@ -42,49 +42,51 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/estilo.css" rel="stylesheet">
 </head>
-
-<body>
+<script>
+  window.addEventListener("scroll", function() {
+      var menu = document.getElementById("header");
+      if (window.scrollY > 50) {
+          menu.classList.add("scrolled");
+      } else {
+          menu.classList.remove("scrolled");
+      }
+  });
   
-  <header id="header" class="header d-flex align-items-center fixed-top"> </header>
-  <div class="hero-hidro-index">
+  </script>
+<body>
+
+<header id="header" class="header d-flex align-items-center fixed-top"> </header>
+  <!--div class="hero-hidro-index">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12" data-aos="fade-right">
+        <div class="col-lg-10 offset-md-2" data-aos="fade-right">
           <h1 style="font-size: 68px; font-weight: none;"><strong>Sala de Situação de São Paulo </strong></h1>
           <p>A Sala de situação do Estado de São Paulo é responsável pelo monitoramento dos recursos hídricos. Esse
             monitoramento é realizado através de <strong>dados de satélites, radares,
               pluviômetros</strong> que são utilizados para análise de chuva e os <strong>fluviômetros</strong>
-            utilizados para análise de rios, córregos e outros corpos d'água. Atualmente a sala de situação
-            conta com <strong>aproximadamente 2.000 pontos de monitoramento no Estado.</strong> Com esses dados e
-            informações são gerados alertas de eventos críticos, boletins e relatórios técnicos
-            que são disponibilizados no e-mail, whatsApp, email e site. Operando como uma central de monitoramento em
-            tempo real, a sala de situação tem objetivo de acompanhar condições hidrometeorologicas
-            e ocorrências de eventos críticos, além, de subsidiar a gestão de recursos hídricos em todo o Estado.</p>
+            utilizados para análise de rios, córregos e outros corpos d'água. </p>
           <center> <a href="https://hidroapp.spaguas.sp.gov.br/" target="_blank" class="btn "
               data-aos="fade-up">HidroApp →</a></center>
-          <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
 
-          <!-- <a href="https://cth.daee.sp.gov.br/sibh/" target="_blank" class="btn" data-aos="fade-up">Dados Hidrológicos →</a> -->
 
         </div>
 
       </div>
     </div>
-  </div>
-  <!-- <section class="hero section">
+  </div-->
+   <section class="hero section">
       <img src="assets/img/banner/DSC_7723.JPG" alt="" data-aos="fade-in">
-      <div class="container"> -->
-  <!-- <div class="row">
-          <div class="col-lg-8">
+      <div class="container">
+  <div class="row">
+          <div class="col-lg-12">
             <h2 data-aos="fade-up" data-aos-delay="100">SALA DE SITUAÇÃO DO ESTADO DE SÃO PAULO</h2>
-            <p data-aos="fade-up" data-aos-delay="200">A SS-SP Sala de Situação do Estado de São Paulo é  responsável pelo monitoamento dos Recursos Hídricos do Estado de São Paulo.</p> -->
-  <!-- <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-              <a href="https://hidroapp.spaguas.sp.gov.br/" target="_blank" class="btn-get-started">HidroApp</a> 
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-            </div> -->
-
-  <!-- </div>
-        </div> -->
+            <p data-aos="fade-up" data-aos-delay="200">A Sala de situação do Estado de São Paulo é responsável pelo monitoramento dos recursos hídricos. Esse monitoramento é realizado através de <strong>dados de satélites, radares,
+              pluviômetros</strong> que são utilizados para análise de chuva e os <strong>fluviômetros</strong> utilizados para análise de rios, córregos e outros corpos d'água.</p> 
+        </div>
+        <div class="p-5 text-center">
+          <a href="" target="_blank" class="btn" data-aos="fade-up">Chuva Agora →</a>
+          </div>
+        </div> 
   <!-- <div class="row gy-4 mt-5 justify-content-center" data-aos="fade-up" data-aos-delay="200"> -->
   <!-- <div class="col align-items-center d-flex" data-aos="fade-up" data-aos-delay="400">
            <h1 style="color: #FFF;"> Acesso Rápido <i class="bi bi-chevron-double-right"></i>
@@ -124,7 +126,7 @@
           </div>
       </div>
       </div> -->
-  <!-- </section> -->
+  </section> 
 
   <section id="objetivo" class="objetivo ">
     <div class="container">
@@ -236,19 +238,18 @@
         <div class="content col-xl-4 d-flex flex-column" data-aos="fade-up" data-aos-delay="100">
           <h3>Monitoramento</h3>
           <p>
-            Monitoramento em tempo real através de satélites, radares, pluviometria para análise de chuva e fluviometria
+            Monitoramento em <strong>tempo real</strong> através de satélites, radares, pluviometria para análise de chuva e fluviometria
             para niveis de rios, córregos e outros cursos d'agua.
           </p>
-          <a href="https://cth.daee.sp.gov.br/sibh/chuva_agora" target="_blank"
-            class="monitoring-btn align-self-center align-self-xl-start" style="text-decoration: none;"><span>Chuva
-              Agora</span> <i class="bi bi-cloud-lightning-rain"></i></a>
+          <a href="https://www.saisp.br/" target="_blank"
+            class="monitoring-btn align-self-center align-self-xl-start" style="text-decoration: none;"><span>Radar SP-Águas</span> <i class="bi bi-cloud-lightning-rain"></i></a>
         </div>
 
-        <div class="col-xl-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="col" data-aos="fade-up" data-aos-delay="200">
           <div class="row gy-4">
-            <div class="col-md-6 card icon-box position-relative">
+            <div class=" card icon-box position-relative">
               <a href="https://satelite.inmet.gov.br/CO" target="_blank">
-                <i class="bi bi-tropical-storm"></i>
+                <!-- <i class="bi bi-tropical-storm"></i> -->
                 <h4>Satélites</h4>
                 <img src="assets/img/posts/satelite_GOES_SE_IV_2025-02-20.gif" class="img-fluid">
                 <div class="">
@@ -256,9 +257,9 @@
                 </div></a>
             </div>
 
-            <div class="col-md-6 card icon-box position-relative">
+            <div class="card icon-box position-relative">
               <a href="https://www.saisp.br/app/index.html" target="_blank">
-                <i class="bi bi-radar"></i>
+                <!-- <i class="bi bi-radar"></i> -->
                 <h4>Radares SP-Aguas</h4>
                 <img src="assets/img/posts/radarSpaguas.png" class="img-fluid">
                 <div class="">
@@ -267,9 +268,9 @@
                 </div></a>
             </div>
 
-            <div class="col-md-6 card icon-box position-relative">
+            <div class="card icon-box position-relative">
               <a href="https://cth.daee.sp.gov.br/sibh/graficos?station_type=plu" target="_blank">
-                <i class="bi bi-broadcast"></i>
+                <!-- <i class="bi bi-broadcast"></i> -->
                 <h4>Pluviometria</h4>
                 <img src="assets/img/posts/plu.png" class="img-fluid">
                 <div class="">
@@ -278,9 +279,9 @@
             </div>
             
 
-            <div class="col-md-6 card icon-box position-relative">
+            <div class="card icon-box position-relative">
               <a href="https://cth.daee.sp.gov.br/sibh/graficos?station_type=flu" target="_blank">
-                <i class="bi bi-easel"></i>
+                <!-- <i class="bi bi-easel"></i> -->
                 <h4>Fluviometria</h4>
                 <img src="assets/img/posts/flu.png" class="img-fluid">
                 <div class="">

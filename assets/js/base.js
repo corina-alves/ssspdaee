@@ -145,21 +145,19 @@ const loadFooter = () =>{
         '<div class="col-lg-4 footer-info">'+
         '<a href="index.html"><img src="https://www.spaguas.sp.gov.br/site/wp-content/uploads/2024/09/SP-4.png" style="width="260px; height="90px;" class="logo"></a>'+'<br/><br/>'+
         '<h2><STRONG>Sala de Situação do Estado de São Paulo</STRONG></h2>'+ 
-          // '<p>Rede Hidrológica Básica do Estado de São Paulo é operada pela SP Águas.</p>'+ 
         '</div>'+
 
         '<div class="col-lg-2 footer-links">'+
           '<h4>Boletins</h4>'+
           '<ul>'+
-            '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8YTE5ZDUyNTItMjkzYS00ZGJlLTg2M2ItZTI0ZjRjODQ3ZDNk?resourcekey=0-n6Kjkz-jNDVJdgI1dJ1A1A" target=_blank>Boletins Diários</a></li>'+
-            '<li><a href="https://drive.google.com/drive/folders/0B4yicqLa_Dj8VFFVb3B4bW5xZkk?resourcekey=0-9rWDTUK16xaKOQnDIPFln" target=_blank>Boletins Mensais</a></li>'+
-            '<li><a href="http://hidroapp.daee.sp.gov.br/" target=_blank>Mapas</a></li>'+
+            '<li><a href="boletinsDiario.html" target=_blank>Boletins Diários</a></li>'+
+            '<li><a href="boletinsMensais.html" target=_blank>Boletins Mensais</a></li>'+
             
           '</ul>'+
            '<h4>-</h4>'+
            '<ul>'+
-            '<li><a href="sobre.html">Sobre Nós</a></li>'+
-            '<li><a href="monitoramento.html">Monitoramento</a></li>'+
+            '<li><a href="sobre.html">Visitas</a></li>'+
+            '<li><a href="hidrologia.html">Hidrologia</a></li>'+
             '<li><a href="salas-de-situacao.html">Salas de Situação</a></li>'+
             // '<li><a href="noticias.html">Notícias</a></li>'+
             // '<li><a href="equipe.php">Equipes</a></li>'+
@@ -168,8 +166,10 @@ const loadFooter = () =>{
         '<div class="col-lg-3 footer-links">'+
         '<h4> veja mais</h4>'+
         '<ul>'+
-          '<li><a href="hidrologia.html">Hidrologia</a></li>'+
-          '<li><a href="estacoes.html">Estações</a></li>'+
+          '<li><a href="https://cth.daee.sp.gov.br/sibh/chuva_agora" target=_blank>Chuva Agora</a></li>'+
+          '<li><a href="https://hidroapp.spaguas.sp.gov.br/mapa" target=_blank>HidroApp</a></li>'+
+          '<li><a href="http://ph.daee.sp.gov.br/" target=_blank>Portal Hidrologia</a></li>'+
+          // '<li><a href="estacoes.html">Estações</a></li>'+
         
         '</ul>'+
           '<h4>Links Úteis</h4>'+
@@ -189,12 +189,12 @@ const loadFooter = () =>{
             '11º andar, Bloco 5<br>'+
            'São Paulo / SP <br>'+
             '<strong>Telefone:</strong> (11) 3293 - 8461<br>'+
-            '<strong>Email:</strong> salasituacao@daee.sp.gov.br<br>'+
+            '<strong>Email:</strong> salasituacaosp@spaguas.sp.gov.br<br>'+
           '</p>'+
 
-          '<div class="social-links"> <p>Redes Sociais DAEE</p>'+
-            '<a href="https://www.facebook.com/DAEESP/" target="_black" class="facebook"><i class="bi bi-facebook"></i></a>'+
-            '<a href="https://www.instagram.com/daeesp/" target="_black" class="instagram"><i class="bi bi-instagram"></i></a>'+
+          '<div class="social-links"> <p>Redes Sociais SP-Águas</p>'+
+            '<a href="https://www.facebook.com/spaguas/" target="_black" class="facebook"><i class="bi bi-facebook"></i></a>'+
+            '<a href="https://www.instagram.com/spaguas/" target="_black" class="instagram"><i class="bi bi-instagram"></i></a>'+
             
 
             '<a href="https://www.youtube.com/channel/UCOEBfJpTq7LE25rdjX9tdUQ" target="_black" class=""><i class="bi bi-youtube"></i></a>'+
@@ -208,7 +208,7 @@ const loadFooter = () =>{
 
   
     '<div class="copyright">'+
-      '&copy;  <strong><span>SSSP-DAEE</span></strong>. '+
+      '&copy;  <strong><span>SSSP-Águas</span></strong>. '+
     '</div>'+
     '<div class="credits">'+
 
